@@ -1,0 +1,70 @@
+import Link from "next/link";
+import { Container } from "@/components/layout/Container";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { WORK_PROJECTS } from "@/lib/work";
+
+const PREVIEW_PROJECTS = WORK_PROJECTS.slice(0, 3);
+
+export function CaseStudyPreview() {
+  return (
+    <section
+      aria-labelledby="work-heading"
+      className="border-t border-sbe-hairline py-28"
+    >
+      <Container>
+        <div className="mb-16 max-w-3xl">
+          <Eyebrow>SELECTED WORK</Eyebrow>
+          <h2
+            id="work-heading"
+            className="mt-6 font-serif text-h2 text-sbe-ink"
+          >
+            Built it. Shipped it. Still running it.
+          </h2>
+        </div>
+
+        <ul
+          className="flex flex-col"
+        >
+          {PREVIEW_PROJECTS.map((project) => (
+            <li
+              key={project.slug}
+              className="group border-t border-sbe-hairline py-10 last:border-b"
+            >
+              <Link
+                href={`/work#${project.slug}`}
+                className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-8"
+              >
+                <div className="md:col-span-1">
+                  <span className="font-mono text-micro uppercase text-sbe-mist">
+                    CASE
+                  </span>
+                </div>
+                <div className="md:col-span-4">
+                  <h3 className="font-serif text-h3 text-sbe-ink group-hover:text-sbe-copper transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="mt-2 font-mono text-caption text-sbe-graphite">
+                    {project.stack}
+                  </p>
+                </div>
+                <div className="md:col-span-6">
+                  <p className="text-body text-sbe-graphite max-w-[58ch]">
+                    {project.summary}
+                  </p>
+                  <p className="mt-4 font-mono text-micro uppercase text-sbe-mist">
+                    {project.metrics[0].label} · {project.metrics[0].value}
+                  </p>
+                </div>
+                <div className="md:col-span-1 md:text-right">
+                  <span className="font-mono text-micro uppercase text-sbe-graphite group-hover:text-sbe-copper transition-colors">
+                    Read →
+                  </span>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </section>
+  );
+}

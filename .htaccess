@@ -1,0 +1,11 @@
+# Passenger directives. Wrapped in <IfModule> so Apache does not 500
+# if mod_passenger is not loaded for this vhost (DreamHost panel toggle
+# "Passenger (Ruby/NodeJS/Python apps only)" must be enabled for sbe.studio).
+# Once Passenger is enabled in the panel, these activate automatically.
+
+<IfModule mod_passenger.c>
+    PassengerNodejs /home/dh_isibk9/.nvm/versions/node/v20.20.2/bin/node
+    PassengerAppRoot /home/dh_isibk9/sbe.studio
+    PassengerAppType node
+    PassengerStartupFile app.js
+</IfModule>
