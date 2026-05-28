@@ -44,7 +44,7 @@ export function Nav() {
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 h-16 border-b border-sbe-hairline",
-          "bg-sbe-canvas/85 backdrop-blur-sm"
+          "bg-sbe-canvas"
         )}
       >
         <Container className="grid h-full grid-cols-[auto_1fr_auto] items-center gap-4">
