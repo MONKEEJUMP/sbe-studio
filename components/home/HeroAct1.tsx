@@ -16,7 +16,7 @@ export function HeroAct1() {
       />
       <BrandStamp
         tone="electric"
-        className="-left-16 top-32 hidden lg:block"
+        className="-left-16 top-[26rem] hidden lg:block"
         opacity={0.95}
         size="13rem"
       />
@@ -38,6 +38,18 @@ export function HeroAct1() {
       />
 
       <Container className="relative">
+        <div className="relative z-10 mx-auto mb-10 max-w-6xl border-y-2 border-sbe-ink bg-sbe-surface py-4 text-center sm:py-5">
+          <p className="font-serif text-[clamp(2.3rem,10vw,5.8rem)] leading-[0.92] text-sbe-cobalt">
+            &lt; the same{" "}
+            <span className="text-sbe-copper">ai</span>{" "}
+            we build for you
+            <br />
+            is the same{" "}
+            <span className="text-sbe-copper">ai</span>{" "}
+            we build for us &gt;
+          </p>
+        </div>
+
         <div className="grid min-h-[720px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(420px,1fr)] lg:items-center">
           <div className="max-w-4xl">
             <Eyebrow>SPACE BOT ENGINEERING STUDIO · OKLAHOMA CITY</Eyebrow>
@@ -118,7 +130,7 @@ export function HeroAct1() {
             <span className="text-sbe-copper">ai</span>{" "}
             we build for you
             <br />
-            {"\u00a0\u00a0"}/ the same{" "}
+            {"\u00a0\u00a0"}is the same{" "}
             <span className="text-sbe-copper">ai</span>{" "}
             we build for us &gt;
           </h1>
