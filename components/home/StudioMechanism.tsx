@@ -99,6 +99,7 @@ export function StudioMechanism() {
                       src={site.image}
                       alt=""
                       fill
+                      priority
                       sizes="(min-width: 640px) 88px, 72px"
                       className="object-cover object-top"
                     />
