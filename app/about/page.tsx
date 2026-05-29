@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { DeploymentStrip } from "@/components/work/DeploymentStrip";
@@ -19,8 +20,14 @@ export default function AboutPage() {
     <>
       <Nav />
       <main id="main" className="pt-16">
-        <section className="py-32">
-          <Container>
+        <section className="relative overflow-hidden py-32">
+          <BrandStamp
+            tone="electric"
+            className="-right-20 top-20 hidden md:block"
+            opacity={0.12}
+            rotate={8}
+          />
+          <Container className="relative z-10">
             <Eyebrow>ABOUT</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
               A one-person firm, with a knowledge base the size of planet earth.
@@ -35,8 +42,15 @@ export default function AboutPage() {
           </Container>
         </section>
 
-        <section className="border-t border-sbe-hairline py-28">
-          <Container>
+        <section className="relative overflow-hidden border-t border-sbe-hairline py-28">
+          <BrandStamp
+            tone="plasma"
+            className="-left-24 bottom-10 hidden lg:block"
+            opacity={0.16}
+            rotate={-8}
+            size="clamp(9rem, 20vw, 18rem)"
+          />
+          <Container className="relative z-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <Eyebrow tone="graphite">OPERATING SHAPE</Eyebrow>

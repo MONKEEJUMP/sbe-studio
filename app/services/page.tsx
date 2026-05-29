@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { DeploymentStrip } from "@/components/work/DeploymentStrip";
@@ -13,14 +14,22 @@ export const metadata: Metadata = {
     "Three engagement tiers from Space Bot Engineering Studio \u2014 Audit, Build, Operate. Every engagement ends in production.",
 };
 
+const TIER_STAMP_TONES = ["electric", "cobalt", "plasma"] as const;
+
 export default function ServicesPage() {
   return (
     <>
       <Nav />
       <main id="main" className="pt-16">
         {/* Hero */}
-        <section className="py-28 lg:py-32">
-          <Container>
+        <section className="relative overflow-hidden py-28 lg:py-32">
+          <BrandStamp
+            tone="cobalt"
+            className="-right-24 top-16 hidden md:block"
+            opacity={0.12}
+            rotate={7}
+          />
+          <Container className="relative z-10">
             <div className="max-w-4xl">
               <Eyebrow>HOW WE WORK</Eyebrow>
               <h1 className="mt-10 font-serif text-h1 text-sbe-ink max-w-[20ch]">
@@ -61,14 +70,25 @@ export default function ServicesPage() {
         </section>
 
         {/* Tier sections */}
-        {SERVICE_TIERS.map((tier) => (
+        {SERVICE_TIERS.map((tier, index) => (
           <section
             key={tier.slug}
             id={tier.slug}
             aria-labelledby={`${tier.slug}-heading`}
-            className="border-t border-sbe-hairline py-28 scroll-mt-24"
+            className="relative scroll-mt-24 overflow-hidden border-t border-sbe-hairline py-28"
           >
-            <Container>
+            <BrandStamp
+              tone={TIER_STAMP_TONES[index % TIER_STAMP_TONES.length]}
+              className={
+                index % 2 === 0
+                  ? "-right-24 top-10 hidden md:block"
+                  : "-left-24 bottom-10 hidden md:block"
+              }
+              opacity={0.1}
+              rotate={index % 2 === 0 ? 8 : -8}
+              size="clamp(8rem, 19vw, 17rem)"
+            />
+            <Container className="relative z-10">
               <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12">
                 {/* Left rail: numeral + title */}
                 <div className="lg:col-span-4">
@@ -177,9 +197,15 @@ export default function ServicesPage() {
         {/* What happens next */}
         <section
           aria-labelledby="next-heading"
-          className="border-t border-sbe-hairline py-28"
+          className="relative overflow-hidden border-t border-sbe-hairline py-28"
         >
-          <Container>
+          <BrandStamp
+            tone="copper"
+            className="-right-20 bottom-10 hidden md:block"
+            opacity={0.1}
+            rotate={8}
+          />
+          <Container className="relative z-10">
             <div className="max-w-4xl">
               <Eyebrow>WHAT HAPPENS NEXT</Eyebrow>
               <h2

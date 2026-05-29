@@ -172,6 +172,13 @@
     background: var(--sbe-surface);
   }
 
+  .sbe-brand-stamp {
+    font-size: var(--stamp-size, clamp(8rem, 24vw, 22rem));
+    opacity: var(--stamp-opacity, 0.16);
+    transform: rotate(var(--stamp-rotate, -7deg));
+    z-index: 0;
+  }
+
   @keyframes sbe-robot-idle {
     0%,
     100% {

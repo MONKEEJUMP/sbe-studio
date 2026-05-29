@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 
@@ -6,9 +7,22 @@ export function FounderTeaser() {
   return (
     <section
       aria-labelledby="founder-heading"
-      className="border-t-2 border-sbe-ink bg-sbe-surface py-28"
+      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-surface py-28"
     >
-      <Container>
+      <BrandStamp
+        tone="cobalt"
+        className="-left-20 top-14 hidden md:block"
+        opacity={0.12}
+        rotate={-6}
+      />
+      <BrandStamp
+        tone="plasma"
+        className="-right-24 bottom-10 hidden lg:block"
+        opacity={0.18}
+        rotate={8}
+        size="clamp(9rem, 20vw, 18rem)"
+      />
+      <Container className="relative z-10">
         <div
           className="mx-auto flex max-w-4xl flex-col items-center rounded-[8px] border-2 border-sbe-ink bg-sbe-electric p-10 text-center sbe-offset-red"
         >

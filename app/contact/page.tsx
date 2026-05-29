@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 
@@ -16,8 +17,21 @@ export default function ContactPage() {
     <>
       <Nav />
       <main id="main" className="pt-16">
-        <section className="py-32">
-          <Container>
+        <section className="relative overflow-hidden py-32">
+          <BrandStamp
+            tone="copper"
+            className="-right-24 top-16 hidden md:block"
+            opacity={0.12}
+            rotate={8}
+          />
+          <BrandStamp
+            tone="electric"
+            className="-left-24 bottom-6 hidden lg:block"
+            opacity={0.14}
+            rotate={-8}
+            size="clamp(9rem, 20vw, 18rem)"
+          />
+          <Container className="relative z-10">
             <Eyebrow>START A CONVERSATION</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
               Tell us what you&rsquo;re trying to build.

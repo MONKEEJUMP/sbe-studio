@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { SERVICE_TIERS } from "@/lib/services";
@@ -9,7 +10,20 @@ export function ServiceTiers() {
       aria-labelledby="services-heading"
       className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-copper py-28"
     >
-      <Container>
+      <BrandStamp
+        tone="electric"
+        className="-right-24 top-10 hidden sm:block"
+        opacity={0.22}
+        rotate={8}
+      />
+      <BrandStamp
+        tone="cobalt"
+        className="-left-28 bottom-12 hidden lg:block"
+        opacity={0.2}
+        rotate={-8}
+        size="clamp(9rem, 20vw, 18rem)"
+      />
+      <Container className="relative z-10">
         <div className="mb-20 max-w-4xl">
           <Eyebrow>HOW WE WORK</Eyebrow>
           <h2

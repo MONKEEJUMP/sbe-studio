@@ -2,6 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { StudioMechanism } from "@/components/home/StudioMechanism";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 
 export function HeroAct1() {
   return (
@@ -13,12 +14,12 @@ export function HeroAct1() {
         aria-hidden="true"
         className="absolute inset-x-0 top-16 h-[45rem] bg-sbe-canvas"
       />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-16 top-32 hidden rotate-[-7deg] font-serif text-[13rem] leading-none text-sbe-electric lg:block"
-      >
-        sbe
-      </div>
+      <BrandStamp
+        tone="electric"
+        className="-left-16 top-32 hidden lg:block"
+        opacity={0.95}
+        size="13rem"
+      />
 
       <Container className="relative">
         <div className="grid min-h-[720px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(420px,1fr)] lg:items-center">

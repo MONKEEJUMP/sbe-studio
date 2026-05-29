@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 
@@ -15,8 +16,14 @@ export default function NotFound() {
     <>
       <Nav />
       <main id="main" className="pt-16">
-        <section className="flex min-h-[70vh] items-center py-32">
-          <Container>
+        <section className="relative flex min-h-[70vh] items-center overflow-hidden py-32">
+          <BrandStamp
+            tone="plasma"
+            className="-right-24 top-20 hidden md:block"
+            opacity={0.14}
+            rotate={8}
+          />
+          <Container className="relative z-10">
             <Eyebrow>ERROR · 404</Eyebrow>
             <h1 className="mt-8 font-serif text-display text-sbe-ink max-w-[18ch]">
               Page not on any hard drive we can find.

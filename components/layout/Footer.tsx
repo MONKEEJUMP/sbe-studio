@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Wordmark } from "@/components/brand/Wordmark";
 import { BrandSignature } from "@/components/brand/BrandSignature";
 import { Rule } from "@/components/ui/Rule";
@@ -25,9 +26,22 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="mt-24 border-t-2 border-sbe-ink bg-sbe-ink text-white">
+    <footer className="relative mt-24 overflow-hidden border-t-2 border-sbe-ink bg-sbe-ink text-white">
       <div aria-hidden="true" className="h-4 w-full sbe-vivid-band" />
-      <Container as="div" className="py-20">
+      <BrandStamp
+        tone="electric"
+        className="-left-24 top-20 hidden md:block"
+        opacity={0.22}
+        rotate={-8}
+      />
+      <BrandStamp
+        tone="plasma"
+        className="-right-28 bottom-12 hidden lg:block"
+        opacity={0.18}
+        rotate={7}
+        size="clamp(9rem, 21vw, 18rem)"
+      />
+      <Container as="div" className="relative z-10 py-20">
         <div className="mb-14 flex flex-col gap-6 border-b-2 border-white pb-10 md:flex-row md:items-end md:justify-between">
           <div className="[&_*]:text-white">
             <BrandSignature variant="footer" />

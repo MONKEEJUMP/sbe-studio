@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ProjectBrowser } from "@/components/work/ProjectBrowser";
@@ -23,8 +24,14 @@ export function DeploymentStrip({
     .filter((project): project is VercelProject => Boolean(project));
 
   return (
-    <section className="border-t border-sbe-hairline py-28">
-      <Container>
+    <section className="relative overflow-hidden border-t border-sbe-hairline py-28">
+      <BrandStamp
+        tone="electric"
+        className="-right-24 top-12 hidden md:block"
+        opacity={0.1}
+        rotate={8}
+      />
+      <Container className="relative z-10">
         <div className="mb-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <Eyebrow tone="cobalt">{eyebrow}</Eyebrow>

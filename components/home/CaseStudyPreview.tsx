@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { WORK_PROJECTS } from "@/lib/work";
 
@@ -9,9 +10,22 @@ export function CaseStudyPreview() {
   return (
     <section
       aria-labelledby="work-heading"
-      className="border-t-2 border-sbe-ink bg-sbe-electric py-28"
+      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-electric py-28"
     >
-      <Container>
+      <BrandStamp
+        tone="plasma"
+        className="-right-20 top-16 hidden md:block"
+        opacity={0.32}
+        rotate={7}
+      />
+      <BrandStamp
+        tone="copper"
+        className="-left-24 bottom-8 hidden lg:block"
+        opacity={0.2}
+        rotate={-9}
+        size="clamp(8rem, 19vw, 17rem)"
+      />
+      <Container className="relative z-10">
         <div className="mb-16 max-w-3xl">
           <Eyebrow>SELECTED WORK</Eyebrow>
           <h2

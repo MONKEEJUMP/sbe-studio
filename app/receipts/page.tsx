@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { MANIFEST_DATA } from "@/lib/manifest-data";
 import { formatDate, formatNumber } from "@/lib/utils";
@@ -60,8 +61,14 @@ export default function ReceiptsPage() {
     <>
       <Nav />
       <main id="main" className="pt-16">
-        <section className="py-32">
-          <Container>
+        <section className="relative overflow-hidden py-32">
+          <BrandStamp
+            tone="electric"
+            className="-right-24 top-20 hidden md:block"
+            opacity={0.12}
+            rotate={7}
+          />
+          <Container className="relative z-10">
             <Eyebrow>THE RECEIPTS</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
               Every number on this site is verifiable.
@@ -74,8 +81,15 @@ export default function ReceiptsPage() {
           </Container>
         </section>
 
-        <section className="border-t border-sbe-hairline pb-28">
-          <Container>
+        <section className="relative overflow-hidden border-t border-sbe-hairline pb-28">
+          <BrandStamp
+            tone="plasma"
+            className="-left-24 top-8 hidden lg:block"
+            opacity={0.12}
+            rotate={-8}
+            size="clamp(8rem, 18vw, 16rem)"
+          />
+          <Container className="relative z-10">
             <div className="divide-y divide-sbe-hairline">
               {RECEIPTS.map((receipt) => (
                 <div

@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ProjectBrowser } from "@/components/work/ProjectBrowser";
@@ -22,7 +23,20 @@ export function VercelShowcase() {
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-72 bg-sbe-canvas"
       />
-      <Container>
+      <BrandStamp
+        tone="cobalt"
+        className="-right-24 top-20 hidden md:block"
+        opacity={0.12}
+        rotate={8}
+      />
+      <BrandStamp
+        tone="plasma"
+        className="-left-24 bottom-16 hidden lg:block"
+        opacity={0.16}
+        rotate={-8}
+        size="clamp(9rem, 18vw, 16rem)"
+      />
+      <Container className="relative z-10">
         <div className="relative grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <Eyebrow tone="cobalt">LIVE VERCEL WORK</Eyebrow>

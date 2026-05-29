@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CREDIBILITY_HOOKS } from "@/lib/credibility";
 
@@ -6,9 +7,21 @@ export function CredibilityGrid() {
   return (
     <section
       aria-labelledby="credibility-heading"
-      className="bg-sbe-canvas py-28"
+      className="relative overflow-hidden bg-sbe-canvas py-28"
     >
-      <Container>
+      <BrandStamp
+        tone="copper"
+        className="-right-20 top-24 hidden md:block"
+        opacity={0.1}
+        rotate={-6}
+      />
+      <BrandStamp
+        tone="electric"
+        className="-left-28 bottom-10 hidden lg:block"
+        opacity={0.14}
+        rotate={7}
+      />
+      <Container className="relative z-10">
         <div className="mb-16 max-w-4xl">
           <Eyebrow>WHY SBE · 10 PROOFS</Eyebrow>
           <h2

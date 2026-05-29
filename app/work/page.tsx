@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
+import { BrandStamp } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { ProjectBrowser } from "@/components/work/ProjectBrowser";
@@ -27,8 +28,14 @@ export default function WorkPage() {
     <>
       <Nav />
       <main id="main" className="pt-16">
-        <section className="py-28 lg:py-32">
-          <Container>
+        <section className="relative overflow-hidden py-28 lg:py-32">
+          <BrandStamp
+            tone="plasma"
+            className="-right-24 top-14 hidden md:block"
+            opacity={0.14}
+            rotate={7}
+          />
+          <Container className="relative z-10">
             <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
                 <Eyebrow>LIVE WORK INDEX</Eyebrow>
@@ -70,8 +77,14 @@ export default function WorkPage() {
           </Container>
         </section>
 
-        <section className="border-t border-sbe-hairline py-28">
-          <Container>
+        <section className="relative overflow-hidden border-t border-sbe-hairline py-28">
+          <BrandStamp
+            tone="electric"
+            className="-left-24 top-20 hidden lg:block"
+            opacity={0.12}
+            rotate={-8}
+          />
+          <Container className="relative z-10">
             <div className="mb-16 max-w-3xl">
               <Eyebrow tone="cobalt">FEATURED DEPLOYMENTS</Eyebrow>
               <h2 className="mt-6 font-serif text-h2 text-sbe-ink">
@@ -134,8 +147,14 @@ export default function WorkPage() {
           </Container>
         </section>
 
-        <section className="border-t border-sbe-hairline py-28">
-          <Container>
+        <section className="relative overflow-hidden border-t border-sbe-hairline py-28">
+          <BrandStamp
+            tone="cobalt"
+            className="-right-28 top-16 hidden lg:block"
+            opacity={0.1}
+            rotate={8}
+          />
+          <Container className="relative z-10">
             <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl">
                 <Eyebrow>ALL LIVE WEBSITES</Eyebrow>
@@ -199,8 +218,14 @@ export default function WorkPage() {
           </Container>
         </section>
 
-        <section className="border-t border-sbe-hairline py-28">
-          <Container>
+        <section className="relative overflow-hidden border-t border-sbe-hairline py-28">
+          <BrandStamp
+            tone="copper"
+            className="-left-28 bottom-14 hidden lg:block"
+            opacity={0.1}
+            rotate={-7}
+          />
+          <Container className="relative z-10">
             <div className="mb-12 max-w-3xl">
               <Eyebrow tone="cobalt">ENGINEERING RECEIPTS</Eyebrow>
               <h2 className="mt-6 font-serif text-h2 text-sbe-ink">
