@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 
@@ -28,6 +28,15 @@ export function FounderTeaser() {
         opacity={0.09}
         rotate={-10}
         size="clamp(5rem, 8vw, 7rem)"
+      />
+      <BrandStampField
+        seed={808}
+        count={24}
+        className="hidden md:block"
+        minOpacity={0.035}
+        maxOpacity={0.14}
+        minRem={3}
+        maxRem={16}
       />
       <Container className="relative z-10">
         <div

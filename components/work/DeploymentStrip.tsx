@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ProjectBrowser } from "@/components/work/ProjectBrowser";
@@ -30,6 +30,16 @@ export function DeploymentStrip({
         className="-right-24 top-12 hidden md:block"
         opacity={0.1}
         rotate={8}
+      />
+      <BrandStampField
+        seed={6111}
+        count={24}
+        tones={["electric", "cobalt", "plasma"]}
+        className="hidden md:block"
+        minOpacity={0.035}
+        maxOpacity={0.13}
+        minRem={3}
+        maxRem={15}
       />
       <Container className="relative z-10">
         <div className="mb-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">

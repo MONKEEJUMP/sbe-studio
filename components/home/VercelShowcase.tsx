@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ProjectBrowser } from "@/components/work/ProjectBrowser";
@@ -42,6 +42,15 @@ export function VercelShowcase() {
         opacity={0.09}
         rotate={-11}
         size="clamp(5rem, 8vw, 7rem)"
+      />
+      <BrandStampField
+        seed={404}
+        count={34}
+        className="hidden md:block"
+        minOpacity={0.035}
+        maxOpacity={0.14}
+        minRem={3}
+        maxRem={17}
       />
       <Container className="relative z-10">
         <div className="relative grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">

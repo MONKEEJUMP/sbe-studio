@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Wordmark } from "@/components/brand/Wordmark";
 import { BrandSignature } from "@/components/brand/BrandSignature";
 import { Rule } from "@/components/ui/Rule";
@@ -47,6 +47,16 @@ export function Footer() {
         opacity={0.14}
         rotate={10}
         size="clamp(5rem, 8vw, 7rem)"
+      />
+      <BrandStampField
+        seed={909}
+        count={34}
+        tones={["electric", "plasma", "cobalt"]}
+        className="hidden md:block"
+        minOpacity={0.06}
+        maxOpacity={0.19}
+        minRem={3.2}
+        maxRem={17}
       />
       <Container as="div" className="relative z-10 py-20">
         <div className="mb-14 flex flex-col gap-6 border-b-2 border-white pb-10 md:flex-row md:items-end md:justify-between">

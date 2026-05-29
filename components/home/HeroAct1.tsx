@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { StudioMechanism } from "@/components/home/StudioMechanism";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 
 export function HeroAct1() {
   return (
@@ -19,6 +19,15 @@ export function HeroAct1() {
         className="-left-16 top-32 hidden lg:block"
         opacity={0.95}
         size="13rem"
+      />
+      <BrandStampField
+        seed={101}
+        count={24}
+        className="hidden lg:block"
+        minOpacity={0.035}
+        maxOpacity={0.13}
+        minRem={3.8}
+        maxRem={18}
       />
 
       <Container className="relative">

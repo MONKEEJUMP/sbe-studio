@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { DeploymentStrip } from "@/components/work/DeploymentStrip";
@@ -34,6 +34,15 @@ export default function AboutPage() {
             rotate={-9}
             size="clamp(6rem, 10vw, 9rem)"
           />
+          <BrandStampField
+            seed={3111}
+            count={26}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.14}
+            minRem={3}
+            maxRem={17}
+          />
           <Container className="relative z-10">
             <Eyebrow>ABOUT</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
@@ -63,6 +72,16 @@ export default function AboutPage() {
             opacity={0.1}
             rotate={10}
             size="clamp(5rem, 8vw, 7rem)"
+          />
+          <BrandStampField
+            seed={3222}
+            count={28}
+            tones={["plasma", "copper", "electric", "cobalt"]}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.13}
+            minRem={3}
+            maxRem={15}
           />
           <Container className="relative z-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">

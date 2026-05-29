@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 
@@ -37,6 +37,16 @@ export default function ContactPage() {
             opacity={0.12}
             rotate={10}
             size="clamp(5rem, 8vw, 7rem)"
+          />
+          <BrandStampField
+            seed={5111}
+            count={30}
+            tones={["copper", "electric", "plasma", "cobalt"]}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.14}
+            minRem={3}
+            maxRem={17}
           />
           <Container className="relative z-10">
             <Eyebrow>START A CONVERSATION</Eyebrow>

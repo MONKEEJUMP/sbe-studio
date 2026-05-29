@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LiveStats } from "@/components/home/LiveStats";
 import { MANIFEST_DATA } from "@/lib/manifest-data";
@@ -30,6 +30,16 @@ export function HeroAct2() {
         opacity={0.16}
         rotate={-10}
         size="clamp(5rem, 10vw, 8rem)"
+      />
+      <BrandStampField
+        seed={202}
+        count={26}
+        tones={["plasma", "copper", "electric"]}
+        className="hidden md:block"
+        minOpacity={0.045}
+        maxOpacity={0.18}
+        minRem={3.4}
+        maxRem={15.5}
       />
       <Container className="relative z-10">
         <div className="mb-16 flex justify-center">

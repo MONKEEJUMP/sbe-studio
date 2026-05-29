@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CREDIBILITY_HOOKS } from "@/lib/credibility";
 
@@ -27,6 +27,16 @@ export function CredibilityGrid() {
         opacity={0.12}
         rotate={-10}
         size="clamp(5rem, 8vw, 7rem)"
+      />
+      <BrandStampField
+        seed={505}
+        count={32}
+        tones={["electric", "cobalt", "plasma"]}
+        className="hidden md:block"
+        minOpacity={0.035}
+        maxOpacity={0.13}
+        minRem={3}
+        maxRem={16}
       />
       <Container className="relative z-10">
         <div className="mb-16 max-w-4xl">

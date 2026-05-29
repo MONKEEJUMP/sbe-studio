@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { MANIFEST_DATA } from "@/lib/manifest-data";
 import { formatDate, formatNumber } from "@/lib/utils";
@@ -75,6 +75,15 @@ export default function ReceiptsPage() {
             rotate={-9}
             size="clamp(6rem, 10vw, 9rem)"
           />
+          <BrandStampField
+            seed={4111}
+            count={24}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.14}
+            minRem={3}
+            maxRem={16}
+          />
           <Container className="relative z-10">
             <Eyebrow>THE RECEIPTS</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
@@ -102,6 +111,16 @@ export default function ReceiptsPage() {
             opacity={0.1}
             rotate={9}
             size="clamp(5rem, 8vw, 7rem)"
+          />
+          <BrandStampField
+            seed={4222}
+            count={24}
+            tones={["plasma", "cobalt", "electric"]}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.13}
+            minRem={3}
+            maxRem={14}
           />
           <Container className="relative z-10">
             <div className="divide-y divide-sbe-hairline">

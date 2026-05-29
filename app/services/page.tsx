@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { DeploymentStrip } from "@/components/work/DeploymentStrip";
@@ -35,6 +35,15 @@ export default function ServicesPage() {
             opacity={0.12}
             rotate={-9}
             size="clamp(6rem, 10vw, 9rem)"
+          />
+          <BrandStampField
+            seed={2111}
+            count={28}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.14}
+            minRem={3}
+            maxRem={17}
           />
           <Container className="relative z-10">
             <div className="max-w-4xl">
@@ -105,6 +114,20 @@ export default function ServicesPage() {
               opacity={0.1}
               rotate={index % 2 === 0 ? -11 : 10}
               size="clamp(4.5rem, 7vw, 6rem)"
+            />
+            <BrandStampField
+              seed={2200 + index * 137}
+              count={22}
+              tones={
+                index % 2 === 0
+                  ? ["electric", "cobalt", "plasma"]
+                  : ["plasma", "copper", "electric"]
+              }
+              className="hidden md:block"
+              minOpacity={0.03}
+              maxOpacity={0.13}
+              minRem={3}
+              maxRem={15}
             />
             <Container className="relative z-10">
               <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12">
@@ -229,6 +252,16 @@ export default function ServicesPage() {
             opacity={0.1}
             rotate={-10}
             size="clamp(5rem, 8vw, 7rem)"
+          />
+          <BrandStampField
+            seed={2444}
+            count={26}
+            tones={["copper", "electric", "cobalt", "plasma"]}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.13}
+            minRem={3}
+            maxRem={16}
           />
           <Container className="relative z-10">
             <div className="max-w-4xl">

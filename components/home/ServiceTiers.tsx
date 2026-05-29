@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { SERVICE_TIERS } from "@/lib/services";
@@ -29,6 +29,16 @@ export function ServiceTiers() {
         opacity={0.16}
         rotate={-12}
         size="clamp(5rem, 9vw, 7rem)"
+      />
+      <BrandStampField
+        seed={606}
+        count={34}
+        tones={["electric", "cobalt", "plasma"]}
+        className="hidden md:block"
+        minOpacity={0.045}
+        maxOpacity={0.18}
+        minRem={3.2}
+        maxRem={17}
       />
       <Container className="relative z-10">
         <div className="mb-20 max-w-4xl">

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { WORK_PROJECTS } from "@/lib/work";
 
@@ -31,6 +31,16 @@ export function CaseStudyPreview() {
         opacity={0.24}
         rotate={10}
         size="clamp(5rem, 8vw, 7rem)"
+      />
+      <BrandStampField
+        seed={707}
+        count={28}
+        tones={["plasma", "copper", "cobalt"]}
+        className="hidden md:block"
+        minOpacity={0.05}
+        maxOpacity={0.2}
+        minRem={3.2}
+        maxRem={15}
       />
       <Container className="relative z-10">
         <div className="mb-16 max-w-3xl">

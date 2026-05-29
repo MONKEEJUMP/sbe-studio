@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { ProjectBrowser } from "@/components/work/ProjectBrowser";
@@ -41,6 +41,15 @@ export default function WorkPage() {
             opacity={0.1}
             rotate={-9}
             size="clamp(6rem, 10vw, 9rem)"
+          />
+          <BrandStampField
+            seed={1111}
+            count={30}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.14}
+            minRem={3}
+            maxRem={18}
           />
           <Container className="relative z-10">
             <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">
@@ -90,6 +99,16 @@ export default function WorkPage() {
             className="-left-24 top-20 hidden lg:block"
             opacity={0.12}
             rotate={-8}
+          />
+          <BrandStampField
+            seed={1212}
+            count={28}
+            tones={["electric", "plasma", "copper"]}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.13}
+            minRem={3}
+            maxRem={16}
           />
           <Container className="relative z-10">
             <div className="mb-16 max-w-3xl">
@@ -168,6 +187,16 @@ export default function WorkPage() {
             rotate={-11}
             size="clamp(5rem, 8vw, 7rem)"
           />
+          <BrandStampField
+            seed={1313}
+            count={42}
+            tones={["cobalt", "electric", "plasma", "copper"]}
+            className="hidden md:block"
+            minOpacity={0.03}
+            maxOpacity={0.12}
+            minRem={3}
+            maxRem={14}
+          />
           <Container className="relative z-10">
             <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl">
@@ -245,6 +274,16 @@ export default function WorkPage() {
             opacity={0.1}
             rotate={9}
             size="clamp(7rem, 13vw, 12rem)"
+          />
+          <BrandStampField
+            seed={1414}
+            count={30}
+            tones={["copper", "electric", "cobalt"]}
+            className="hidden md:block"
+            minOpacity={0.035}
+            maxOpacity={0.13}
+            minRem={3}
+            maxRem={15}
           />
           <Container className="relative z-10">
             <div className="mb-12 max-w-3xl">

@@ -1,4 +1,4 @@
-import { BrandStamp } from "@/components/brand/BrandStamp";
+import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Marquee } from "@/components/ui/Marquee";
 
@@ -42,6 +42,16 @@ export function HeroAct3() {
         opacity={0.32}
         rotate={-10}
         size="8rem"
+      />
+      <BrandStampField
+        seed={303}
+        count={12}
+        tones={["plasma", "copper", "cobalt"]}
+        className="hidden sm:block"
+        minOpacity={0.07}
+        maxOpacity={0.2}
+        minRem={2.8}
+        maxRem={9}
       />
       <div className="relative z-10 mb-6 flex justify-center px-6">
         <Eyebrow className="rounded-full border-2 border-sbe-ink bg-sbe-surface px-4 py-2 text-sbe-cobalt">
