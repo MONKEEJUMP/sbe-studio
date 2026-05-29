@@ -22,6 +22,13 @@ export function FounderTeaser() {
         rotate={8}
         size="clamp(9rem, 20vw, 18rem)"
       />
+      <BrandStamp
+        tone="copper"
+        className="left-[58%] top-20 hidden lg:block"
+        opacity={0.09}
+        rotate={-10}
+        size="clamp(5rem, 8vw, 7rem)"
+      />
       <Container className="relative z-10">
         <div
           className="mx-auto flex max-w-4xl flex-col items-center rounded-[8px] border-2 border-sbe-ink bg-sbe-electric p-10 text-center sbe-offset-red"

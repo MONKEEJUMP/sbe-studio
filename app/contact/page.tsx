@@ -31,6 +31,13 @@ export default function ContactPage() {
             rotate={-8}
             size="clamp(9rem, 20vw, 18rem)"
           />
+          <BrandStamp
+            tone="plasma"
+            className="left-[54%] bottom-24 hidden xl:block"
+            opacity={0.12}
+            rotate={10}
+            size="clamp(5rem, 8vw, 7rem)"
+          />
           <Container className="relative z-10">
             <Eyebrow>START A CONVERSATION</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">

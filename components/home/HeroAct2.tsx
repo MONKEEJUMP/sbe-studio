@@ -24,6 +24,13 @@ export function HeroAct2() {
         rotate={6}
         size="clamp(10rem, 26vw, 21rem)"
       />
+      <BrandStamp
+        tone="electric"
+        className="-left-10 bottom-3 hidden lg:block"
+        opacity={0.16}
+        rotate={-10}
+        size="clamp(5rem, 10vw, 8rem)"
+      />
       <Container className="relative z-10">
         <div className="mb-16 flex justify-center">
           <Eyebrow className="rounded-full border-2 border-sbe-ink bg-sbe-surface px-4 py-2 text-sbe-copper">

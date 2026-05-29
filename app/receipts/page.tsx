@@ -68,6 +68,13 @@ export default function ReceiptsPage() {
             opacity={0.12}
             rotate={7}
           />
+          <BrandStamp
+            tone="copper"
+            className="-left-20 bottom-8 hidden lg:block"
+            opacity={0.1}
+            rotate={-9}
+            size="clamp(6rem, 10vw, 9rem)"
+          />
           <Container className="relative z-10">
             <Eyebrow>THE RECEIPTS</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
@@ -88,6 +95,13 @@ export default function ReceiptsPage() {
             opacity={0.12}
             rotate={-8}
             size="clamp(8rem, 18vw, 16rem)"
+          />
+          <BrandStamp
+            tone="cobalt"
+            className="-right-20 bottom-8 hidden lg:block"
+            opacity={0.1}
+            rotate={9}
+            size="clamp(5rem, 8vw, 7rem)"
           />
           <Container className="relative z-10">
             <div className="divide-y divide-sbe-hairline">

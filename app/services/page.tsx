@@ -29,6 +29,13 @@ export default function ServicesPage() {
             opacity={0.12}
             rotate={7}
           />
+          <BrandStamp
+            tone="plasma"
+            className="-left-20 bottom-8 hidden lg:block"
+            opacity={0.12}
+            rotate={-9}
+            size="clamp(6rem, 10vw, 9rem)"
+          />
           <Container className="relative z-10">
             <div className="max-w-4xl">
               <Eyebrow>HOW WE WORK</Eyebrow>
@@ -87,6 +94,17 @@ export default function ServicesPage() {
               opacity={0.1}
               rotate={index % 2 === 0 ? 8 : -8}
               size="clamp(8rem, 19vw, 17rem)"
+            />
+            <BrandStamp
+              tone={index % 2 === 0 ? "plasma" : "electric"}
+              className={
+                index % 2 === 0
+                  ? "left-[48%] bottom-12 hidden xl:block"
+                  : "right-[18%] top-20 hidden xl:block"
+              }
+              opacity={0.1}
+              rotate={index % 2 === 0 ? -11 : 10}
+              size="clamp(4.5rem, 7vw, 6rem)"
             />
             <Container className="relative z-10">
               <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12">
@@ -204,6 +222,13 @@ export default function ServicesPage() {
             className="-right-20 bottom-10 hidden md:block"
             opacity={0.1}
             rotate={8}
+          />
+          <BrandStamp
+            tone="cobalt"
+            className="left-[54%] top-16 hidden lg:block"
+            opacity={0.1}
+            rotate={-10}
+            size="clamp(5rem, 8vw, 7rem)"
           />
           <Container className="relative z-10">
             <div className="max-w-4xl">

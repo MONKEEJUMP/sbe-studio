@@ -27,6 +27,13 @@ export default function AboutPage() {
             opacity={0.12}
             rotate={8}
           />
+          <BrandStamp
+            tone="copper"
+            className="-left-20 bottom-8 hidden lg:block"
+            opacity={0.1}
+            rotate={-9}
+            size="clamp(6rem, 10vw, 9rem)"
+          />
           <Container className="relative z-10">
             <Eyebrow>ABOUT</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
@@ -49,6 +56,13 @@ export default function AboutPage() {
             opacity={0.16}
             rotate={-8}
             size="clamp(9rem, 20vw, 18rem)"
+          />
+          <BrandStamp
+            tone="cobalt"
+            className="right-[18%] top-12 hidden xl:block"
+            opacity={0.1}
+            rotate={10}
+            size="clamp(5rem, 8vw, 7rem)"
           />
           <Container className="relative z-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">

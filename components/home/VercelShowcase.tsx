@@ -36,6 +36,13 @@ export function VercelShowcase() {
         rotate={-8}
         size="clamp(9rem, 18vw, 16rem)"
       />
+      <BrandStamp
+        tone="copper"
+        className="left-[44%] top-[34rem] hidden xl:block"
+        opacity={0.09}
+        rotate={-11}
+        size="clamp(5rem, 8vw, 7rem)"
+      />
       <Container className="relative z-10">
         <div className="relative grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">

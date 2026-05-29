@@ -41,6 +41,13 @@ export function Footer() {
         rotate={7}
         size="clamp(9rem, 21vw, 18rem)"
       />
+      <BrandStamp
+        tone="cobalt"
+        className="left-[46%] top-28 hidden xl:block"
+        opacity={0.14}
+        rotate={10}
+        size="clamp(5rem, 8vw, 7rem)"
+      />
       <Container as="div" className="relative z-10 py-20">
         <div className="mb-14 flex flex-col gap-6 border-b-2 border-white pb-10 md:flex-row md:items-end md:justify-between">
           <div className="[&_*]:text-white">

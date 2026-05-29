@@ -23,6 +23,13 @@ export function ServiceTiers() {
         rotate={-8}
         size="clamp(9rem, 20vw, 18rem)"
       />
+      <BrandStamp
+        tone="electric"
+        className="left-[46%] top-[24rem] hidden xl:block"
+        opacity={0.16}
+        rotate={-12}
+        size="clamp(5rem, 9vw, 7rem)"
+      />
       <Container className="relative z-10">
         <div className="mb-20 max-w-4xl">
           <Eyebrow>HOW WE WORK</Eyebrow>

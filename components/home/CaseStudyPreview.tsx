@@ -25,6 +25,13 @@ export function CaseStudyPreview() {
         rotate={-9}
         size="clamp(8rem, 19vw, 17rem)"
       />
+      <BrandStamp
+        tone="plasma"
+        className="left-[44%] top-44 hidden xl:block"
+        opacity={0.24}
+        rotate={10}
+        size="clamp(5rem, 8vw, 7rem)"
+      />
       <Container className="relative z-10">
         <div className="mb-16 max-w-3xl">
           <Eyebrow>SELECTED WORK</Eyebrow>

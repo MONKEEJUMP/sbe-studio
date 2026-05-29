@@ -21,6 +21,13 @@ export function CredibilityGrid() {
         opacity={0.14}
         rotate={7}
       />
+      <BrandStamp
+        tone="plasma"
+        className="left-[48%] top-[38rem] hidden xl:block"
+        opacity={0.12}
+        rotate={-10}
+        size="clamp(5rem, 8vw, 7rem)"
+      />
       <Container className="relative z-10">
         <div className="mb-16 max-w-4xl">
           <Eyebrow>WHY SBE · 10 PROOFS</Eyebrow>

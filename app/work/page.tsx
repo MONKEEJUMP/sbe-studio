@@ -35,6 +35,13 @@ export default function WorkPage() {
             opacity={0.14}
             rotate={7}
           />
+          <BrandStamp
+            tone="electric"
+            className="-left-20 bottom-8 hidden lg:block"
+            opacity={0.1}
+            rotate={-9}
+            size="clamp(6rem, 10vw, 9rem)"
+          />
           <Container className="relative z-10">
             <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
@@ -154,6 +161,13 @@ export default function WorkPage() {
             opacity={0.1}
             rotate={8}
           />
+          <BrandStamp
+            tone="plasma"
+            className="left-[46%] top-[46rem] hidden xl:block"
+            opacity={0.12}
+            rotate={-11}
+            size="clamp(5rem, 8vw, 7rem)"
+          />
           <Container className="relative z-10">
             <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl">
@@ -224,6 +238,13 @@ export default function WorkPage() {
             className="-left-28 bottom-14 hidden lg:block"
             opacity={0.1}
             rotate={-7}
+          />
+          <BrandStamp
+            tone="electric"
+            className="-right-24 top-40 hidden lg:block"
+            opacity={0.1}
+            rotate={9}
+            size="clamp(7rem, 13vw, 12rem)"
           />
           <Container className="relative z-10">
             <div className="mb-12 max-w-3xl">
