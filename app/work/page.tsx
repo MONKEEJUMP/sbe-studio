@@ -42,6 +42,13 @@ export default function WorkPage() {
             rotate={-9}
             size="clamp(6rem, 10vw, 9rem)"
           />
+          <BrandStamp
+            tone="cobalt"
+            className="left-[58%] top-28 hidden xl:block"
+            opacity={0.075}
+            rotate={-19}
+            size="clamp(2.7rem, 4vw, 4rem)"
+          />
           <BrandStampField
             seed={1111}
             count={30}
@@ -99,6 +106,13 @@ export default function WorkPage() {
             className="-left-24 top-20 hidden lg:block"
             opacity={0.12}
             rotate={-8}
+          />
+          <BrandStamp
+            tone="copper"
+            className="right-[24%] bottom-20 hidden xl:block"
+            opacity={0.075}
+            rotate={22}
+            size="clamp(2.5rem, 4vw, 3.6rem)"
           />
           <BrandStampField
             seed={1212}
@@ -186,6 +200,13 @@ export default function WorkPage() {
             opacity={0.12}
             rotate={-11}
             size="clamp(5rem, 8vw, 7rem)"
+          />
+          <BrandStamp
+            tone="electric"
+            className="right-[18%] top-[34rem] hidden xl:block"
+            opacity={0.065}
+            rotate={17}
+            size="clamp(2.4rem, 3.5vw, 3.4rem)"
           />
           <BrandStampField
             seed={1313}

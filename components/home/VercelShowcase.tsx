@@ -43,6 +43,13 @@ export function VercelShowcase() {
         rotate={-11}
         size="clamp(5rem, 8vw, 7rem)"
       />
+      <BrandStamp
+        tone="electric"
+        className="right-[31%] top-[12rem] hidden xl:block"
+        opacity={0.08}
+        rotate={21}
+        size="clamp(2.6rem, 4vw, 3.8rem)"
+      />
       <BrandStampField
         seed={404}
         count={34}

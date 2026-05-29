@@ -20,6 +20,13 @@ export function HeroAct1() {
         opacity={0.95}
         size="13rem"
       />
+      <BrandStamp
+        tone="plasma"
+        className="left-[39%] top-28 hidden xl:block"
+        opacity={0.07}
+        rotate={18}
+        size="clamp(2.8rem, 5vw, 4.2rem)"
+      />
       <BrandStampField
         seed={101}
         count={24}

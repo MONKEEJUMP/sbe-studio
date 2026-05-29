@@ -28,6 +28,13 @@ export function CredibilityGrid() {
         rotate={-10}
         size="clamp(5rem, 8vw, 7rem)"
       />
+      <BrandStamp
+        tone="cobalt"
+        className="right-[20%] bottom-[11rem] hidden xl:block"
+        opacity={0.075}
+        rotate={24}
+        size="clamp(2.6rem, 4vw, 3.8rem)"
+      />
       <BrandStampField
         seed={505}
         count={32}

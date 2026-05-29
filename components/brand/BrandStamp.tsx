@@ -89,9 +89,15 @@ function between(
   return min + seeded(seed, index, salt) * (max - min);
 }
 
-function shuffledSlots(seed: number, total: number) {
-  return Array.from({ length: total }, (_, slot) => slot).sort((a, b) => {
-    return seeded(seed, a, 31) - seeded(seed, b, 31);
+const FIELD_ANCHORS = [
+  { x: 34, y: 23 },
+  { x: 49, y: 55 },
+  { x: 36, y: 84 },
+];
+
+function orderedAnchors(seed: number) {
+  return [...FIELD_ANCHORS].sort((a, b) => {
+    return seeded(seed, Math.round(a.x + a.y), 31) - seeded(seed, Math.round(b.x + b.y), 31);
   });
 }
 
@@ -106,15 +112,9 @@ export function BrandStampField({
   maxRem = 14,
 }: BrandStampFieldProps) {
   const stampCount = Math.min(count, 2);
-  const columns = Math.min(4, Math.max(2, Math.ceil(Math.sqrt(stampCount * 1.4))));
-  const rows = Math.ceil(stampCount / columns);
-  const slots = shuffledSlots(seed, columns * rows);
-  const safeMinRem = Math.min(minRem, 2.6);
-  const safeMaxRem = Math.min(maxRem, 3.2);
-  const insetX = 25;
-  const insetY = 22;
-  const usableX = 100 - insetX * 2;
-  const usableY = 100 - insetY * 2;
+  const anchors = orderedAnchors(seed);
+  const safeMinRem = Math.min(minRem, 2.35);
+  const safeMaxRem = Math.min(maxRem, 2.85);
 
   return (
     <div
@@ -122,20 +122,11 @@ export function BrandStampField({
       className={cn("pointer-events-none absolute inset-0 z-0", className)}
     >
       {Array.from({ length: stampCount }, (_, index) => {
-        const slot = slots[index];
-        const column = slot % columns;
-        const row = Math.floor(slot / columns);
-        const cellW = usableX / columns;
-        const cellH = usableY / rows;
+        const anchor = anchors[index];
         const left =
-          insetX +
-          (column + 0.5) * cellW +
-          between(seed, index, 1, -cellW * 0.12, cellW * 0.12);
-        const top =
-          insetY +
-          (row + 0.5) * cellH +
-          between(seed, index, 2, -cellH * 0.1, cellH * 0.1);
-        const rotate = between(seed, index, 3, -34, 34);
+          anchor.x + between(seed, index, 1, -3.8, 3.8);
+        const top = anchor.y + between(seed, index, 2, -3.4, 3.4);
+        const rotate = between(seed, index, 3, -32, 32);
         const rem = between(seed, index, 4, safeMinRem, safeMaxRem);
         const vw = between(seed, index, 5, rem * 0.58, rem * 1.02);
         const max = between(seed, index, 6, rem * 1.02, rem * 1.24);

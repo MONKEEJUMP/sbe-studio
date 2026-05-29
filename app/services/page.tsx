@@ -36,6 +36,13 @@ export default function ServicesPage() {
             rotate={-9}
             size="clamp(6rem, 10vw, 9rem)"
           />
+          <BrandStamp
+            tone="electric"
+            className="left-[54%] top-24 hidden xl:block"
+            opacity={0.07}
+            rotate={-21}
+            size="clamp(2.6rem, 4vw, 3.8rem)"
+          />
           <BrandStampField
             seed={2111}
             count={28}

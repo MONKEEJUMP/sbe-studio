@@ -30,6 +30,13 @@ export function ServiceTiers() {
         rotate={-12}
         size="clamp(5rem, 9vw, 7rem)"
       />
+      <BrandStamp
+        tone="plasma"
+        className="right-[22%] bottom-[7rem] hidden xl:block"
+        opacity={0.12}
+        rotate={19}
+        size="clamp(2.7rem, 4vw, 3.9rem)"
+      />
       <BrandStampField
         seed={606}
         count={34}
