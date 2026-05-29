@@ -1,7 +1,39 @@
+import type { CSSProperties } from "react";
 import { Code2, Cpu, LockKeyhole, Sparkles, Workflow } from "lucide-react";
 
-const blinkBlocks = Array.from({ length: 12 }, (_, index) => index);
-const signalDots = Array.from({ length: 5 }, (_, index) => index);
+const paletteVars = [
+  "var(--sbe-electric)",
+  "var(--sbe-cobalt)",
+  "var(--sbe-copper)",
+  "var(--sbe-plasma)",
+  "var(--sbe-surface)",
+];
+
+const blinkBlocks = Array.from({ length: 12 }, (_, index) => ({
+  id: index,
+  color: paletteVars[(index * 5 + 2) % paletteVars.length],
+  delay: `${(index * 0.17).toFixed(2)}s`,
+  duration: `${(1.1 + (index % 5) * 0.18).toFixed(2)}s`,
+}));
+
+const gridPulseCells = Array.from({ length: 96 }, (_, index) => ({
+  id: index,
+  color: paletteVars[(index * 7 + Math.floor(index / 3)) % paletteVars.length],
+  delay: `${((index * 0.19) % 4.2).toFixed(2)}s`,
+  duration: `${(2.1 + ((index * 0.11) % 2.4)).toFixed(2)}s`,
+}));
+
+const mouthPixels = Array.from({ length: 18 }, (_, index) => {
+  const row = Math.floor(index / 6);
+  const column = index % 6;
+
+  return {
+    id: index,
+    delay: `${(column * 0.08 + row * 0.23).toFixed(2)}s`,
+    duration: `${(1.05 + row * 0.13 + (column % 2) * 0.07).toFixed(2)}s`,
+  };
+});
+
 const footerModes = [
   { label: "Prompt", icon: Sparkles },
   { label: "Build", icon: Workflow },
@@ -36,36 +68,37 @@ export function StudioMechanism() {
         <div className="studio-grid relative mt-3 overflow-hidden rounded-[6px] border-2 border-sbe-ink bg-sbe-surface px-4 pb-4 pt-8 sm:px-6 sm:pb-6">
           <div
             aria-hidden="true"
-            className="absolute left-0 right-0 top-0 h-3 sbe-vivid-band"
+            className="pointer-events-none absolute inset-0 z-0 grid grid-cols-12 grid-rows-8"
+          >
+            {gridPulseCells.map((cell) => (
+              <span
+                key={cell.id}
+                className="sbe-grid-pulse"
+                style={
+                  {
+                    "--pulse-color": cell.color,
+                    "--pulse-delay": cell.delay,
+                    "--pulse-duration": cell.duration,
+                  } as CSSProperties
+                }
+              />
+            ))}
+          </div>
+
+          <div
+            aria-hidden="true"
+            className="absolute left-0 right-0 top-0 z-10 h-3 sbe-vivid-band"
           />
 
-          <div className="relative mx-auto flex min-h-[27rem] max-w-[30rem] items-center justify-center py-8 sm:min-h-[30rem]">
+          <div className="relative z-10 mx-auto flex min-h-[27rem] max-w-[30rem] items-center justify-center py-8 sm:min-h-[30rem]">
             <div
               aria-hidden="true"
-              className="absolute left-1/2 top-4 flex -translate-x-1/2 flex-col items-center gap-3"
-            >
-              {signalDots.map((dot) => (
-                <span
-                  key={dot}
-                  className="sbe-signal-dot h-2 w-2 rounded-full bg-sbe-ink"
-                />
-              ))}
-            </div>
-
-            <div
-              aria-hidden="true"
-              className="sbe-star-float absolute left-[16%] top-16 z-20 flex h-16 w-20 items-center justify-center"
+              className="sbe-badge-float absolute left-[16%] top-16 z-20 flex h-16 w-20 items-center justify-center"
             >
               <span className="absolute h-12 w-16 rounded-[50%] border-2 border-sbe-ink bg-sbe-surface shadow-[inset_0_0_0_7px_var(--sbe-plasma)]" />
-              <Sparkles className="relative h-9 w-9 text-sbe-ink" strokeWidth={1.8} />
-            </div>
-
-            <div
-              aria-hidden="true"
-              className="sbe-star-float-delayed absolute right-[14%] top-24 z-20 flex h-10 w-12 items-center justify-center"
-            >
-              <span className="absolute h-8 w-10 rounded-[50%] border-2 border-sbe-ink bg-sbe-electric" />
-              <Sparkles className="relative h-6 w-6 text-sbe-ink" strokeWidth={1.8} />
+              <span className="relative -rotate-6 font-mono text-sm font-bold tracking-normal text-sbe-ink">
+                \@\@
+              </span>
             </div>
 
             <div
@@ -75,8 +108,15 @@ export function StudioMechanism() {
               <div className="grid grid-cols-6 gap-2">
                 {blinkBlocks.map((block) => (
                   <span
-                    key={block}
+                    key={block.id}
                     className="sbe-blink-tile h-4 w-4 rounded-[4px] border border-sbe-ink bg-sbe-copper"
+                    style={
+                      {
+                        "--tile-color": block.color,
+                        "--tile-delay": block.delay,
+                        "--tile-duration": block.duration,
+                      } as CSSProperties
+                    }
                   />
                 ))}
               </div>
@@ -132,10 +172,16 @@ export function StudioMechanism() {
 
                     <div className="mt-5 rounded-[10px] border-2 border-sbe-ink bg-sbe-ink p-2">
                       <div className="grid grid-cols-6 gap-1">
-                        {Array.from({ length: 18 }, (_, index) => (
+                        {mouthPixels.map((pixel) => (
                           <span
-                            key={index}
+                            key={pixel.id}
                             className="sbe-mouth-pixel h-2 rounded-full bg-sbe-electric"
+                            style={
+                              {
+                                "--mouth-delay": pixel.delay,
+                                "--mouth-duration": pixel.duration,
+                              } as CSSProperties
+                            }
                           />
                         ))}
                       </div>
@@ -143,10 +189,15 @@ export function StudioMechanism() {
                   </div>
 
                   <div className="mt-4 grid grid-cols-3 gap-2">
-                    {["S", "B", "E"].map((label) => (
+                    {["S", "B", "E"].map((label, index) => (
                       <span
                         key={label}
-                        className="rounded-[6px] border-2 border-sbe-ink bg-sbe-surface py-2 text-center font-mono text-micro font-bold text-sbe-ink"
+                        className="sbe-letter-blink rounded-[6px] border-2 border-sbe-ink bg-sbe-surface py-2 text-center font-mono text-micro font-bold text-sbe-ink"
+                        style={
+                          {
+                            "--letter-delay": `${(index * 0.18).toFixed(2)}s`,
+                          } as CSSProperties
+                        }
                       >
                         {label}
                       </span>
@@ -160,9 +211,33 @@ export function StudioMechanism() {
               aria-hidden="true"
               className="absolute bottom-10 left-0 hidden rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-4 shadow-[8px_8px_0_var(--sbe-plasma)] sm:block"
             >
-              <div className="mb-3 h-3 w-24 bg-sbe-ink" />
-              <div className="mb-2 h-3 w-16 bg-sbe-copper" />
-              <div className="h-3 w-28 bg-sbe-cobalt" />
+              <div
+                className="sbe-diagnostic-line mb-3 h-3 w-24 bg-sbe-ink"
+                style={
+                  {
+                    "--line-delay": "0s",
+                    "--line-duration": "1.9s",
+                  } as CSSProperties
+                }
+              />
+              <div
+                className="sbe-diagnostic-line mb-2 h-3 w-16 bg-sbe-copper"
+                style={
+                  {
+                    "--line-delay": "0.31s",
+                    "--line-duration": "1.55s",
+                  } as CSSProperties
+                }
+              />
+              <div
+                className="sbe-diagnostic-line h-3 w-28 bg-sbe-cobalt"
+                style={
+                  {
+                    "--line-delay": "0.18s",
+                    "--line-duration": "2.15s",
+                  } as CSSProperties
+                }
+              />
             </div>
           </div>
 

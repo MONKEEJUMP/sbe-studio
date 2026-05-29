@@ -194,34 +194,31 @@
     }
   }
 
-  @keyframes sbe-signal-dot {
-    0%,
-    100% {
-      opacity: 1;
-      transform: scale(0.7);
-    }
-
-    50% {
-      opacity: 0.35;
-      transform: scale(1.65);
-    }
-  }
-
   @keyframes sbe-blink-tile {
     0%,
-    18%,
     100% {
-      background-color: var(--sbe-copper);
+      background-color: var(--tile-color, var(--sbe-copper));
       transform: translateY(0);
+    }
+
+    16% {
+      background-color: var(--sbe-surface);
+      transform: translateY(-1px) scale(1.05);
+    }
+
+    31% {
+      background-color: var(--sbe-cobalt);
+      transform: translateY(0) scale(0.96);
     }
 
     45% {
       background-color: var(--sbe-electric);
-      transform: translateY(-2px);
+      transform: translateY(-2px) scale(1.08);
     }
 
     70% {
       background-color: var(--sbe-plasma);
+      transform: translateY(0) scale(1);
     }
   }
 
@@ -253,14 +250,101 @@
     0%,
     100% {
       background-color: var(--sbe-electric);
+      transform: scaleX(1);
     }
 
-    33% {
-      background-color: var(--sbe-copper);
+    18% {
+      background-color: var(--sbe-electric);
+      transform: scaleX(0.86);
     }
 
-    66% {
+    24% {
+      background-color: var(--sbe-surface);
+      transform: scaleX(1.12);
+    }
+
+    32% {
+      background-color: var(--sbe-electric);
+      transform: scaleX(1);
+    }
+
+    58% {
       background-color: var(--sbe-cobalt);
+      transform: scaleX(0.94);
+    }
+
+    70% {
+      background-color: var(--sbe-surface);
+      transform: scaleX(1.08);
+    }
+  }
+
+  @keyframes sbe-grid-pulse {
+    0%,
+    12%,
+    100% {
+      background-color: transparent;
+      opacity: 0;
+    }
+
+    18% {
+      background-color: var(--pulse-color, var(--sbe-electric));
+      opacity: 0.75;
+    }
+
+    24% {
+      background-color: transparent;
+      opacity: 0;
+    }
+
+    62% {
+      background-color: var(--pulse-color, var(--sbe-copper));
+      opacity: 0.5;
+    }
+
+    69% {
+      background-color: transparent;
+      opacity: 0;
+    }
+  }
+
+  @keyframes sbe-letter-blink {
+    0%,
+    48%,
+    100% {
+      background-color: var(--sbe-surface);
+    }
+
+    55%,
+    68% {
+      background-color: var(--sbe-plasma);
+    }
+
+    78% {
+      background-color: var(--sbe-surface);
+    }
+
+    84% {
+      background-color: var(--sbe-plasma);
+    }
+  }
+
+  @keyframes sbe-diagnostic-line {
+    0%,
+    100% {
+      transform: scaleX(0.42);
+    }
+
+    38% {
+      transform: scaleX(1);
+    }
+
+    64% {
+      transform: scaleX(0.58);
+    }
+
+    82% {
+      transform: scaleX(0.92);
     }
   }
 
@@ -282,6 +366,7 @@
     transform-origin: center bottom;
   }
 
+  .sbe-badge-float,
   .sbe-star-float {
     animation: sbe-star-float 3.4s ease-in-out infinite;
   }
@@ -291,28 +376,9 @@
     animation-delay: 0.7s;
   }
 
-  .sbe-signal-dot {
-    animation: sbe-signal-dot 1.8s ease-in-out infinite;
-  }
-
-  .sbe-signal-dot:nth-child(2) {
-    animation-delay: 0.12s;
-  }
-
-  .sbe-signal-dot:nth-child(3) {
-    animation-delay: 0.24s;
-  }
-
-  .sbe-signal-dot:nth-child(4) {
-    animation-delay: 0.36s;
-  }
-
-  .sbe-signal-dot:nth-child(5) {
-    animation-delay: 0.48s;
-  }
-
   .sbe-blink-tile {
-    animation: sbe-blink-tile 2.2s steps(1, end) infinite;
+    animation: sbe-blink-tile var(--tile-duration, 2.2s) steps(1, end) infinite;
+    animation-delay: var(--tile-delay, 0s);
   }
 
   .sbe-blink-tile:nth-child(2n) {
@@ -346,7 +412,9 @@
   }
 
   .sbe-mouth-pixel {
-    animation: sbe-mouth-pixel 1.6s steps(1, end) infinite;
+    animation: sbe-mouth-pixel var(--mouth-duration, 1.45s) steps(1, end) infinite;
+    animation-delay: var(--mouth-delay, 0s);
+    transform-origin: center;
   }
 
   .sbe-mouth-pixel:nth-child(2n) {
@@ -363,6 +431,22 @@
 
   .sbe-antenna-pulse {
     animation: sbe-antenna-pulse 2.6s ease-in-out infinite;
+  }
+
+  .sbe-grid-pulse {
+    animation: sbe-grid-pulse var(--pulse-duration, 3s) steps(1, end) infinite;
+    animation-delay: var(--pulse-delay, 0s);
+  }
+
+  .sbe-letter-blink {
+    animation: sbe-letter-blink 1.4s steps(1, end) infinite;
+    animation-delay: var(--letter-delay, 0s);
+  }
+
+  .sbe-diagnostic-line {
+    animation: sbe-diagnostic-line var(--line-duration, 1.8s) ease-in-out infinite;
+    animation-delay: var(--line-delay, 0s);
+    transform-origin: left center;
   }
 
   @media (prefers-reduced-motion: reduce) {
