@@ -39,7 +39,7 @@ export function HeroAct1() {
 
       <Container className="relative">
         <div className="pointer-events-none absolute inset-x-4 -top-16 z-20 hidden justify-center lg:flex">
-          <p className="max-w-[34rem] border-y border-sbe-ink bg-sbe-surface/95 px-4 py-1.5 text-center font-serif text-[clamp(0.95rem,1.45vw,1.55rem)] leading-none text-sbe-cobalt">
+          <p className="max-w-[34rem] bg-sbe-surface/95 px-4 py-1.5 text-center font-serif text-[clamp(1.24rem,1.89vw,2.02rem)] leading-none text-sbe-cobalt">
             &lt; the same{" "}
             <span className="text-sbe-copper">ai</span>{" "}
             we build for you
