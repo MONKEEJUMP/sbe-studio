@@ -34,6 +34,73 @@ const mouthPixels = Array.from({ length: 18 }, (_, index) => {
   };
 });
 
+const bounceBalls = [
+  {
+    id: 0,
+    size: "1.1rem",
+    delay: "-0.2s",
+    duration: "6.2s",
+    x: ["8%", "64%", "86%", "32%", "74%", "8%"],
+    y: ["16%", "10%", "58%", "82%", "38%", "16%"],
+  },
+  {
+    id: 1,
+    size: "0.95rem",
+    delay: "-1.1s",
+    duration: "5.4s",
+    x: ["78%", "18%", "10%", "62%", "88%", "78%"],
+    y: ["18%", "34%", "76%", "88%", "28%", "18%"],
+  },
+  {
+    id: 2,
+    size: "1rem",
+    delay: "-2.4s",
+    duration: "7s",
+    x: ["18%", "84%", "70%", "12%", "42%", "18%"],
+    y: ["72%", "70%", "20%", "26%", "88%", "72%"],
+  },
+  {
+    id: 3,
+    size: "0.8rem",
+    delay: "-0.7s",
+    duration: "4.9s",
+    x: ["42%", "90%", "56%", "16%", "24%", "42%"],
+    y: ["12%", "40%", "86%", "62%", "24%", "12%"],
+  },
+  {
+    id: 4,
+    size: "1.15rem",
+    delay: "-3.2s",
+    duration: "6.6s",
+    x: ["88%", "58%", "6%", "30%", "82%", "88%"],
+    y: ["76%", "14%", "42%", "90%", "58%", "76%"],
+  },
+  {
+    id: 5,
+    size: "0.9rem",
+    delay: "-1.8s",
+    duration: "5.8s",
+    x: ["28%", "76%", "92%", "46%", "12%", "28%"],
+    y: ["46%", "82%", "22%", "10%", "68%", "46%"],
+  },
+  {
+    id: 6,
+    size: "0.75rem",
+    delay: "-2.8s",
+    duration: "4.6s",
+    x: ["54%", "14%", "34%", "86%", "62%", "54%"],
+    y: ["88%", "52%", "12%", "34%", "76%", "88%"],
+  },
+  {
+    id: 7,
+    size: "1.05rem",
+    delay: "-4s",
+    duration: "7.4s",
+    x: ["12%", "52%", "82%", "74%", "20%", "12%"],
+    y: ["88%", "74%", "48%", "8%", "18%", "88%"],
+  },
+];
+
 const footerModes = [
   { label: "Prompt", icon: Sparkles },
   { label: "Build", icon: Workflow },
@@ -51,6 +118,39 @@ function BotBadge({ className = "" }: { className?: string }) {
       <span className="relative -rotate-6 font-mono text-sm font-bold tracking-normal text-sbe-ink">
         \@\@
       </span>
+    </div>
+  );
+}
+
+function BouncingBalls() {
+  return (
+    <div
+      aria-hidden="true"
+      className="sbe-bounce-layer pointer-events-none absolute inset-0 z-[1] overflow-hidden"
+    >
+      {bounceBalls.map((ball) => (
+        <span
+          key={ball.id}
+          className="sbe-bounce-ball"
+          style={
+            {
+              "--ball-size": ball.size,
+              "--ball-delay": ball.delay,
+              "--ball-duration": ball.duration,
+              "--ball-x0": ball.x[0],
+              "--ball-x1": ball.x[1],
+              "--ball-x2": ball.x[2],
+              "--ball-x3": ball.x[3],
+              "--ball-x4": ball.x[4],
+              "--ball-y0": ball.y[0],
+              "--ball-y1": ball.y[1],
+              "--ball-y2": ball.y[2],
+              "--ball-y3": ball.y[3],
+              "--ball-y4": ball.y[4],
+            } as CSSProperties
+          }
+        />
+      ))}
     </div>
   );
 }
@@ -251,6 +351,8 @@ export function StudioMechanism() {
               />
             ))}
           </div>
+
+          <BouncingBalls />
 
           <div
             aria-hidden="true"

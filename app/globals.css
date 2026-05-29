@@ -333,6 +333,56 @@
     }
   }
 
+  @keyframes sbe-ball-bounce {
+    0%,
+    100% {
+      left: var(--ball-x0);
+      top: var(--ball-y0);
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    20% {
+      left: var(--ball-x1);
+      top: var(--ball-y1);
+      transform: translate(-50%, -50%) scale(0.92, 1.08);
+    }
+
+    40% {
+      left: var(--ball-x2);
+      top: var(--ball-y2);
+      transform: translate(-50%, -50%) scale(1.06, 0.94);
+    }
+
+    60% {
+      left: var(--ball-x3);
+      top: var(--ball-y3);
+      transform: translate(-50%, -50%) scale(0.96, 1.04);
+    }
+
+    80% {
+      left: var(--ball-x4);
+      top: var(--ball-y4);
+      transform: translate(-50%, -50%) scale(1.04, 0.96);
+    }
+  }
+
+  @keyframes sbe-ball-glow {
+    0%,
+    100% {
+      box-shadow:
+        0 0 0 2px var(--sbe-ink),
+        0 0 0 5px var(--sbe-plasma),
+        0 0 18px var(--sbe-copper);
+    }
+
+    50% {
+      box-shadow:
+        0 0 0 2px var(--sbe-ink),
+        0 0 0 7px var(--sbe-plasma),
+        0 0 28px var(--sbe-copper);
+    }
+  }
+
   @keyframes sbe-letter-blink {
     0%,
     48%,
@@ -481,6 +531,33 @@
     animation: sbe-grid-pulse var(--pulse-duration, 3s) steps(1, end) infinite;
     animation-delay: var(--pulse-delay, 0s);
     will-change: background-color, opacity;
+  }
+
+  .sbe-bounce-layer {
+    contain: paint;
+  }
+
+  .sbe-bounce-ball {
+    animation:
+      sbe-ball-bounce var(--ball-duration, 6s) linear infinite,
+      sbe-ball-glow 1.7s ease-in-out infinite;
+    animation-delay: var(--ball-delay, 0s), var(--ball-delay, 0s);
+    background:
+      radial-gradient(
+        circle at 34% 28%,
+        var(--sbe-surface) 0 13%,
+        var(--sbe-plasma) 14% 40%,
+        var(--sbe-copper) 41% 100%
+      );
+    border: 2px solid var(--sbe-ink);
+    border-radius: 999px;
+    height: var(--ball-size, 1rem);
+    left: var(--ball-x0, 50%);
+    opacity: 0.92;
+    position: absolute;
+    top: var(--ball-y0, 50%);
+    width: var(--ball-size, 1rem);
+    will-change: left, top, transform, box-shadow;
   }
 
   .sbe-letter-blink {
