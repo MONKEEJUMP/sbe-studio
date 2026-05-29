@@ -34,18 +34,19 @@ const STATS: Stat[] = [
 
 export function LiveStats() {
   return (
-    <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {STATS.map((stat) => (
         <div
           key={stat.label}
-          className="flex flex-col items-start"
+          className="rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-6 sbe-offset-red"
         >
           <StatNumber
             value={stat.value}
             suffix={stat.suffix}
             format={stat.format ?? "number"}
+            className="text-sbe-cobalt"
           />
-          <p className="mt-3 font-mono text-micro uppercase text-sbe-graphite">
+          <p className="mt-5 font-mono text-micro uppercase text-sbe-graphite">
             {stat.label}
           </p>
         </div>

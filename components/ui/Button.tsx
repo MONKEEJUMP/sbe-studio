@@ -33,12 +33,12 @@ type Props = LinkButtonProps | ButtonProps;
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-sbe-ink text-sbe-canvas hover:bg-sbe-copper hover:text-sbe-canvas transition-colors duration-200",
+    "border-2 border-sbe-ink bg-sbe-ink text-sbe-canvas shadow-[0_6px_0_var(--sbe-copper)] hover:-translate-y-0.5 hover:shadow-[0_8px_0_var(--sbe-copper)] active:translate-y-0 active:shadow-[0_3px_0_var(--sbe-copper)] transition-all duration-200",
   secondary:
-    "bg-transparent text-sbe-ink border border-sbe-ink hover:bg-sbe-ink hover:text-sbe-canvas transition-colors duration-200",
+    "bg-sbe-surface text-sbe-ink border-2 border-sbe-ink hover:bg-sbe-cobalt hover:text-white transition-colors duration-200",
   ghost:
     "bg-transparent text-sbe-ink hover:bg-sbe-hairline transition-colors duration-150",
-  link: "bg-transparent text-sbe-ink underline decoration-sbe-copper decoration-1 underline-offset-4 hover:decoration-2 transition-all duration-150",
+  link: "bg-transparent text-sbe-ink underline decoration-sbe-copper decoration-2 underline-offset-4 hover:text-sbe-copper transition-colors duration-150",
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -63,7 +63,7 @@ export function Button(props: Props) {
   } = props;
 
   const base =
-    "group inline-flex items-center justify-center gap-3 rounded-sm font-sans font-medium whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed";
+    "group inline-flex items-center justify-center gap-3 rounded-full font-sans font-bold whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed";
 
   const classes = cn(base, variants[variant], sizes[size], className);
 

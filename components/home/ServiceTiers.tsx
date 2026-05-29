@@ -7,14 +7,14 @@ export function ServiceTiers() {
   return (
     <section
       aria-labelledby="services-heading"
-      className="border-t border-sbe-hairline py-28"
+      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-copper-soft py-28"
     >
       <Container>
-        <div className="mb-20 max-w-3xl">
+        <div className="mb-20 max-w-4xl">
           <Eyebrow>HOW WE WORK</Eyebrow>
           <h2
             id="services-heading"
-            className="mt-6 font-serif text-h2 text-sbe-ink"
+            className="mt-6 font-serif text-h1 text-sbe-ink sm:text-display"
           >
             Three ways in. Every engagement ends in production.
           </h2>
@@ -26,23 +26,19 @@ export function ServiceTiers() {
         </div>
 
         <div
-          className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-0"
+          className="grid grid-cols-1 gap-6 md:grid-cols-3"
         >
           {SERVICE_TIERS.map((tier, i) => (
             <div
               key={tier.slug}
-              className={
-                i === 0
-                  ? "md:pr-10 lg:pr-12"
-                  : i === SERVICE_TIERS.length - 1
-                  ? "md:border-l md:border-sbe-hairline md:pl-10 lg:pl-12"
-                  : "md:border-l md:border-sbe-hairline md:px-10 lg:px-12"
-              }
+              className={`rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-8 ${
+                i === 1 ? "sbe-offset-blue" : i === 2 ? "sbe-offset-red" : ""
+              }`}
             >
               <div className="flex items-baseline gap-4">
                 <span
                   aria-hidden="true"
-                  className="font-serif text-display text-sbe-copper leading-none"
+                  className="font-serif text-display leading-none text-sbe-copper"
                 >
                   {tier.numeral}
                 </span>
@@ -51,7 +47,7 @@ export function ServiceTiers() {
                 </span>
               </div>
 
-              <h3 className="mt-8 font-serif text-h3 text-sbe-ink">
+              <h3 className="mt-8 font-serif text-h2 text-sbe-ink">
                 {tier.title}
               </h3>
               <p className="mt-2 text-body-lg text-sbe-graphite max-w-[34ch]">

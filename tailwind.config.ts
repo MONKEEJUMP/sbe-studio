@@ -21,6 +21,9 @@ const config: Config = {
           "copper-soft": "var(--sbe-copper-soft)",
           cobalt: "var(--sbe-cobalt)",
           "cobalt-soft": "var(--sbe-cobalt-soft)",
+          electric: "var(--sbe-electric)",
+          plasma: "var(--sbe-plasma)",
+          cream: "var(--sbe-cream)",
           live: "var(--sbe-live)",
           verified: "var(--sbe-verified)",
           alert: "var(--sbe-alert)",
@@ -33,16 +36,16 @@ const config: Config = {
       },
       fontSize: {
         display: [
-          "3.75rem",
-          { lineHeight: "1.03", letterSpacing: "0", fontWeight: "400" },
+          "5.25rem",
+          { lineHeight: "0.98", letterSpacing: "0", fontWeight: "400" },
         ],
         h1: [
-          "3rem",
-          { lineHeight: "1.08", letterSpacing: "0", fontWeight: "400" },
+          "4rem",
+          { lineHeight: "1.02", letterSpacing: "0", fontWeight: "400" },
         ],
         h2: [
-          "2.25rem",
-          { lineHeight: "1.15", letterSpacing: "0", fontWeight: "400" },
+          "2.75rem",
+          { lineHeight: "1.08", letterSpacing: "0", fontWeight: "400" },
         ],
         h3: [
           "1.5rem",

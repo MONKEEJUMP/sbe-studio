@@ -95,7 +95,7 @@ export function Nav() {
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-expanded={open}
                 onClick={() => setOpen((v) => !v)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-sm text-sbe-ink transition-colors hover:bg-sbe-hairline md:hidden"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-sbe-electric text-white transition-transform hover:-translate-y-0.5 md:hidden"
               >
                 {open ? (
                   <X size={20} strokeWidth={1.5} aria-hidden="true" />

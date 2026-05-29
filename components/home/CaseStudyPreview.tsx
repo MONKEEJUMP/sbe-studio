@@ -9,14 +9,14 @@ export function CaseStudyPreview() {
   return (
     <section
       aria-labelledby="work-heading"
-      className="border-t border-sbe-hairline py-28"
+      className="border-t-2 border-sbe-ink bg-sbe-cream py-28"
     >
       <Container>
         <div className="mb-16 max-w-3xl">
           <Eyebrow>SELECTED WORK</Eyebrow>
           <h2
             id="work-heading"
-            className="mt-6 font-serif text-h2 text-sbe-ink"
+            className="mt-6 font-serif text-h1 text-sbe-ink"
           >
             Built it. Shipped it. Still running it.
           </h2>
@@ -28,7 +28,7 @@ export function CaseStudyPreview() {
           {PREVIEW_PROJECTS.map((project) => (
             <li
               key={project.slug}
-              className="group border-t border-sbe-hairline py-10 last:border-b"
+              className="group mb-5 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-6 transition-transform duration-200 hover:-translate-y-1"
             >
               <Link
                 href={`/work#${project.slug}`}

@@ -6,14 +6,14 @@ export function CredibilityGrid() {
   return (
     <section
       aria-labelledby="credibility-heading"
-      className="py-28"
+      className="bg-sbe-canvas py-28"
     >
       <Container>
-        <div className="mb-16 max-w-3xl">
+        <div className="mb-16 max-w-4xl">
           <Eyebrow>WHY SBE · 10 PROOFS</Eyebrow>
           <h2
             id="credibility-heading"
-            className="mt-6 font-serif text-h2 text-sbe-ink"
+            className="mt-6 font-serif text-h1 text-sbe-ink sm:text-display"
           >
             Every claim links to a file on a hard drive.
           </h2>
@@ -24,17 +24,17 @@ export function CredibilityGrid() {
         </div>
 
         <ul
-          className="grid grid-cols-1 gap-x-8 gap-y-0 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           {CREDIBILITY_HOOKS.map((hook) => {
             const n = hook.id.toString().padStart(2, "0");
             return (
               <li
                 key={hook.id}
-                className="group flex flex-col border-t border-sbe-hairline py-10"
+                className="group flex min-h-[25rem] flex-col rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-7 transition-transform duration-200 hover:-translate-y-1"
               >
                 <div className="flex items-baseline justify-between">
-                  <span className="font-mono text-micro uppercase text-sbe-copper">
+                  <span className="font-mono text-caption uppercase text-sbe-copper">
                     {n}
                   </span>
                   {hook.stat && (
@@ -45,7 +45,7 @@ export function CredibilityGrid() {
                 </div>
 
                 {hook.stat && (
-                  <span className="mt-2 font-mono text-h3 text-sbe-ink tabular-nums">
+                  <span className="mt-3 font-mono text-h2 text-sbe-cobalt tabular-nums">
                     {hook.stat.value}
                   </span>
                 )}
@@ -65,7 +65,7 @@ export function CredibilityGrid() {
                 </p>
 
                 {hook.source && (
-                  <p className="mt-6 font-mono text-micro uppercase text-sbe-mist">
+                  <p className="mt-auto pt-8 font-mono text-micro uppercase text-sbe-mist">
                     SOURCE · {hook.source}
                   </p>
                 )}

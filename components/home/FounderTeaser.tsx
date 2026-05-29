@@ -6,11 +6,11 @@ export function FounderTeaser() {
   return (
     <section
       aria-labelledby="founder-heading"
-      className="border-t border-sbe-hairline py-28"
+      className="border-t-2 border-sbe-ink bg-sbe-surface py-28"
     >
       <Container>
         <div
-          className="mx-auto flex max-w-3xl flex-col items-center text-center"
+          className="mx-auto flex max-w-4xl flex-col items-center rounded-[8px] border-2 border-sbe-ink bg-sbe-cobalt-soft p-10 text-center sbe-offset-red"
         >
           <span
             aria-hidden="true"

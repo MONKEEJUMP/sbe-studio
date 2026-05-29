@@ -16,15 +16,19 @@ export function VercelShowcase() {
   return (
     <section
       aria-labelledby="vercel-showcase-heading"
-      className="border-t border-sbe-hairline py-28"
+      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-canvas py-28"
     >
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-72 bg-[linear-gradient(180deg,var(--sbe-cream),transparent)]"
+      />
       <Container>
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">
+        <div className="relative grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <Eyebrow tone="cobalt">LIVE VERCEL WORK</Eyebrow>
             <h2
               id="vercel-showcase-heading"
-              className="mt-6 max-w-[18ch] font-serif text-h2 text-sbe-cobalt"
+              className="mt-6 max-w-[12ch] font-serif text-h1 text-sbe-ink sm:text-display"
             >
               A studio wall of shipped websites.
             </h2>
@@ -35,36 +39,35 @@ export function VercelShowcase() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 border-t border-sbe-hairline pt-8 lg:col-span-5 lg:border-t-0 lg:pt-0">
-            <div>
-              <p className="font-mono text-micro uppercase text-sbe-mist">
-                Live sites
-              </p>
-              <p className="mt-2 font-mono text-h3 text-sbe-ink">
-                {PORTFOLIO_STATS.totalProjects}
-              </p>
-            </div>
-            <div>
-              <p className="font-mono text-micro uppercase text-sbe-mist">
-                Sectors
-              </p>
-              <p className="mt-2 font-mono text-h3 text-sbe-ink">
-                {PORTFOLIO_STATS.categories}
-              </p>
-            </div>
-            <div>
-              <p className="font-mono text-micro uppercase text-sbe-mist">
-                Platform
-              </p>
-              <p className="mt-2 font-mono text-h3 text-sbe-ink">Vercel</p>
-            </div>
+          <div className="grid grid-cols-3 gap-4 lg:col-span-5">
+            {[
+              ["Live sites", PORTFOLIO_STATS.totalProjects],
+              ["Sectors", PORTFOLIO_STATS.categories],
+              ["Platform", "Vercel"],
+            ].map(([label, value]) => (
+              <div
+                key={label}
+                className="rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-5"
+              >
+                <p className="font-mono text-micro uppercase text-sbe-mist">
+                  {label}
+                </p>
+                <p className="mt-3 font-mono text-h4 text-sbe-cobalt">
+                  {value}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12">
+        <div className="relative mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12">
           {lead && (
             <article className="lg:col-span-7">
-              <ProjectBrowser project={lead} priority />
+              <ProjectBrowser
+                project={lead}
+                priority
+                className="sbe-offset-plasma"
+              />
               <div className="mt-6 max-w-2xl">
                 <p className="font-mono text-micro uppercase text-sbe-copper">
                   Featured deployment
@@ -83,7 +86,7 @@ export function VercelShowcase() {
             {supporting.map((project) => (
               <article
                 key={project.slug}
-                className="grid grid-cols-1 gap-5 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
+                className="grid grid-cols-1 gap-5 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-4 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
               >
                 <ProjectBrowser project={project} />
                 <div>
