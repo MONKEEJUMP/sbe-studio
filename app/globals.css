@@ -240,6 +240,16 @@
     }
   }
 
+  @keyframes sbe-triangle-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
   @keyframes sbe-mouth-bar {
     0%,
     100% {
@@ -495,6 +505,13 @@
   .sbe-robot-eye {
     animation: sbe-robot-eye 5.5s ease-in-out infinite;
     transform-origin: center;
+  }
+
+  .sbe-nose-triangle {
+    animation: sbe-triangle-spin 9.5s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+    will-change: transform;
   }
 
   .sbe-mouth-bar {

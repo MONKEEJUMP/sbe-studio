@@ -99,6 +99,54 @@ const bounceBalls = [
     x: ["92%", "70%", "51%", "86%", "94%", "92%"],
     y: ["72%", "70%", "68%", "52%", "88%", "72%"],
   },
+  {
+    id: 8,
+    size: "0.78rem",
+    delay: "-1.5s",
+    duration: "12.8s",
+    x: ["6%", "24%", "46%", "14%", "8%", "6%"],
+    y: ["8%", "12%", "18%", "32%", "58%", "8%"],
+  },
+  {
+    id: 9,
+    size: "0.86rem",
+    delay: "-1.5s",
+    duration: "12.8s",
+    x: ["94%", "72%", "51%", "86%", "92%", "94%"],
+    y: ["24%", "20%", "18%", "8%", "44%", "24%"],
+  },
+  {
+    id: 10,
+    size: "0.76rem",
+    delay: "-4.8s",
+    duration: "15s",
+    x: ["10%", "30%", "47%", "16%", "34%", "10%"],
+    y: ["52%", "48%", "43%", "78%", "90%", "52%"],
+  },
+  {
+    id: 11,
+    size: "0.92rem",
+    delay: "-4.8s",
+    duration: "15s",
+    x: ["90%", "68%", "52%", "84%", "66%", "90%"],
+    y: ["62%", "54%", "43%", "82%", "26%", "62%"],
+  },
+  {
+    id: 12,
+    size: "0.7rem",
+    delay: "-7.2s",
+    duration: "13.8s",
+    x: ["18%", "36%", "48%", "8%", "30%", "18%"],
+    y: ["28%", "36%", "48%", "54%", "12%", "28%"],
+  },
+  {
+    id: 13,
+    size: "0.82rem",
+    delay: "-7.2s",
+    duration: "13.8s",
+    x: ["82%", "66%", "52%", "92%", "70%", "82%"],
+    y: ["88%", "68%", "48%", "36%", "82%", "88%"],
+  },
 ];
 
 const footerModes = [
@@ -265,7 +313,19 @@ function RobotCore({ className = "" }: { className?: string }) {
             </div>
 
             <div className="mt-4 flex items-center justify-center gap-4 sm:mt-5">
-              <span className="h-0 w-0 border-x-[11px] border-b-[20px] border-x-transparent border-b-sbe-copper sm:border-x-[12px] sm:border-b-[22px]" />
+              <svg
+                aria-hidden="true"
+                className="sbe-nose-triangle h-7 w-7 text-sbe-copper"
+                viewBox="0 0 28 28"
+              >
+                <polygon
+                  points="14 4 25 24 3 24"
+                  fill="currentColor"
+                  stroke="var(--sbe-ink)"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
               <span className="h-7 w-7 rounded-full border-2 border-sbe-ink bg-sbe-electric" />
             </div>
 
