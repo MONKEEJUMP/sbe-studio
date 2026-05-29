@@ -20,7 +20,7 @@ export function VercelShowcase() {
     >
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-72 bg-[linear-gradient(180deg,var(--sbe-cream),transparent)]"
+        className="absolute inset-x-0 top-0 h-72 bg-sbe-canvas"
       />
       <Container>
         <div className="relative grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">

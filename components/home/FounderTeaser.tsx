@@ -10,7 +10,7 @@ export function FounderTeaser() {
     >
       <Container>
         <div
-          className="mx-auto flex max-w-4xl flex-col items-center rounded-[8px] border-2 border-sbe-ink bg-sbe-cobalt-soft p-10 text-center sbe-offset-red"
+          className="mx-auto flex max-w-4xl flex-col items-center rounded-[8px] border-2 border-sbe-ink bg-sbe-electric p-10 text-center sbe-offset-red"
         >
           <span
             aria-hidden="true"

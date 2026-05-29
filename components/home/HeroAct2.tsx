@@ -10,20 +10,20 @@ export function HeroAct2() {
   return (
     <section
       aria-labelledby="proof-heading"
-      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-cobalt py-24 text-white"
+      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-cobalt py-24 text-sbe-ink"
     >
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-24 bg-[linear-gradient(180deg,rgba(255,255,255,0.16),transparent)]"
+        className="absolute inset-x-0 top-0 h-0 bg-sbe-cobalt"
       />
       <Container>
         <div className="mb-16 flex justify-center">
-          <Eyebrow className="rounded-full border border-white/40 bg-white px-4 py-2 text-sbe-copper">
+          <Eyebrow className="rounded-full border-2 border-sbe-ink bg-sbe-surface px-4 py-2 text-sbe-copper">
             VERIFIABLE PROOF-OF-WORK · LAST UPDATED{" "}
             {lastUpdated.toUpperCase()}
           </Eyebrow>
         </div>
-        <p className="mx-auto mb-12 max-w-4xl text-center font-serif text-h2 text-white">
+        <p className="mx-auto mb-12 max-w-4xl text-center font-serif text-h2 text-sbe-ink">
           Real numbers. Real systems. Real production.
         </p>
         <h2 id="proof-heading" className="sr-only">

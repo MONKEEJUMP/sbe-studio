@@ -11,11 +11,11 @@ export function HeroAct1() {
     >
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-16 h-[45rem] bg-[radial-gradient(circle_at_18%_24%,rgba(178,34,52,0.16),transparent_28%),radial-gradient(circle_at_82%_20%,rgba(81,71,217,0.20),transparent_30%),linear-gradient(180deg,var(--sbe-canvas),rgba(255,243,216,0.68))]"
+        className="absolute inset-x-0 top-16 h-[45rem] bg-sbe-canvas"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-16 top-32 hidden rotate-[-7deg] font-serif text-[13rem] leading-none text-sbe-hairline opacity-60 lg:block"
+        className="pointer-events-none absolute -left-16 top-32 hidden rotate-[-7deg] font-serif text-[13rem] leading-none text-sbe-electric lg:block"
       >
         sbe
       </div>
@@ -60,17 +60,17 @@ export function HeroAct1() {
             {
               title: "Built-in AI systems",
               body: "Assistants, agents, knowledge bases, internal tools, and workflows designed around the way your team already works.",
-              tone: "bg-sbe-cobalt-soft",
+              tone: "bg-sbe-electric",
             },
             {
               title: "Live website launches",
               body: "Beautiful public sites, Vercel deployments, real URLs, screenshots, analytics, and maintenance after the launch.",
-              tone: "bg-sbe-copper-soft",
+              tone: "bg-sbe-copper",
             },
             {
               title: "Proof you can inspect",
               body: "Every claim points back to working systems, indexed files, production domains, and receipts we can open together.",
-              tone: "bg-sbe-cream",
+              tone: "bg-sbe-plasma",
             },
           ].map((card, index) => (
             <article

@@ -25,13 +25,14 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="sbe-vivid-band mt-24 border-t-2 border-sbe-ink text-white">
+    <footer className="mt-24 border-t-2 border-sbe-ink bg-sbe-ink text-white">
+      <div aria-hidden="true" className="h-4 w-full sbe-vivid-band" />
       <Container as="div" className="py-20">
-        <div className="mb-14 flex flex-col gap-6 border-b border-white/30 pb-10 md:flex-row md:items-end md:justify-between">
+        <div className="mb-14 flex flex-col gap-6 border-b-2 border-white pb-10 md:flex-row md:items-end md:justify-between">
           <div className="[&_*]:text-white">
             <BrandSignature variant="footer" />
           </div>
-          <p className="max-w-sm text-caption text-white/80 md:text-right">
+          <p className="max-w-sm text-caption text-white md:text-right">
             Oklahoma City | Building AI that works.
           </p>
         </div>
@@ -42,14 +43,14 @@ export function Footer() {
             <div className="[&_*]:text-white">
               <Wordmark href="/" forceFull showMotto={false} />
             </div>
-            <p className="mt-3 text-caption text-white/80">
+            <p className="mt-3 text-caption text-white">
               Practical AI systems, useful automation, and careful code for real teams.
             </p>
           </div>
 
           {/* Column 2 — Site */}
           <div>
-            <h2 className="font-mono text-micro uppercase text-white/60">
+            <h2 className="font-mono text-micro uppercase text-white">
               Site
             </h2>
             <ul className="mt-4 space-y-2">
@@ -57,7 +58,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                   href={l.href}
-                    className="text-body text-white/80 transition-colors hover:text-white"
+                    className="text-body text-white transition-colors hover:text-white"
                   >
                     {l.label}
                   </Link>
@@ -68,52 +69,52 @@ export function Footer() {
 
           {/* Column 3 — Proof */}
           <div>
-            <h2 className="font-mono text-micro uppercase text-white/60">
+            <h2 className="font-mono text-micro uppercase text-white">
               Proof
             </h2>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link
                   href="/receipts"
-                  className="text-body text-white/80 transition-colors hover:text-white"
+                  className="text-body text-white transition-colors hover:text-white"
                 >
                   The Receipts →
                 </Link>
               </li>
             </ul>
-            <p className="mt-3 max-w-xs text-caption text-white/80">
+            <p className="mt-3 max-w-xs text-caption text-white">
               Every number on this site is verifiable.
             </p>
           </div>
 
           {/* Column 4 — Contact */}
           <div>
-            <h2 className="font-mono text-micro uppercase text-white/60">
+            <h2 className="font-mono text-micro uppercase text-white">
               Contact
             </h2>
             <ul className="mt-4 space-y-2">
               <li>
                 <a
                   href="mailto:hello@sbe.studio"
-                  className="font-mono text-body text-white/80 transition-colors hover:text-white"
+                  className="font-mono text-body text-white transition-colors hover:text-white"
                 >
                   hello@sbe.studio
                 </a>
               </li>
             </ul>
-            <p className="mt-3 text-caption text-white/80">
+            <p className="mt-3 text-caption text-white">
               Mon–Fri · Central Time
             </p>
           </div>
         </div>
 
-        <Rule className="mt-16 bg-white/30" />
+        <Rule className="mt-16 bg-white" />
 
         <div className="flex flex-col items-start justify-between gap-4 pt-8 sm:flex-row sm:items-center">
-          <p className="text-caption text-white/80">
+          <p className="text-caption text-white">
             © 2026 Space Bot Engineering Studio. Built in Oklahoma City.
           </p>
-          <p className="font-mono text-micro text-white/70">
+          <p className="font-mono text-micro text-white">
             theme: {mounted ? resolvedTheme ?? "light" : "light"}
           </p>
         </div>

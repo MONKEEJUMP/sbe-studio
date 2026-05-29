@@ -33,7 +33,7 @@ export function HeroAct3() {
   return (
     <section
       aria-labelledby="stack-heading"
-      className="border-y-2 border-sbe-ink bg-sbe-cream py-7"
+      className="border-y-2 border-sbe-ink bg-sbe-electric py-7"
     >
       <div className="mb-6 flex justify-center px-6">
         <Eyebrow className="rounded-full border-2 border-sbe-ink bg-sbe-surface px-4 py-2 text-sbe-cobalt">

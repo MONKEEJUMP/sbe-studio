@@ -47,7 +47,7 @@ export function StudioMechanism() {
           <LockKeyhole className="h-4 w-4 text-sbe-cobalt" aria-hidden="true" />
         </div>
 
-        <div className="studio-grid relative mt-3 overflow-hidden rounded-[6px] border-2 border-sbe-ink bg-sbe-cream p-4 sm:p-6">
+        <div className="studio-grid relative mt-3 overflow-hidden rounded-[6px] border-2 border-sbe-ink bg-sbe-surface p-4 sm:p-6">
           <div
             aria-hidden="true"
             className="absolute left-0 right-0 top-0 h-3 sbe-vivid-band"
@@ -64,7 +64,7 @@ export function StudioMechanism() {
                     Always be coding.
                   </h2>
                 </div>
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[8px] border-2 border-sbe-ink bg-sbe-cobalt text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[8px] border-2 border-sbe-ink bg-sbe-cobalt text-sbe-ink">
                   <Code2 className="h-6 w-6" aria-hidden="true" />
                 </div>
               </div>

@@ -35,7 +35,7 @@ const variants: Record<ButtonVariant, string> = {
   primary:
     "border-2 border-sbe-ink bg-sbe-ink text-sbe-canvas shadow-[0_6px_0_var(--sbe-copper)] hover:-translate-y-0.5 hover:shadow-[0_8px_0_var(--sbe-copper)] active:translate-y-0 active:shadow-[0_3px_0_var(--sbe-copper)] transition-all duration-200",
   secondary:
-    "bg-sbe-surface text-sbe-ink border-2 border-sbe-ink hover:bg-sbe-cobalt hover:text-white transition-colors duration-200",
+    "bg-sbe-surface text-sbe-ink border-2 border-sbe-ink hover:bg-sbe-cobalt hover:text-sbe-ink transition-colors duration-200",
   ghost:
     "bg-transparent text-sbe-ink hover:bg-sbe-hairline transition-colors duration-150",
   link: "bg-transparent text-sbe-ink underline decoration-sbe-copper decoration-2 underline-offset-4 hover:text-sbe-copper transition-colors duration-150",

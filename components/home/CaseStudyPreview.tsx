@@ -9,7 +9,7 @@ export function CaseStudyPreview() {
   return (
     <section
       aria-labelledby="work-heading"
-      className="border-t-2 border-sbe-ink bg-sbe-cream py-28"
+      className="border-t-2 border-sbe-ink bg-sbe-electric py-28"
     >
       <Container>
         <div className="mb-16 max-w-3xl">

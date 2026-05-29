@@ -7,7 +7,7 @@ export function ServiceTiers() {
   return (
     <section
       aria-labelledby="services-heading"
-      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-copper-soft py-28"
+      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-copper py-28"
     >
       <Container>
         <div className="mb-20 max-w-4xl">

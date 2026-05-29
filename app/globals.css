@@ -3,46 +3,40 @@
 @tailwind utilities;
 
 :root {
-  /* Paper and Pen — Light */
-  --sbe-canvas: #FFFDF8;
-  --sbe-ink: #0A0A0A;
-  --sbe-graphite: #34363B;
-  --sbe-mist: #8D929D;
-  --sbe-hairline: #DEDAD2;
+  /* SBE Neon System — Light */
+  --sbe-canvas: #FFFFFF;
+  --sbe-ink: #000000;
+  --sbe-graphite: #000000;
+  --sbe-mist: #000000;
+  --sbe-hairline: #000000;
   --sbe-surface: #FFFFFF;
 
-  /* United States flag palette — Light */
-  --sbe-copper: #B22234;
-  --sbe-cobalt: #3C3B6E;
-  --sbe-copper-soft: #F8D7DC;
-  --sbe-cobalt-soft: #E0E0EE;
-  --sbe-electric: #5147D9;
-  --sbe-plasma: #E62E73;
-  --sbe-cream: #FFF3D8;
+  /* User-specified palette */
+  --sbe-copper: #FF69B4;
+  --sbe-cobalt: #00AEFF;
+  --sbe-electric: #00F0FF;
+  --sbe-plasma: #FFB8DC;
 
   /* Status signals */
-  --sbe-live: #F59E0B;
-  --sbe-verified: #059669;
-  --sbe-alert: #DC2626;
+  --sbe-live: #FF69B4;
+  --sbe-verified: #00AEFF;
+  --sbe-alert: #FF69B4;
 
   color-scheme: light;
 }
 
 .dark {
-  --sbe-canvas: #0A0A0A;
-  --sbe-ink: #F5F5F4;
-  --sbe-graphite: #A3A3A3;
-  --sbe-mist: #737373;
-  --sbe-hairline: #262626;
-  --sbe-surface: #141414;
+  --sbe-canvas: #000000;
+  --sbe-ink: #FFFFFF;
+  --sbe-graphite: #FFFFFF;
+  --sbe-mist: #FFFFFF;
+  --sbe-hairline: #FFFFFF;
+  --sbe-surface: #000000;
 
-  --sbe-copper: #F06474;
-  --sbe-cobalt: #A8B0FF;
-  --sbe-copper-soft: #3A0B12;
-  --sbe-cobalt-soft: #17183B;
-  --sbe-electric: #9B95FF;
-  --sbe-plasma: #FF5D9E;
-  --sbe-cream: #221A0A;
+  --sbe-copper: #FF69B4;
+  --sbe-cobalt: #00AEFF;
+  --sbe-electric: #00F0FF;
+  --sbe-plasma: #FFB8DC;
 
   color-scheme: dark;
 }
@@ -152,11 +146,13 @@
   .sbe-vivid-band {
     background:
       linear-gradient(
-        115deg,
-        var(--sbe-cobalt) 0%,
-        var(--sbe-electric) 34%,
-        var(--sbe-plasma) 66%,
-        var(--sbe-copper) 100%
+        90deg,
+        var(--sbe-electric) 0%,
+        var(--sbe-electric) 33.333%,
+        var(--sbe-plasma) 33.333%,
+        var(--sbe-plasma) 66.666%,
+        var(--sbe-cobalt) 66.666%,
+        var(--sbe-cobalt) 100%
       );
   }
 
@@ -173,9 +169,7 @@
   }
 
   .sbe-soft-panel {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.82)),
-      var(--sbe-surface);
+    background: var(--sbe-surface);
   }
 
   @media (prefers-reduced-motion: reduce) {
