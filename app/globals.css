@@ -198,26 +198,31 @@
     0%,
     100% {
       background-color: var(--tile-color, var(--sbe-copper));
-      transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
 
     16% {
       background-color: var(--sbe-surface);
+      opacity: 0.72;
       transform: translateY(-1px) scale(1.05);
     }
 
     31% {
       background-color: var(--sbe-cobalt);
+      opacity: 1;
       transform: translateY(0) scale(0.96);
     }
 
     45% {
       background-color: var(--sbe-electric);
+      opacity: 1;
       transform: translateY(-2px) scale(1.08);
     }
 
     70% {
       background-color: var(--sbe-plasma);
+      opacity: 0.82;
       transform: translateY(0) scale(1);
     }
   }
@@ -279,6 +284,26 @@
     }
   }
 
+  @keyframes sbe-mouth-scan {
+    0% {
+      transform: translateX(-140%);
+      opacity: 0;
+    }
+
+    18% {
+      opacity: 1;
+    }
+
+    58% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(140%);
+      opacity: 0;
+    }
+  }
+
   @keyframes sbe-grid-pulse {
     0%,
     12%,
@@ -313,19 +338,36 @@
     48%,
     100% {
       background-color: var(--sbe-surface);
+      transform: translateY(0);
     }
 
     55%,
     68% {
       background-color: var(--sbe-plasma);
+      transform: translateY(-1px);
     }
 
     78% {
       background-color: var(--sbe-surface);
+      transform: translateY(0);
     }
 
     84% {
       background-color: var(--sbe-plasma);
+      transform: translateY(-1px);
+    }
+  }
+
+  @keyframes sbe-panel-pulse {
+    0%,
+    100% {
+      transform: translateY(0);
+      box-shadow: 8px 8px 0 var(--sbe-cobalt);
+    }
+
+    48% {
+      transform: translateY(-2px);
+      box-shadow: 8px 8px 0 var(--sbe-copper);
     }
   }
 
@@ -369,6 +411,7 @@
   .sbe-badge-float,
   .sbe-star-float {
     animation: sbe-star-float 3.4s ease-in-out infinite;
+    will-change: transform;
   }
 
   .sbe-star-float-delayed {
@@ -379,18 +422,12 @@
   .sbe-blink-tile {
     animation: sbe-blink-tile var(--tile-duration, 2.2s) steps(1, end) infinite;
     animation-delay: var(--tile-delay, 0s);
+    will-change: background-color, opacity, transform;
   }
 
-  .sbe-blink-tile:nth-child(2n) {
-    animation-delay: 0.25s;
-  }
-
-  .sbe-blink-tile:nth-child(3n) {
-    animation-delay: 0.55s;
-  }
-
-  .sbe-blink-tile:nth-child(5n) {
-    animation-delay: 0.85s;
+  .sbe-blink-panel {
+    animation: sbe-panel-pulse 2.4s ease-in-out infinite;
+    will-change: transform, box-shadow;
   }
 
   .sbe-robot-eye {
@@ -415,38 +452,48 @@
     animation: sbe-mouth-pixel var(--mouth-duration, 1.45s) steps(1, end) infinite;
     animation-delay: var(--mouth-delay, 0s);
     transform-origin: center;
+    will-change: background-color, transform;
   }
 
-  .sbe-mouth-pixel:nth-child(2n) {
-    animation-delay: 0.2s;
+  .sbe-mouth-screen {
+    overflow: hidden;
+    position: relative;
   }
 
-  .sbe-mouth-pixel:nth-child(3n) {
-    animation-delay: 0.4s;
-  }
-
-  .sbe-mouth-pixel:nth-child(5n) {
-    animation-delay: 0.6s;
+  .sbe-mouth-screen::after {
+    animation: sbe-mouth-scan 1.15s linear infinite;
+    background: var(--sbe-surface);
+    bottom: 6px;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 6px;
+    width: 32%;
+    will-change: transform, opacity;
   }
 
   .sbe-antenna-pulse {
     animation: sbe-antenna-pulse 2.6s ease-in-out infinite;
+    will-change: transform, box-shadow;
   }
 
   .sbe-grid-pulse {
     animation: sbe-grid-pulse var(--pulse-duration, 3s) steps(1, end) infinite;
     animation-delay: var(--pulse-delay, 0s);
+    will-change: background-color, opacity;
   }
 
   .sbe-letter-blink {
     animation: sbe-letter-blink 1.4s steps(1, end) infinite;
     animation-delay: var(--letter-delay, 0s);
+    will-change: background-color, transform;
   }
 
   .sbe-diagnostic-line {
     animation: sbe-diagnostic-line var(--line-duration, 1.8s) ease-in-out infinite;
     animation-delay: var(--line-delay, 0s);
     transform-origin: left center;
+    will-change: transform;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -459,12 +506,7 @@
       animation: none !important;
     }
 
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+    html {
       scroll-behavior: auto !important;
     }
   }
