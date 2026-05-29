@@ -175,7 +175,9 @@
   .sbe-brand-stamp {
     font-size: var(--stamp-size, clamp(8rem, 24vw, 22rem));
     opacity: var(--stamp-opacity, 0.16);
-    transform: rotate(var(--stamp-rotate, -7deg));
+    transform: translate(var(--stamp-shift-x, 0), var(--stamp-shift-y, 0))
+      rotate(var(--stamp-rotate, -7deg));
+    transform-origin: center;
     z-index: 0;
   }
 

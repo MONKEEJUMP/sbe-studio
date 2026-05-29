@@ -9,6 +9,7 @@ type BrandStampProps = {
   opacity?: number;
   rotate?: number;
   size?: string;
+  centered?: boolean;
   style?: CSSProperties;
   children?: string;
 };
@@ -26,6 +27,7 @@ export function BrandStamp({
   opacity = 0.16,
   rotate = -7,
   size = "clamp(8rem, 24vw, 22rem)",
+  centered = false,
   style,
   children = "sbe",
 }: BrandStampProps) {
@@ -42,6 +44,8 @@ export function BrandStamp({
           "--stamp-opacity": opacity,
           "--stamp-rotate": `${rotate}deg`,
           "--stamp-size": size,
+          "--stamp-shift-x": centered ? "-50%" : "0",
+          "--stamp-shift-y": centered ? "-50%" : "0",
           ...style,
         } as CSSProperties
       }
@@ -85,6 +89,12 @@ function between(
   return min + seeded(seed, index, salt) * (max - min);
 }
 
+function shuffledSlots(seed: number, total: number) {
+  return Array.from({ length: total }, (_, slot) => slot).sort((a, b) => {
+    return seeded(seed, a, 31) - seeded(seed, b, 31);
+  });
+}
+
 export function BrandStampField({
   seed,
   count = 10,
@@ -95,18 +105,40 @@ export function BrandStampField({
   minRem = 4,
   maxRem = 14,
 }: BrandStampFieldProps) {
+  const stampCount = Math.min(count, 2);
+  const columns = Math.min(4, Math.max(2, Math.ceil(Math.sqrt(stampCount * 1.4))));
+  const rows = Math.ceil(stampCount / columns);
+  const slots = shuffledSlots(seed, columns * rows);
+  const safeMinRem = Math.min(minRem, 2.6);
+  const safeMaxRem = Math.min(maxRem, 3.2);
+  const insetX = 25;
+  const insetY = 22;
+  const usableX = 100 - insetX * 2;
+  const usableY = 100 - insetY * 2;
+
   return (
     <div
       aria-hidden="true"
       className={cn("pointer-events-none absolute inset-0 z-0", className)}
     >
-      {Array.from({ length: count }, (_, index) => {
-        const left = between(seed, index, 1, -24, 126);
-        const top = between(seed, index, 2, -14, 102);
-        const rotate = between(seed, index, 3, -42, 42);
-        const rem = between(seed, index, 4, minRem, maxRem);
-        const vw = between(seed, index, 5, rem * 0.72, rem * 1.65);
-        const max = between(seed, index, 6, rem * 1.18, rem * 1.72);
+      {Array.from({ length: stampCount }, (_, index) => {
+        const slot = slots[index];
+        const column = slot % columns;
+        const row = Math.floor(slot / columns);
+        const cellW = usableX / columns;
+        const cellH = usableY / rows;
+        const left =
+          insetX +
+          (column + 0.5) * cellW +
+          between(seed, index, 1, -cellW * 0.12, cellW * 0.12);
+        const top =
+          insetY +
+          (row + 0.5) * cellH +
+          between(seed, index, 2, -cellH * 0.1, cellH * 0.1);
+        const rotate = between(seed, index, 3, -34, 34);
+        const rem = between(seed, index, 4, safeMinRem, safeMaxRem);
+        const vw = between(seed, index, 5, rem * 0.58, rem * 1.02);
+        const max = between(seed, index, 6, rem * 1.02, rem * 1.24);
         const opacity = between(seed, index, 7, minOpacity, maxOpacity);
         const toneIndex = Math.floor(
           between(seed, index, 8, 0, tones.length - 0.001)
@@ -116,6 +148,7 @@ export function BrandStampField({
           <BrandStamp
             key={`${seed}-${index}`}
             tone={tones[toneIndex]}
+            centered
             opacity={Number(opacity.toFixed(3))}
             rotate={Number(rotate.toFixed(2))}
             size={`clamp(${rem.toFixed(2)}rem, ${vw.toFixed(2)}vw, ${max.toFixed(2)}rem)`}

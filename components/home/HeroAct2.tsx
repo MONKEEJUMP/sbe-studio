@@ -24,13 +24,6 @@ export function HeroAct2() {
         rotate={6}
         size="clamp(10rem, 26vw, 21rem)"
       />
-      <BrandStamp
-        tone="electric"
-        className="-left-10 bottom-3 hidden lg:block"
-        opacity={0.16}
-        rotate={-10}
-        size="clamp(5rem, 10vw, 8rem)"
-      />
       <BrandStampField
         seed={202}
         count={26}
