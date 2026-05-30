@@ -42,11 +42,11 @@ export function HeroAct1() {
           <p className="max-w-[34rem] bg-sbe-surface/95 px-4 py-1.5 text-center font-serif text-[clamp(1.24rem,1.89vw,2.02rem)] leading-none text-sbe-cobalt">
             &lt; the same{" "}
             <span className="text-sbe-copper">ai</span>{" "}
-            we build for you
+            we built for you
             <br />
-            is the same{" "}
+            / is the same{" "}
             <span className="text-sbe-copper">ai</span>{" "}
-            we build for us &gt;
+            we built for us &gt;
           </p>
         </div>
         <div className="grid min-h-[720px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(420px,1fr)] lg:items-center">
@@ -127,11 +127,11 @@ export function HeroAct1() {
           >
             &lt; the same{" "}
             <span className="text-sbe-copper">ai</span>{" "}
-            we build for you
+            we built for you
             <br />
-            {"\u00a0\u00a0"}is the same{" "}
+            / is the same{" "}
             <span className="text-sbe-copper">ai</span>{" "}
-            we build for us &gt;
+            we built for us &gt;
           </h1>
         </div>
       </Container>
