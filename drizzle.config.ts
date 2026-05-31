@@ -6,11 +6,18 @@ import { config } from 'dotenv';
 // Next.js runtime (which reads .env.local automatically) and the Drizzle CLI.
 config({ path: '.env.local' });
 
+// Supabase requires SSL, but the stored DATABASE_URL omits it; ensure the CLI
+// connects with sslmode=require without mutating the credential itself.
+const url = process.env.DATABASE_URL ?? '';
+const dbUrl = /sslmode=/.test(url)
+  ? url
+  : `${url}${url.includes('?') ? '&' : '?'}sslmode=require`;
+
 export default defineConfig({
   schema: './lib/db/schema.ts',
   out: './drizzle',
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.DATABASE_URL!,
+    url: dbUrl,
   },
 });
