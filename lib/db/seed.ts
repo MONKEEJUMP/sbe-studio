@@ -25,7 +25,7 @@ const META: Record<string, { label: string; source: string; unit?: string }> = {
   vaultFilesIndexed: { label: 'Knowledge Base Files Indexed', source: 'vault-index.sqlite', unit: 'files' },
   vaultChunks: { label: 'Vault Chunks', source: 'vault-index.sqlite', unit: 'chunks' },
   vaultWords: { label: 'Vault Words', source: 'vault-index.sqlite', unit: 'words' },
-  vaultTokens: { label: 'Indexed Tokens', source: 'vault-index.sqlite', unit: 'tokens' },
+  vaultTokens: { label: 'Indexed Tokens', source: 'AI_PROJECT_MANIFEST.md', unit: 'tokens' },
   vaultContentMB: { label: 'Vault Content Size', source: 'vault-index.sqlite', unit: 'MB' },
   vaultIndexSizeMB: { label: 'Vault Index Size', source: 'vault-index.sqlite', unit: 'MB' },
   architectureDocs: { label: 'Architecture Documents', source: 'vault-search.js stats', unit: 'docs' },
@@ -132,6 +132,16 @@ const META: Record<string, { label: string; source: string; unit?: string }> = {
 
 const DEFAULT_SOURCE = 'AI_PROJECT_MANIFEST.md';
 
+/**
+ * Verified corrections applied over the raw manifest value. The manifest claims 26
+ * public Vercel deployments, but the enumerable inventory (lib/vercel-portfolio.ts)
+ * lists exactly 25 and the work page renders 25, so 25 is the verifiable truth and
+ * the metric table (the source of truth) stores 25.
+ */
+const VALUE_OVERRIDES: Record<string, number | string> = {
+  publicVercelDeployments: 25,
+};
+
 /** Fallback humaniser for any field missing an explicit label. */
 function deriveLabel(key: string): string {
   return key
@@ -150,12 +160,13 @@ async function main(): Promise<void> {
 
   const rows: NewMetric[] = Object.entries(MANIFEST_DATA).map(([key, value]) => {
     const meta = META[key];
-    const isNumber = typeof value === 'number';
+    const resolved = key in VALUE_OVERRIDES ? VALUE_OVERRIDES[key] : value;
+    const isNumber = typeof resolved === 'number';
     return {
       key,
       label: meta?.label ?? deriveLabel(key),
-      valueText: isNumber ? null : String(value),
-      valueNum: isNumber ? (value as number) : null,
+      valueText: isNumber ? null : String(resolved),
+      valueNum: isNumber ? (resolved as number) : null,
       unit: meta?.unit ?? null,
       source: meta?.source ?? DEFAULT_SOURCE,
       measuredAt,

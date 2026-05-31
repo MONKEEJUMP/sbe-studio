@@ -6,7 +6,7 @@ import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { DeploymentStrip } from "@/components/work/DeploymentStrip";
-import { MANIFEST_DATA } from "@/lib/manifest-data";
+import { getManifest } from "@/lib/loaders/manifest";
 import { formatDate, formatNumber } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -15,7 +15,9 @@ export const metadata: Metadata = {
     "The origin story of Space Bot Engineering Studio — 130 days, 20 flagship projects, one knowledge base.",
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const manifest = await getManifest();
+
   return (
     <>
       <Nav />
@@ -93,9 +95,9 @@ export default function AboutPage() {
               </div>
               <div className="space-y-8 lg:col-span-8">
                 <p className="max-w-[68ch] text-body-lg text-sbe-ink">
-                  The current manifest tracks {formatNumber(MANIFEST_DATA.aiSignalFiles)} AI-signal
-                  files, {formatNumber(MANIFEST_DATA.projectRoots)} project
-                  roots, and {MANIFEST_DATA.flagshipProjects} flagship
+                  The current manifest tracks {formatNumber(manifest.aiSignalFiles)} AI-signal
+                  files, {formatNumber(manifest.projectRoots)} project
+                  roots, and {manifest.flagshipProjects} flagship
                   projects. The point is not volume for its own sake. The point
                   is a working memory of what was built, what failed, and what
                   can be reused.
@@ -111,7 +113,7 @@ export default function AboutPage() {
                       Active span
                     </p>
                     <p className="mt-2 font-mono text-body text-sbe-ink">
-                      {MANIFEST_DATA.activeDays} days
+                      {manifest.activeDays} days
                     </p>
                   </div>
                   <div>
@@ -119,7 +121,7 @@ export default function AboutPage() {
                       Origin date
                     </p>
                     <p className="mt-2 font-mono text-body text-sbe-ink">
-                      {formatDate(MANIFEST_DATA.originDate)}
+                      {formatDate(manifest.originDate)}
                     </p>
                   </div>
                   <div>
@@ -127,7 +129,7 @@ export default function AboutPage() {
                       Location
                     </p>
                     <p className="mt-2 font-mono text-body text-sbe-ink">
-                      {MANIFEST_DATA.location}
+                      {manifest.location}
                     </p>
                   </div>
                 </div>

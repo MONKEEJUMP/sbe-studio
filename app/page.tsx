@@ -8,19 +8,22 @@ import { ServiceTiers } from "@/components/home/ServiceTiers";
 import { CaseStudyPreview } from "@/components/home/CaseStudyPreview";
 import { FounderTeaser } from "@/components/home/FounderTeaser";
 import { VercelShowcase } from "@/components/home/VercelShowcase";
+import { getManifest } from "@/lib/loaders/manifest";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const manifest = await getManifest();
+
   return (
     <>
       <Nav />
       <main id="main" className="pt-16">
         <HeroAct1 />
-        <HeroAct2 />
+        <HeroAct2 manifest={manifest} />
         <HeroAct3 />
         <VercelShowcase />
-        <CredibilityGrid />
+        <CredibilityGrid manifest={manifest} />
         <ServiceTiers />
-        <CaseStudyPreview />
+        <CaseStudyPreview manifest={manifest} />
         <FounderTeaser />
       </main>
       <Footer />

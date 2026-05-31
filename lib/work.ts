@@ -1,4 +1,4 @@
-import { MANIFEST_DATA } from "./manifest-data";
+import type { ManifestData } from "./manifest-data";
 import { formatNumber } from "./utils";
 
 export type WorkMetric = {
@@ -17,7 +17,8 @@ export type WorkProject = {
   metrics: WorkMetric[];
 };
 
-export const WORK_PROJECTS: WorkProject[] = [
+export function getWorkProjects(manifest: ManifestData): WorkProject[] {
+  return [
   {
     slug: "lucy-fusion-search",
     title: "LUCY v3.2 Fusion Search",
@@ -30,15 +31,15 @@ export const WORK_PROJECTS: WorkProject[] = [
     metrics: [
       {
         label: "Accuracy",
-        value: MANIFEST_DATA.benchmarkAccuracy,
+        value: manifest.benchmarkAccuracy,
       },
       {
         label: "Lead over Grok",
-        value: `${MANIFEST_DATA.grokBeatBySeconds}s`,
+        value: `${manifest.grokBeatBySeconds}s`,
       },
       {
         label: "Response time",
-        value: MANIFEST_DATA.lucyV32ResponseTime,
+        value: manifest.lucyV32ResponseTime,
       },
     ],
   },
@@ -54,11 +55,11 @@ export const WORK_PROJECTS: WorkProject[] = [
     metrics: [
       {
         label: "Production visits",
-        value: formatNumber(MANIFEST_DATA.spacebotVisits),
+        value: formatNumber(manifest.spacebotVisits),
       },
       {
         label: "Production domains",
-        value: String(MANIFEST_DATA.productionDomains),
+        value: String(manifest.productionDomains),
       },
       {
         label: "Agents",
@@ -78,15 +79,15 @@ export const WORK_PROJECTS: WorkProject[] = [
     metrics: [
       {
         label: "Files indexed",
-        value: formatNumber(MANIFEST_DATA.vaultFilesIndexed),
+        value: formatNumber(manifest.vaultFilesIndexed),
       },
       {
         label: "Indexed tokens",
-        value: `${MANIFEST_DATA.vaultTokens / 1_000_000}M`,
+        value: `${manifest.vaultTokens / 1_000_000}M`,
       },
       {
         label: "Index size",
-        value: `${MANIFEST_DATA.vaultIndexSizeMB.toFixed(1)} MB`,
+        value: `${manifest.vaultIndexSizeMB.toFixed(1)} MB`,
       },
     ],
   },
@@ -102,15 +103,15 @@ export const WORK_PROJECTS: WorkProject[] = [
     metrics: [
       {
         label: "Bot personalities",
-        value: String(MANIFEST_DATA.botPersonalities),
+        value: String(manifest.botPersonalities),
       },
       {
         label: "Heartbeat iterations",
-        value: String(MANIFEST_DATA.heartbeatIterations),
+        value: String(manifest.heartbeatIterations),
       },
       {
         label: "Architecture docs",
-        value: `${MANIFEST_DATA.botspaceArchitectureDocs}+`,
+        value: `${manifest.botspaceArchitectureDocs}+`,
       },
     ],
   },
@@ -126,15 +127,15 @@ export const WORK_PROJECTS: WorkProject[] = [
     metrics: [
       {
         label: "Messaging platforms",
-        value: `${MANIFEST_DATA.messagingPlatforms}+`,
+        value: `${manifest.messagingPlatforms}+`,
       },
       {
         label: "Agent implementations",
-        value: formatNumber(MANIFEST_DATA.codespaceAgents),
+        value: formatNumber(manifest.codespaceAgents),
       },
       {
         label: "SDK files",
-        value: formatNumber(MANIFEST_DATA.codespacePluginSdkFiles),
+        value: formatNumber(manifest.codespacePluginSdkFiles),
       },
     ],
   },
@@ -150,11 +151,11 @@ export const WORK_PROJECTS: WorkProject[] = [
     metrics: [
       {
         label: "Paper",
-        value: MANIFEST_DATA.arxivPaperTSTR,
+        value: manifest.arxivPaperTSTR,
       },
       {
         label: "Runtime",
-        value: MANIFEST_DATA.tstrLanguage,
+        value: manifest.tstrLanguage,
       },
       {
         label: "Method",
@@ -162,4 +163,5 @@ export const WORK_PROJECTS: WorkProject[] = [
       },
     ],
   },
-];
+  ];
+}

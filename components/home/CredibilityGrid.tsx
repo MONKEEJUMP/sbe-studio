@@ -1,9 +1,11 @@
 import { Container } from "@/components/layout/Container";
 import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { CREDIBILITY_HOOKS } from "@/lib/credibility";
+import { getCredibilityHooks } from "@/lib/credibility";
+import type { ManifestData } from "@/lib/manifest-data";
 
-export function CredibilityGrid() {
+export function CredibilityGrid({ manifest }: { manifest: ManifestData }) {
+  const hooks = getCredibilityHooks(manifest);
   return (
     <section
       aria-labelledby="credibility-heading"
@@ -63,7 +65,7 @@ export function CredibilityGrid() {
         <ul
           className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
-          {CREDIBILITY_HOOKS.map((hook) => {
+          {hooks.map((hook) => {
             const n = hook.id.toString().padStart(2, "0");
             return (
               <li

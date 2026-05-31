@@ -2,11 +2,11 @@ import { Container } from "@/components/layout/Container";
 import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LiveStats } from "@/components/home/LiveStats";
-import { MANIFEST_DATA } from "@/lib/manifest-data";
+import type { ManifestData } from "@/lib/manifest-data";
 import { formatDate } from "@/lib/utils";
 
-export function HeroAct2() {
-  const lastUpdated = formatDate(MANIFEST_DATA.manifestGenerated);
+export function HeroAct2({ manifest }: { manifest: ManifestData }) {
+  const lastUpdated = formatDate(manifest.manifestGenerated);
 
   return (
     <section
@@ -47,7 +47,7 @@ export function HeroAct2() {
         <h2 id="proof-heading" className="sr-only">
           Verifiable proof of work
         </h2>
-        <LiveStats />
+        <LiveStats manifest={manifest} />
       </Container>
     </section>
   );

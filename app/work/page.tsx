@@ -6,7 +6,8 @@ import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { ProjectBrowser } from "@/components/work/ProjectBrowser";
-import { WORK_PROJECTS } from "@/lib/work";
+import { getWorkProjects } from "@/lib/work";
+import { getManifest } from "@/lib/loaders/manifest";
 import {
   FEATURED_VERCEL_PROJECTS,
   PORTFOLIO_STATS,
@@ -20,7 +21,9 @@ export const metadata: Metadata = {
     "Live websites, Vercel deployments, and selected engineering case studies from Space Bot Engineering Studio.",
 };
 
-export default function WorkPage() {
+export default async function WorkPage() {
+  const manifest = await getManifest();
+  const workProjects = getWorkProjects(manifest);
   const leadProject = FEATURED_VERCEL_PROJECTS[0];
   const supportingProjects = FEATURED_VERCEL_PROJECTS.slice(1);
 
@@ -320,7 +323,7 @@ export default function WorkPage() {
             </div>
 
             <div className="divide-y divide-sbe-hairline">
-              {WORK_PROJECTS.map((project, index) => (
+              {workProjects.map((project, index) => (
                 <article
                   key={project.slug}
                   id={project.slug}

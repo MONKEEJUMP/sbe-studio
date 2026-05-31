@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
-import { MANIFEST_DATA } from "@/lib/manifest-data";
+import { getManifest } from "@/lib/loaders/manifest";
 
-export const dynamic = "force-static";
+export const revalidate = 3600;
 
 export async function GET() {
-  return NextResponse.json(MANIFEST_DATA, {
+  const manifest = await getManifest();
+
+  return NextResponse.json(manifest, {
     headers: {
       "Cache-Control": "s-maxage=3600, stale-while-revalidate=86400",
       "Content-Type": "application/json",

@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { WORK_PROJECTS } from "@/lib/work";
+import { getWorkProjects } from "@/lib/work";
+import type { ManifestData } from "@/lib/manifest-data";
 
-const PREVIEW_PROJECTS = WORK_PROJECTS.slice(0, 3);
-
-export function CaseStudyPreview() {
+export function CaseStudyPreview({ manifest }: { manifest: ManifestData }) {
+  const previewProjects = getWorkProjects(manifest).slice(0, 3);
   return (
     <section
       aria-labelledby="work-heading"
@@ -56,7 +56,7 @@ export function CaseStudyPreview() {
         <ul
           className="flex flex-col"
         >
-          {PREVIEW_PROJECTS.map((project) => (
+          {previewProjects.map((project) => (
             <li
               key={project.slug}
               className="group mb-5 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-6 transition-transform duration-200 hover:-translate-y-1"
