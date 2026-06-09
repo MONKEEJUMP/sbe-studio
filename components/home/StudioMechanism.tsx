@@ -1,153 +1,34 @@
 import type { CSSProperties } from "react";
-import { Code2, Cpu, LockKeyhole, Sparkles, Workflow } from "lucide-react";
+import {
+  Activity,
+  Code2,
+  Cpu,
+  LockKeyhole,
+  Sparkles,
+  Workflow,
+} from "lucide-react";
 
 const paletteVars = [
   "var(--sbe-electric)",
   "var(--sbe-cobalt)",
   "var(--sbe-copper)",
   "var(--sbe-plasma)",
-  "var(--sbe-surface)",
 ];
 
-const blinkBlocks = Array.from({ length: 12 }, (_, index) => ({
+const signalCells = Array.from({ length: 24 }, (_, index) => ({
   id: index,
-  color: paletteVars[(index * 5 + 2) % paletteVars.length],
-  delay: `${(index * 0.17).toFixed(2)}s`,
-  duration: `${(0.95 + (index % 5) * 0.16).toFixed(2)}s`,
+  color: paletteVars[(index * 3 + Math.floor(index / 4)) % paletteVars.length],
+  delay: `${(index * 0.11).toFixed(2)}s`,
+  duration: `${(2.4 + (index % 4) * 0.18).toFixed(2)}s`,
 }));
 
-const gridPulseCells = Array.from({ length: 120 }, (_, index) => ({
-  id: index,
-  color: paletteVars[(index * 7 + Math.floor(index / 3)) % paletteVars.length],
-  delay: `${((index * 0.19) % 4.2).toFixed(2)}s`,
-  duration: `${(1.85 + ((index * 0.11) % 2.1)).toFixed(2)}s`,
-}));
-
-const mouthPixels = Array.from({ length: 18 }, (_, index) => {
-  const row = Math.floor(index / 6);
-  const column = index % 6;
-
-  return {
+const waveBars = [42, 72, 56, 88, 64, 46, 78, 52, 68, 44].map(
+  (height, index) => ({
     id: index,
-    delay: `${(column * 0.08 + row * 0.22).toFixed(2)}s`,
-    duration: `${(0.9 + row * 0.14 + (column % 2) * 0.07).toFixed(2)}s`,
-  };
-});
-
-const bounceBalls = [
-  {
-    id: 0,
-    size: "0.92rem",
-    delay: "-0.2s",
-    duration: "12.4s",
-    x: ["8%", "28%", "47%", "18%", "10%", "8%"],
-    y: ["18%", "22%", "28%", "16%", "42%", "18%"],
-  },
-  {
-    id: 1,
-    size: "0.82rem",
-    delay: "-0.2s",
-    duration: "12.4s",
-    x: ["90%", "68%", "51%", "82%", "92%", "90%"],
-    y: ["32%", "30%", "28%", "18%", "48%", "32%"],
-  },
-  {
-    id: 2,
-    size: "0.88rem",
-    delay: "-3.4s",
-    duration: "14s",
-    x: ["14%", "32%", "48%", "10%", "28%", "14%"],
-    y: ["82%", "72%", "59%", "62%", "90%", "82%"],
-  },
-  {
-    id: 3,
-    size: "0.78rem",
-    delay: "-3.4s",
-    duration: "14s",
-    x: ["88%", "70%", "52%", "92%", "78%", "88%"],
-    y: ["42%", "50%", "59%", "74%", "22%", "42%"],
-  },
-  {
-    id: 4,
-    size: "0.96rem",
-    delay: "-6.1s",
-    duration: "13.2s",
-    x: ["20%", "34%", "46%", "12%", "22%", "20%"],
-    y: ["44%", "48%", "51%", "26%", "76%", "44%"],
-  },
-  {
-    id: 5,
-    size: "0.84rem",
-    delay: "-6.1s",
-    duration: "13.2s",
-    x: ["74%", "62%", "51%", "88%", "76%", "74%"],
-    y: ["74%", "62%", "52%", "86%", "34%", "74%"],
-  },
-  {
-    id: 6,
-    size: "0.72rem",
-    delay: "-8.8s",
-    duration: "11.4s",
-    x: ["7%", "26%", "47%", "18%", "6%", "7%"],
-    y: ["66%", "67%", "68%", "88%", "48%", "66%"],
-  },
-  {
-    id: 7,
-    size: "0.9rem",
-    delay: "-8.8s",
-    duration: "11.4s",
-    x: ["92%", "70%", "51%", "86%", "94%", "92%"],
-    y: ["72%", "70%", "68%", "52%", "88%", "72%"],
-  },
-  {
-    id: 8,
-    size: "0.78rem",
-    delay: "-1.5s",
-    duration: "12.8s",
-    x: ["6%", "24%", "46%", "14%", "8%", "6%"],
-    y: ["8%", "12%", "18%", "32%", "58%", "8%"],
-  },
-  {
-    id: 9,
-    size: "0.86rem",
-    delay: "-1.5s",
-    duration: "12.8s",
-    x: ["94%", "72%", "51%", "86%", "92%", "94%"],
-    y: ["24%", "20%", "18%", "8%", "44%", "24%"],
-  },
-  {
-    id: 10,
-    size: "0.76rem",
-    delay: "-4.8s",
-    duration: "15s",
-    x: ["10%", "30%", "47%", "16%", "34%", "10%"],
-    y: ["52%", "48%", "43%", "78%", "90%", "52%"],
-  },
-  {
-    id: 11,
-    size: "0.92rem",
-    delay: "-4.8s",
-    duration: "15s",
-    x: ["90%", "68%", "52%", "84%", "66%", "90%"],
-    y: ["62%", "54%", "43%", "82%", "26%", "62%"],
-  },
-  {
-    id: 12,
-    size: "0.7rem",
-    delay: "-7.2s",
-    duration: "13.8s",
-    x: ["18%", "36%", "48%", "8%", "30%", "18%"],
-    y: ["28%", "36%", "48%", "54%", "12%", "28%"],
-  },
-  {
-    id: 13,
-    size: "0.82rem",
-    delay: "-7.2s",
-    duration: "13.8s",
-    x: ["82%", "66%", "52%", "92%", "70%", "82%"],
-    y: ["88%", "68%", "48%", "36%", "82%", "88%"],
-  },
-];
+    height,
+    delay: `${(index * 0.08).toFixed(2)}s`,
+  }),
+);
 
 const footerModes = [
   { label: "Prompt", icon: Sparkles },
@@ -156,45 +37,21 @@ const footerModes = [
   { label: "Prove", icon: LockKeyhole },
 ];
 
-function BotBadge({ className = "" }: { className?: string }) {
+function SignalMatrix() {
   return (
     <div
       aria-hidden="true"
-      className={`sbe-badge-float relative flex h-16 w-20 items-center justify-center ${className}`}
+      className="grid grid-cols-8 gap-2 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-3 shadow-[6px_6px_0_var(--sbe-plasma)]"
     >
-      <span className="absolute h-12 w-16 rounded-[50%] border-2 border-sbe-ink bg-sbe-surface shadow-[inset_0_0_0_7px_var(--sbe-plasma)]" />
-      <span className="relative -rotate-6 font-mono text-sm font-bold tracking-normal text-sbe-ink">
-        \@\@
-      </span>
-    </div>
-  );
-}
-
-function BouncingBalls() {
-  return (
-    <div
-      aria-hidden="true"
-      className="sbe-bounce-layer pointer-events-none absolute inset-0 z-[1] overflow-hidden"
-    >
-      {bounceBalls.map((ball) => (
+      {signalCells.map((cell) => (
         <span
-          key={ball.id}
-          className="sbe-bounce-ball"
+          key={cell.id}
+          className="sbe-probot-signal h-3 w-3 rounded-[3px] border border-sbe-ink"
           style={
             {
-              "--ball-size": ball.size,
-              "--ball-delay": ball.delay,
-              "--ball-duration": ball.duration,
-              "--ball-x0": ball.x[0],
-              "--ball-x1": ball.x[1],
-              "--ball-x2": ball.x[2],
-              "--ball-x3": ball.x[3],
-              "--ball-x4": ball.x[4],
-              "--ball-y0": ball.y[0],
-              "--ball-y1": ball.y[1],
-              "--ball-y2": ball.y[2],
-              "--ball-y3": ball.y[3],
-              "--ball-y4": ball.y[4],
+              "--signal-color": cell.color,
+              "--signal-delay": cell.delay,
+              "--signal-duration": cell.duration,
             } as CSSProperties
           }
         />
@@ -203,163 +60,93 @@ function BouncingBalls() {
   );
 }
 
-function BlinkPanel({ className = "" }: { className?: string }) {
+function RobotCore() {
   return (
-    <div
-      aria-hidden="true"
-      className={`sbe-blink-panel rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-3 shadow-[8px_8px_0_var(--sbe-cobalt)] ${className}`}
-    >
-      <div className="grid grid-cols-6 gap-2">
-        {blinkBlocks.map((block) => (
-          <span
-            key={block.id}
-            className="sbe-blink-tile h-4 w-4 rounded-[4px] border border-sbe-ink bg-sbe-copper"
-            style={
-              {
-                "--tile-color": block.color,
-                "--tile-delay": block.delay,
-                "--tile-duration": block.duration,
-              } as CSSProperties
-            }
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function DiagnosticCard({ className = "" }: { className?: string }) {
-  return (
-    <div
-      aria-hidden="true"
-      className={`sbe-diagnostic-card rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-4 shadow-[8px_8px_0_var(--sbe-plasma)] ${className}`}
-    >
-      <div
-        className="sbe-diagnostic-line mb-3 h-3 w-24 bg-sbe-ink"
-        style={
-          {
-            "--line-delay": "0s",
-            "--line-duration": "1.9s",
-          } as CSSProperties
-        }
-      />
-      <div
-        className="sbe-diagnostic-line mb-2 h-3 w-16 bg-sbe-copper"
-        style={
-          {
-            "--line-delay": "0.31s",
-            "--line-duration": "1.55s",
-          } as CSSProperties
-        }
-      />
-      <div
-        className="sbe-diagnostic-line h-3 w-28 bg-sbe-cobalt"
-        style={
-          {
-            "--line-delay": "0.18s",
-            "--line-duration": "2.15s",
-          } as CSSProperties
-        }
-      />
-    </div>
-  );
-}
-
-function RobotCore({ className = "" }: { className?: string }) {
-  return (
-    <div
-      className={`sbe-robot-core relative aspect-square rounded-[14px] border-2 border-sbe-ink bg-sbe-ink p-5 shadow-[12px_12px_0_var(--sbe-cobalt)] sm:p-6 ${className}`}
-    >
+    <div className="sbe-probot-idle relative mx-auto w-full max-w-[24rem]">
       <div
         aria-hidden="true"
-        className="absolute inset-4 rounded-[10px] border border-sbe-electric"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-8 rounded-[10px] border border-sbe-copper"
+        className="absolute inset-x-8 -bottom-6 h-12 border-2 border-sbe-ink bg-sbe-cobalt"
       />
 
-      <div className="sbe-robot-idle relative flex h-full items-center justify-center">
+      <div className="relative border-2 border-sbe-ink bg-sbe-ink p-4 shadow-[12px_12px_0_var(--sbe-cobalt)] sm:p-5">
         <div
           aria-hidden="true"
-          className="absolute -top-2 left-1/2 h-12 w-2 -translate-x-1/2 rounded-full border-2 border-sbe-ink bg-sbe-surface"
+          className="absolute inset-4 border border-sbe-electric"
         />
         <div
           aria-hidden="true"
-          className="sbe-antenna-pulse absolute -top-10 left-1/2 h-10 w-10 -translate-x-1/2 rounded-full border-2 border-sbe-ink bg-sbe-copper"
-        />
-
-        <div
-          aria-hidden="true"
-          className="absolute left-[13%] top-1/2 h-20 w-9 -translate-y-1/2 rounded-[10px] border-2 border-sbe-ink bg-sbe-copper"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute right-[13%] top-1/2 h-20 w-9 -translate-y-1/2 rounded-[10px] border-2 border-sbe-ink bg-sbe-cobalt"
+          className="absolute inset-8 border border-sbe-copper"
         />
 
-        <div className="relative w-[70%] rounded-[22px] border-2 border-sbe-ink bg-sbe-electric p-3 shadow-[8px_8px_0_var(--sbe-copper)] sm:p-4">
-          <div className="rounded-[16px] border-2 border-sbe-ink bg-sbe-surface px-3 py-4 sm:px-4 sm:py-5">
-            <div className="flex items-center justify-between gap-2 sm:gap-3">
-              <div className="sbe-robot-eye flex h-12 flex-1 items-center justify-center rounded-[10px] border-2 border-sbe-ink bg-sbe-plasma sm:h-14">
-                <span className="h-4 w-4 rounded-full bg-sbe-ink sm:h-5 sm:w-5" />
+        <div className="relative z-10 bg-sbe-surface p-4 sm:p-5">
+          <div className="mb-4 flex items-center justify-between border-b-2 border-sbe-ink pb-3">
+            <span className="font-mono text-micro uppercase text-sbe-ink">
+              SBE / AI CORE
+            </span>
+            <span className="flex items-center gap-2 font-mono text-micro uppercase text-sbe-copper">
+              <span className="h-2.5 w-2.5 rounded-full bg-sbe-copper" />
+              Live
+            </span>
+          </div>
+
+          <div className="relative overflow-hidden border-2 border-sbe-ink bg-sbe-electric p-4 shadow-[8px_8px_0_var(--sbe-copper)]">
+            <div
+              aria-hidden="true"
+              className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-sbe-ink"
+            />
+            <div className="grid grid-cols-2 gap-4">
+              <div className="sbe-probot-eye h-16 border-2 border-sbe-ink bg-sbe-surface p-2">
+                <span className="block h-full bg-sbe-ink" />
               </div>
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] border-2 border-sbe-ink bg-sbe-cobalt sm:h-14 sm:w-14">
-                <Code2 className="h-6 w-6 text-sbe-ink sm:h-7 sm:w-7" strokeWidth={2.2} />
-              </div>
-              <div className="sbe-robot-eye flex h-12 flex-1 items-center justify-center rounded-[10px] border-2 border-sbe-ink bg-sbe-plasma sm:h-14">
-                <span className="h-4 w-4 rounded-full bg-sbe-ink sm:h-5 sm:w-5" />
+              <div className="sbe-probot-eye h-16 border-2 border-sbe-ink bg-sbe-surface p-2">
+                <span className="block h-full bg-sbe-ink" />
               </div>
             </div>
 
-            <div className="mt-4 flex items-center justify-center gap-4 sm:mt-5">
-              <svg
-                aria-hidden="true"
-                className="sbe-nose-triangle h-7 w-7 text-sbe-copper"
-                viewBox="0 0 28 28"
-              >
-                <polygon
-                  points="14 4 25 24 3 24"
-                  fill="currentColor"
-                  stroke="var(--sbe-ink)"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
+            <div className="mt-4 flex items-center justify-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center border-2 border-sbe-ink bg-sbe-cobalt">
+                <Code2
+                  className="h-7 w-7 text-sbe-ink"
+                  strokeWidth={2.2}
+                  aria-hidden="true"
                 />
-              </svg>
-              <span className="h-7 w-7 rounded-full border-2 border-sbe-ink bg-sbe-electric" />
-            </div>
-
-            <div className="sbe-mouth-screen mt-4 rounded-[10px] border-2 border-sbe-ink bg-sbe-ink p-2 sm:mt-5">
-              <div className="grid grid-cols-6 gap-1">
-                {mouthPixels.map((pixel) => (
-                  <span
-                    key={pixel.id}
-                    className="sbe-mouth-pixel h-2 rounded-full bg-sbe-electric"
-                    style={
-                      {
-                        "--mouth-delay": pixel.delay,
-                        "--mouth-duration": pixel.duration,
-                      } as CSSProperties
-                    }
-                  />
-                ))}
+              </div>
+              <div className="h-14 min-w-0 flex-1 border-2 border-sbe-ink bg-sbe-surface px-3 py-2">
+                <div className="flex h-full items-end justify-between gap-1.5">
+                  {waveBars.map((bar) => (
+                    <span
+                      key={bar.id}
+                      className="sbe-probot-wave w-full bg-sbe-ink"
+                      style={
+                        {
+                          "--wave-height": `${bar.height}%`,
+                          "--wave-delay": bar.delay,
+                        } as CSSProperties
+                      }
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-3 grid grid-cols-3 gap-2 sm:mt-4">
-            {["S", "B", "E"].map((label, index) => (
-              <span
-                key={label}
-                className="sbe-letter-blink rounded-[6px] border-2 border-sbe-ink bg-sbe-surface py-2 text-center font-mono text-micro font-bold text-sbe-ink"
-                style={
-                  {
-                    "--letter-delay": `${(index * 0.18).toFixed(2)}s`,
-                  } as CSSProperties
-                }
+          <div className="mt-4 grid grid-cols-3 gap-3">
+            {[
+              ["S", "System"],
+              ["B", "Build"],
+              ["E", "Proof"],
+            ].map(([letter, label]) => (
+              <div
+                key={letter}
+                className="border-2 border-sbe-ink bg-sbe-surface p-2 text-center"
               >
-                {label}
-              </span>
+                <span className="block font-mono text-h4 font-bold leading-none text-sbe-ink">
+                  {letter}
+                </span>
+                <span className="mt-1 block truncate font-mono text-[0.55rem] uppercase leading-none text-sbe-copper">
+                  {label}
+                </span>
+              </div>
             ))}
           </div>
         </div>
@@ -371,15 +158,15 @@ function RobotCore({ className = "" }: { className?: string }) {
 export function StudioMechanism() {
   return (
     <figure
-      aria-label="An animated SBE robot avatar inside a square bot-engine frame."
-      className="sbe-robot-stage relative mx-auto w-full max-w-[calc(100vw-4rem)] pb-10 pt-12 sm:max-w-[680px]"
+      aria-label="A polished SBE AI robot core inside a square bot-engine frame."
+      className="sbe-robot-stage relative mx-auto w-full max-w-[calc(100vw-4rem)] pb-10 pt-10 sm:max-w-[680px]"
     >
       <div
         aria-hidden="true"
-        className="sbe-vivid-band absolute inset-x-6 bottom-4 h-28 rounded-[8px] sm:inset-x-10"
+        className="sbe-vivid-band absolute inset-x-10 bottom-4 h-20 rounded-[8px]"
       />
 
-      <div className="relative rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-3 sbe-offset-red sm:p-4">
+      <div className="relative rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-3 shadow-[10px_10px_0_var(--sbe-copper)] sm:p-4">
         <div className="flex h-10 items-center gap-3 border-b-2 border-sbe-ink px-2">
           <span className="flex gap-2" aria-hidden="true">
             <span className="h-3 w-3 rounded-full bg-sbe-copper" />
@@ -387,61 +174,45 @@ export function StudioMechanism() {
             <span className="h-3 w-3 rounded-full bg-sbe-ink" />
           </span>
           <span className="min-w-0 flex-1 truncate font-mono text-micro uppercase text-sbe-graphite">
-            sbe.studio / bot-avatar
+            sbe.studio / pro bot
           </span>
-          <LockKeyhole className="h-4 w-4 text-sbe-cobalt" aria-hidden="true" />
+          <Activity className="h-4 w-4 text-sbe-cobalt" aria-hidden="true" />
         </div>
 
-        <div className="studio-grid relative mt-3 overflow-hidden rounded-[6px] border-2 border-sbe-ink bg-sbe-surface px-3 pb-4 pt-8 sm:px-6 sm:pb-6">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-0 grid grid-cols-8 grid-rows-[repeat(15,minmax(0,1fr))] sm:grid-cols-12 sm:grid-rows-10"
-          >
-            {gridPulseCells.map((cell) => (
-              <span
-                key={cell.id}
-                className="sbe-grid-pulse"
-                style={
-                  {
-                    "--pulse-color": cell.color,
-                    "--pulse-delay": cell.delay,
-                    "--pulse-duration": cell.duration,
-                  } as CSSProperties
-                }
-              />
-            ))}
-          </div>
-
-          <BouncingBalls />
-
+        <div className="studio-grid-pro relative mt-3 overflow-hidden rounded-[6px] border-2 border-sbe-ink bg-sbe-surface px-4 pb-5 pt-5 sm:px-7 sm:pb-7">
           <div
             aria-hidden="true"
             className="absolute left-0 right-0 top-0 z-10 h-3 sbe-vivid-band"
           />
 
-          <div className="relative z-10 flex flex-col items-center gap-6 py-6 sm:hidden">
-            <div className="grid w-full grid-cols-[auto_minmax(0,1fr)] items-start gap-4">
-              <BotBadge className="relative mt-2" />
-              <BlinkPanel className="justify-self-end" />
-            </div>
+          <div className="relative z-10 grid min-h-[34rem] items-center gap-6 lg:grid-cols-[minmax(0,1fr)_8rem]">
+            <RobotCore />
 
-            <RobotCore className="w-full max-w-[18.5rem]" />
-
-            <DiagnosticCard className="ml-1 w-full max-w-[17rem] self-start" />
+            <aside className="grid gap-4 lg:self-center">
+              <SignalMatrix />
+              <div
+                aria-hidden="true"
+                className="rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-3 shadow-[6px_6px_0_var(--sbe-cobalt)]"
+              >
+                <div className="mb-3 flex items-center justify-between font-mono text-micro uppercase text-sbe-ink">
+                  <span>Core</span>
+                  <span className="text-sbe-copper">92%</span>
+                </div>
+                <div className="h-3 border-2 border-sbe-ink bg-sbe-surface">
+                  <div className="h-full w-[92%] bg-sbe-electric" />
+                </div>
+                <div className="mt-3 h-3 border-2 border-sbe-ink bg-sbe-surface">
+                  <div className="h-full w-[64%] bg-sbe-plasma" />
+                </div>
+              </div>
+            </aside>
           </div>
 
-          <div className="relative z-10 mx-auto hidden min-h-[30rem] max-w-[30rem] items-center justify-center py-8 sm:flex">
-            <BotBadge className="absolute left-[16%] top-16 z-20" />
-            <BlinkPanel className="absolute right-0 top-14 z-30 sm:-right-8" />
-            <RobotCore className="w-full max-w-[24rem]" />
-            <DiagnosticCard className="absolute bottom-10 left-0" />
-          </div>
-
-          <div className="relative z-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="relative z-10 mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {footerModes.map(({ label, icon: Icon }) => (
               <div
                 key={label}
-                className="flex items-center gap-2 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface px-3 py-3"
+                className="flex items-center justify-center gap-2 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface px-3 py-3"
               >
                 <Icon className="h-4 w-4 text-sbe-copper" aria-hidden="true" />
                 <span className="font-mono text-micro uppercase text-sbe-ink">

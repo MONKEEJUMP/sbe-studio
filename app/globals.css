@@ -143,6 +143,14 @@
     background-size: 28px 28px;
   }
 
+  .studio-grid-pro {
+    background-image:
+      linear-gradient(var(--sbe-hairline) 1px, transparent 1px),
+      linear-gradient(90deg, var(--sbe-hairline) 1px, transparent 1px);
+    background-position: -1px -1px;
+    background-size: 44px 44px;
+  }
+
   .sbe-vivid-band {
     background:
       linear-gradient(
@@ -349,6 +357,68 @@
     69% {
       background-color: transparent;
       opacity: 0;
+    }
+  }
+
+  @keyframes sbe-probot-idle {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  @keyframes sbe-probot-eye {
+    0%,
+    100% {
+      transform: translateX(-115%);
+      opacity: 0;
+    }
+
+    20%,
+    68% {
+      opacity: 1;
+    }
+
+    78% {
+      transform: translateX(115%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes sbe-probot-wave {
+    0%,
+    100% {
+      transform: scaleY(0.58);
+    }
+
+    44% {
+      transform: scaleY(1);
+    }
+
+    72% {
+      transform: scaleY(0.74);
+    }
+  }
+
+  @keyframes sbe-probot-signal {
+    0%,
+    100% {
+      background-color: var(--sbe-surface);
+      opacity: 1;
+    }
+
+    42% {
+      background-color: var(--signal-color, var(--sbe-electric));
+      opacity: 1;
+    }
+
+    58% {
+      background-color: var(--signal-color, var(--sbe-electric));
+      opacity: 0.72;
     }
   }
 
@@ -568,6 +638,49 @@
   .sbe-grid-pulse {
     animation: sbe-grid-pulse var(--pulse-duration, 3s) steps(1, end) infinite;
     animation-delay: var(--pulse-delay, 0s);
+    will-change: background-color, opacity;
+  }
+
+  .sbe-probot-idle {
+    animation: sbe-probot-idle 5.8s ease-in-out infinite;
+    transform-origin: center bottom;
+    will-change: transform;
+  }
+
+  .sbe-probot-eye {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .sbe-probot-eye::after {
+    animation: sbe-probot-eye 3.8s ease-in-out infinite;
+    background: var(--sbe-cobalt);
+    bottom: 8px;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 8px;
+    width: 38%;
+    will-change: transform, opacity;
+  }
+
+  .sbe-probot-eye:nth-child(2)::after {
+    animation-delay: 0.42s;
+    background: var(--sbe-plasma);
+  }
+
+  .sbe-probot-wave {
+    animation: sbe-probot-wave 1.9s ease-in-out infinite;
+    animation-delay: var(--wave-delay, 0s);
+    height: var(--wave-height, 50%);
+    transform-origin: bottom;
+    will-change: transform;
+  }
+
+  .sbe-probot-signal {
+    animation: sbe-probot-signal var(--signal-duration, 2.6s) steps(1, end) infinite;
+    animation-delay: var(--signal-delay, 0s);
+    background-color: var(--sbe-surface);
     will-change: background-color, opacity;
   }
 
