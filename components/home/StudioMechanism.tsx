@@ -91,7 +91,7 @@ function RobotCore() {
             </span>
           </div>
 
-          <div className="relative overflow-hidden border-2 border-sbe-ink bg-sbe-electric p-4 shadow-[8px_8px_0_var(--sbe-copper)]">
+          <div className="relative overflow-hidden border-2 border-sbe-ink bg-sbe-electric p-4 shadow-[8px_8px_0_var(--sbe-cobalt)]">
             <div
               aria-hidden="true"
               className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-sbe-ink"

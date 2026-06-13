@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     "Live websites, Vercel deployments, and selected engineering case studies from Space Bot Engineering Studio.",
 };
 
+const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
+
 export default function WorkPage() {
   const leadProject = FEATURED_VERCEL_PROJECTS[0];
   const supportingProjects = FEATURED_VERCEL_PROJECTS.slice(1);
@@ -139,7 +141,11 @@ export default function WorkPage() {
             {leadProject && (
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
                 <div className="lg:col-span-7">
-                  <ProjectBrowser project={leadProject} priority />
+                  <ProjectBrowser
+                    project={leadProject}
+                    priority
+                    className="sbe-offset-plasma"
+                  />
                 </div>
                 <div className="lg:col-span-5">
                   <p className="font-mono text-micro uppercase text-sbe-copper">
@@ -171,7 +177,10 @@ export default function WorkPage() {
             <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
               {supportingProjects.map((project, index) => (
                 <article key={project.slug}>
-                  <ProjectBrowser project={project} />
+                  <ProjectBrowser
+                    project={project}
+                    className={CARD_SHADOWS[index % CARD_SHADOWS.length]}
+                  />
                   <p className="mt-5 font-mono text-micro uppercase text-sbe-copper">
                     {String(index + 2).padStart(2, "0")} · {project.category}
                   </p>
@@ -237,9 +246,12 @@ export default function WorkPage() {
             </div>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
-              {VERCEL_PROJECTS.map((project) => (
+              {VERCEL_PROJECTS.map((project, index) => (
                 <article key={project.slug} id={project.slug} className="group">
-                  <ProjectBrowser project={project} />
+                  <ProjectBrowser
+                    project={project}
+                    className={CARD_SHADOWS[index % CARD_SHADOWS.length]}
+                  />
                   <div className="mt-5">
                     <div className="flex items-start justify-between gap-4">
                       <div>

@@ -66,12 +66,10 @@ export function ServiceTiers() {
         <div
           className="grid grid-cols-1 gap-6 md:grid-cols-3"
         >
-          {SERVICE_TIERS.map((tier, i) => (
+          {SERVICE_TIERS.map((tier) => (
             <div
               key={tier.slug}
-              className={`rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-8 ${
-                i === 1 ? "sbe-offset-blue" : i === 2 ? "sbe-offset-red" : ""
-              }`}
+              className="rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-8 sbe-offset-blue"
             >
               <div className="flex items-baseline gap-4">
                 <span

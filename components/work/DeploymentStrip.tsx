@@ -13,6 +13,8 @@ type DeploymentStripProps = {
   slugs: string[];
 };
 
+const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
+
 export function DeploymentStrip({
   eyebrow = "LIVE DEPLOYMENTS",
   title,
@@ -56,9 +58,12 @@ export function DeploymentStrip({
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article key={project.slug}>
-              <ProjectBrowser project={project} />
+              <ProjectBrowser
+                project={project}
+                className={CARD_SHADOWS[index % CARD_SHADOWS.length]}
+              />
               <p className="mt-5 font-mono text-micro uppercase text-sbe-mist">
                 {project.category}
               </p>

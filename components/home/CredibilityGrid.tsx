@@ -3,6 +3,8 @@ import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CREDIBILITY_HOOKS } from "@/lib/credibility";
 
+const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
+
 export function CredibilityGrid() {
   return (
     <section
@@ -63,12 +65,14 @@ export function CredibilityGrid() {
         <ul
           className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
-          {CREDIBILITY_HOOKS.map((hook) => {
+          {CREDIBILITY_HOOKS.map((hook, index) => {
             const n = hook.id.toString().padStart(2, "0");
             return (
               <li
                 key={hook.id}
-                className="group flex min-h-[25rem] flex-col rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-7 transition-transform duration-200 hover:-translate-y-1"
+                className={`group flex min-h-[25rem] flex-col rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-7 transition-transform duration-200 hover:-translate-y-1 ${
+                  CARD_SHADOWS[index % CARD_SHADOWS.length]
+                }`}
               >
                 <div className="flex items-baseline justify-between">
                   <span className="font-mono text-caption uppercase text-sbe-copper">

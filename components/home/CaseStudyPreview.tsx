@@ -59,7 +59,7 @@ export function CaseStudyPreview() {
           {PREVIEW_PROJECTS.map((project) => (
             <li
               key={project.slug}
-              className="group mb-5 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-6 transition-transform duration-200 hover:-translate-y-1"
+              className="group mb-5 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-6 transition-transform duration-200 hover:-translate-y-1 sbe-offset-blue"
             >
               <Link
                 href={`/work#${project.slug}`}

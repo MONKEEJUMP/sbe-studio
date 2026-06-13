@@ -10,6 +10,7 @@ import {
 } from "@/lib/vercel-portfolio";
 
 const HOME_PROJECTS = FEATURED_VERCEL_PROJECTS.slice(0, 4);
+const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
 
 export function VercelShowcase() {
   const [lead, ...supporting] = HOME_PROJECTS;
@@ -81,10 +82,12 @@ export function VercelShowcase() {
               ["Live sites", PORTFOLIO_STATS.totalProjects],
               ["Sectors", PORTFOLIO_STATS.categories],
               ["Platform", "Vercel"],
-            ].map(([label, value]) => (
+            ].map(([label, value], index) => (
               <div
                 key={label}
-                className="rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-5"
+                className={`rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-5 ${
+                  CARD_SHADOWS[index % CARD_SHADOWS.length]
+                }`}
               >
                 <p className="font-mono text-micro uppercase text-sbe-mist">
                   {label}
@@ -120,10 +123,12 @@ export function VercelShowcase() {
           )}
 
           <div className="grid gap-8 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
-            {supporting.map((project) => (
+            {supporting.map((project, index) => (
               <article
                 key={project.slug}
-                className="grid grid-cols-1 gap-5 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-4 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
+                className={`grid grid-cols-1 gap-5 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-4 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] ${
+                  CARD_SHADOWS[index % CARD_SHADOWS.length]
+                }`}
               >
                 <ProjectBrowser project={project} />
                 <div>
