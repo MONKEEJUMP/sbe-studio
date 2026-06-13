@@ -12,15 +12,15 @@
   --sbe-surface: #FFFFFF;
 
   /* Philadelphia Flyers palette */
-  --sbe-copper: #FF9300;
-  --sbe-cobalt: #FF9300;
-  --sbe-electric: #FF9300;
+  --sbe-copper: #FFA600;
+  --sbe-cobalt: #FFA600;
+  --sbe-electric: #FFA600;
   --sbe-plasma: #FFFFFF;
 
   /* Status signals */
-  --sbe-live: #FF9300;
-  --sbe-verified: #FF9300;
-  --sbe-alert: #FF9300;
+  --sbe-live: #FFA600;
+  --sbe-verified: #FFA600;
+  --sbe-alert: #FFA600;
 
   color-scheme: light;
 }
@@ -33,9 +33,9 @@
   --sbe-hairline: #FFFFFF;
   --sbe-surface: #000000;
 
-  --sbe-copper: #FF9300;
-  --sbe-cobalt: #FF9300;
-  --sbe-electric: #FF9300;
+  --sbe-copper: #FFA600;
+  --sbe-cobalt: #FFA600;
+  --sbe-electric: #FFA600;
   --sbe-plasma: #FFFFFF;
 
   color-scheme: dark;
