@@ -9,10 +9,12 @@ import {
 } from "lucide-react";
 
 const paletteVars = [
-  "var(--sbe-electric)",
+  "var(--sbe-copper)",
   "var(--sbe-cobalt)",
   "var(--sbe-copper)",
+  "var(--sbe-cobalt)",
   "var(--sbe-plasma)",
+  "var(--sbe-neon)",
 ];
 
 const signalCells = Array.from({ length: 24 }, (_, index) => ({
@@ -84,7 +86,7 @@ function RobotCore() {
               SBE / AI CORE
             </span>
             <span className="flex items-center gap-2 font-mono text-micro uppercase text-sbe-copper">
-              <span className="h-2.5 w-2.5 rounded-full bg-sbe-copper" />
+              <span className="h-2.5 w-2.5 rounded-full border border-sbe-ink bg-sbe-neon" />
               Live
             </span>
           </div>
@@ -106,7 +108,7 @@ function RobotCore() {
             <div className="mt-4 flex items-center justify-center gap-4">
               <div className="flex h-14 w-14 items-center justify-center border-2 border-sbe-ink bg-sbe-cobalt">
                 <Code2
-                  className="h-7 w-7 text-sbe-ink"
+                  className="h-7 w-7 text-white"
                   strokeWidth={2.2}
                   aria-hidden="true"
                 />
@@ -171,7 +173,7 @@ export function StudioMechanism() {
           <span className="flex gap-2" aria-hidden="true">
             <span className="h-3 w-3 rounded-full bg-sbe-copper" />
             <span className="h-3 w-3 rounded-full bg-sbe-cobalt" />
-            <span className="h-3 w-3 rounded-full bg-sbe-ink" />
+            <span className="h-3 w-3 rounded-full border border-sbe-ink bg-sbe-neon" />
           </span>
           <span className="min-w-0 flex-1 truncate font-mono text-micro uppercase text-sbe-graphite">
             sbe.studio / pro bot

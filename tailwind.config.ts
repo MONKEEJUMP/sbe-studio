@@ -21,6 +21,7 @@ const config: Config = {
           cobalt: "var(--sbe-cobalt)",
           electric: "var(--sbe-electric)",
           plasma: "var(--sbe-plasma)",
+          neon: "var(--sbe-neon)",
           live: "var(--sbe-live)",
           verified: "var(--sbe-verified)",
           alert: "var(--sbe-alert)",

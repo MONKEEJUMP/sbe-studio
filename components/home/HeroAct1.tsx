@@ -89,31 +89,43 @@ export function HeroAct1() {
               title: "Built-in AI systems",
               body: "Assistants, agents, knowledge bases, internal tools, and workflows designed around the way your team already works.",
               tone: "bg-sbe-electric",
+              accent: "",
+              label: "text-sbe-ink",
+              heading: "text-sbe-ink",
+              copy: "text-sbe-ink",
             },
             {
               title: "Live website launches",
               body: "Beautiful public sites, Vercel deployments, real URLs, screenshots, analytics, and maintenance after the launch.",
-              tone: "bg-sbe-copper",
+              tone: "bg-sbe-cobalt",
+              accent: "sbe-offset-blue",
+              label: "text-sbe-neon",
+              heading: "text-white",
+              copy: "text-white",
             },
             {
               title: "Proof you can inspect",
               body: "Every claim points back to working systems, indexed files, production domains, and receipts we can open together.",
-              tone: "bg-sbe-plasma",
+              tone: "bg-sbe-surface",
+              accent: "sbe-offset-plasma",
+              label: "text-sbe-plasma",
+              heading: "text-sbe-ink",
+              copy: "text-sbe-graphite",
             },
           ].map((card, index) => (
             <article
               key={card.title}
               className={`rounded-[8px] border-2 border-sbe-ink p-7 ${
                 card.tone
-              } ${index === 1 ? "sbe-offset-red" : ""}`}
+              } ${card.accent}`}
             >
-              <p className="font-mono text-micro uppercase text-sbe-copper">
+              <p className={`font-mono text-micro uppercase ${card.label}`}>
                 0{index + 1} / Studio mode
               </p>
-              <h2 className="mt-5 font-serif text-h3 text-sbe-ink">
+              <h2 className={`mt-5 font-serif text-h3 ${card.heading}`}>
                 {card.title}
               </h2>
-              <p className="mt-4 text-body font-semibold text-sbe-graphite">
+              <p className={`mt-4 text-body font-semibold ${card.copy}`}>
                 {card.body}
               </p>
             </article>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /* SBE Flyers System — Light */
+  /* SBE Electropop System — Light */
   --sbe-canvas: #FFFFFF;
   --sbe-ink: #000000;
   --sbe-graphite: #000000;
@@ -11,16 +11,17 @@
   --sbe-hairline: #000000;
   --sbe-surface: #FFFFFF;
 
-  /* Philadelphia Flyers palette */
-  --sbe-copper: #FFA600;
-  --sbe-cobalt: #FFA600;
-  --sbe-electric: #FFA600;
-  --sbe-plasma: #FFFFFF;
+  /* Electropop palette: orange and blue lead; pink and neon yellow accent. */
+  --sbe-copper: #FF6B00;
+  --sbe-cobalt: #5200FF;
+  --sbe-electric: #FF6B00;
+  --sbe-plasma: #F900FF;
+  --sbe-neon: #CCFF00;
 
   /* Status signals */
-  --sbe-live: #FFA600;
-  --sbe-verified: #FFA600;
-  --sbe-alert: #FFA600;
+  --sbe-live: #CCFF00;
+  --sbe-verified: #5200FF;
+  --sbe-alert: #F900FF;
 
   color-scheme: light;
 }
@@ -33,10 +34,11 @@
   --sbe-hairline: #FFFFFF;
   --sbe-surface: #000000;
 
-  --sbe-copper: #FFA600;
-  --sbe-cobalt: #FFA600;
-  --sbe-electric: #FFA600;
-  --sbe-plasma: #FFFFFF;
+  --sbe-copper: #FF6B00;
+  --sbe-cobalt: #5200FF;
+  --sbe-electric: #FF6B00;
+  --sbe-plasma: #F900FF;
+  --sbe-neon: #CCFF00;
 
   color-scheme: dark;
 }
@@ -76,14 +78,14 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--sbe-copper);
+    outline: 2px solid var(--sbe-neon);
     outline-offset: 2px;
     border-radius: 2px;
   }
 
   ::selection {
-    background-color: var(--sbe-copper);
-    color: var(--sbe-canvas);
+    background-color: var(--sbe-neon);
+    color: var(--sbe-ink);
   }
 
   /* Remove default button / input styling */
@@ -155,12 +157,14 @@
     background:
       linear-gradient(
         90deg,
-        var(--sbe-ink) 0%,
-        var(--sbe-ink) 20%,
-        var(--sbe-copper) 20%,
-        var(--sbe-copper) 72%,
-        var(--sbe-surface) 72%,
-        var(--sbe-surface) 100%
+        var(--sbe-copper) 0%,
+        var(--sbe-copper) 38%,
+        var(--sbe-cobalt) 38%,
+        var(--sbe-cobalt) 74%,
+        var(--sbe-plasma) 74%,
+        var(--sbe-plasma) 88%,
+        var(--sbe-neon) 88%,
+        var(--sbe-neon) 100%
       );
   }
 
@@ -169,11 +173,11 @@
   }
 
   .sbe-offset-blue {
-    box-shadow: 10px 10px 0 var(--sbe-ink);
+    box-shadow: 10px 10px 0 var(--sbe-cobalt);
   }
 
   .sbe-offset-plasma {
-    box-shadow: 10px 10px 0 var(--sbe-copper);
+    box-shadow: 10px 10px 0 var(--sbe-plasma);
   }
 
   .sbe-soft-panel {
