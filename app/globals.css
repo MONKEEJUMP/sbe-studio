@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /* SBE Neon System — Light */
+  /* SBE Flyers System — Light */
   --sbe-canvas: #FFFFFF;
   --sbe-ink: #000000;
   --sbe-graphite: #000000;
@@ -11,16 +11,16 @@
   --sbe-hairline: #000000;
   --sbe-surface: #FFFFFF;
 
-  /* User-specified palette */
-  --sbe-copper: #FF69B4;
-  --sbe-cobalt: #00AEFF;
-  --sbe-electric: #00F0FF;
-  --sbe-plasma: #FFB8DC;
+  /* Philadelphia Flyers palette */
+  --sbe-copper: #F74902;
+  --sbe-cobalt: #F74902;
+  --sbe-electric: #F74902;
+  --sbe-plasma: #FFFFFF;
 
   /* Status signals */
-  --sbe-live: #FF69B4;
-  --sbe-verified: #00AEFF;
-  --sbe-alert: #FF69B4;
+  --sbe-live: #F74902;
+  --sbe-verified: #F74902;
+  --sbe-alert: #F74902;
 
   color-scheme: light;
 }
@@ -33,10 +33,10 @@
   --sbe-hairline: #FFFFFF;
   --sbe-surface: #000000;
 
-  --sbe-copper: #FF69B4;
-  --sbe-cobalt: #00AEFF;
-  --sbe-electric: #00F0FF;
-  --sbe-plasma: #FFB8DC;
+  --sbe-copper: #F74902;
+  --sbe-cobalt: #F74902;
+  --sbe-electric: #F74902;
+  --sbe-plasma: #FFFFFF;
 
   color-scheme: dark;
 }
@@ -155,12 +155,12 @@
     background:
       linear-gradient(
         90deg,
-        var(--sbe-electric) 0%,
-        var(--sbe-electric) 33.333%,
-        var(--sbe-plasma) 33.333%,
-        var(--sbe-plasma) 66.666%,
-        var(--sbe-cobalt) 66.666%,
-        var(--sbe-cobalt) 100%
+        var(--sbe-ink) 0%,
+        var(--sbe-ink) 20%,
+        var(--sbe-copper) 20%,
+        var(--sbe-copper) 72%,
+        var(--sbe-surface) 72%,
+        var(--sbe-surface) 100%
       );
   }
 
@@ -169,11 +169,11 @@
   }
 
   .sbe-offset-blue {
-    box-shadow: 10px 10px 0 var(--sbe-cobalt);
+    box-shadow: 10px 10px 0 var(--sbe-ink);
   }
 
   .sbe-offset-plasma {
-    box-shadow: 10px 10px 0 var(--sbe-plasma);
+    box-shadow: 10px 10px 0 var(--sbe-copper);
   }
 
   .sbe-soft-panel {
