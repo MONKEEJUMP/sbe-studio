@@ -673,6 +673,29 @@
     background: var(--sbe-plasma);
   }
 
+  .sbe-spacebot-eye {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .sbe-spacebot-eye::after {
+    animation: sbe-probot-eye 4.2s ease-in-out infinite;
+    background: var(--sbe-neon);
+    bottom: 9px;
+    content: "";
+    left: 0;
+    opacity: 0.86;
+    position: absolute;
+    top: 9px;
+    width: 28%;
+    will-change: transform, opacity;
+  }
+
+  .sbe-spacebot-eye:nth-child(2)::after {
+    animation-delay: 0.54s;
+    background: var(--sbe-plasma);
+  }
+
   .sbe-probot-wave {
     animation: sbe-probot-wave 1.9s ease-in-out infinite;
     animation-delay: var(--wave-delay, 0s);
