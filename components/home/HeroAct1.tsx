@@ -1,7 +1,6 @@
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { StudioMechanism } from "@/components/home/StudioMechanism";
 import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 
 export function HeroAct1() {
@@ -49,28 +48,28 @@ export function HeroAct1() {
             we built for us &gt;
           </p>
         </div>
-        <div className="grid min-h-[720px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(420px,1fr)] lg:items-center">
-          <div className="max-w-4xl">
+        <div className="flex min-h-[560px] items-center justify-center py-12 text-center lg:min-h-[620px]">
+          <div className="mx-auto max-w-5xl">
             <Eyebrow>SPACE BOT ENGINEERING STUDIO · OKLAHOMA CITY</Eyebrow>
 
             <h1
               id="hero-heading"
-              className="mt-8 max-w-[11ch] font-serif text-h2 text-sbe-ink sm:text-display lg:max-w-[12ch]"
+              className="mx-auto mt-8 max-w-[13ch] font-serif text-h2 text-sbe-ink sm:text-display"
             >
               The studio that keeps AI shipping.
             </h1>
 
-            <p className="mt-8 max-w-[32ch] text-h3 font-bold leading-tight text-sbe-ink">
+            <p className="mx-auto mt-8 max-w-[36ch] text-h3 font-bold leading-tight text-sbe-ink">
               Build the system. Launch the website. Keep the receipts.
             </p>
 
-            <p className="mt-6 max-w-[48ch] text-body-lg text-sbe-graphite">
+            <p className="mx-auto mt-6 max-w-[54ch] text-body-lg text-sbe-graphite">
               SBE turns useful AI ideas into real production software, public
               websites, automations, and operating systems that a team can
               actually use.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-6">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
               <Button href="/contact" variant="primary" size="lg" withArrow>
                 Start a conversation
               </Button>
@@ -79,8 +78,6 @@ export function HeroAct1() {
               </Button>
             </div>
           </div>
-
-          <StudioMechanism />
         </div>
 
         <div className="grid gap-5 pt-4 md:grid-cols-3">

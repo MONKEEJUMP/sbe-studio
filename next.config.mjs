@@ -7,6 +7,10 @@ const projectRoot = dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  experimental: {
+    cpus: 1,
+    workerThreads: true,
+  },
   turbopack: {
     root: projectRoot,
   },

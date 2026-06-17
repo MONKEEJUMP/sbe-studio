@@ -1,30 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { BRAND_MOTTO } from "@/lib/brand";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-  preload: true,
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-  preload: false,
-  axes: ["opsz"],
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-  preload: false,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sbe.studio"),
@@ -86,11 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${inter.variable} ${fraunces.variable} ${jetbrains.variable}`}
-    >
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
