@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s · Space Bot Engineering Studio",
   },
   description:
-    `${BRAND_MOTTO}. An engineering studio in Oklahoma City building Ai systems that run in production.`,
+    `${BRAND_MOTTO}. A production engineering studio in Oklahoma City building Ai systems, public websites, automations, and operating infrastructure that can be verified.`,
   keywords: [
     "Ai consulting Oklahoma City",
     "Ai implementation",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: BRAND_MOTTO,
     description:
-      "Space Bot Engineering Studio builds Ai systems that run in production.",
+      "Space Bot Engineering Studio builds production Ai systems, public websites, automations, and verifiable technical infrastructure.",
     type: "website",
     locale: "en_US",
     siteName: "Space Bot Engineering Studio",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: BRAND_MOTTO,
     description:
-      "Space Bot Engineering Studio builds Ai systems that run in production.",
+      "Space Bot Engineering Studio builds production Ai systems, public websites, automations, and verifiable technical infrastructure.",
   },
   robots: { index: true, follow: true },
   icons: {
@@ -46,7 +46,7 @@ const organizationJsonLd = {
   alternateName: "SBE",
   url: "https://sbe.studio",
   description:
-    "An engineering studio in Oklahoma City. Building Ai systems that run in production. Every claim on this site links to a file on a hard drive.",
+    "A production engineering studio in Oklahoma City. Building Ai systems, public websites, automations, and operating infrastructure. Every claim on this site links to a file on a hard drive.",
   slogan: BRAND_MOTTO,
   address: {
     "@type": "PostalAddress",

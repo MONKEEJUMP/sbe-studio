@@ -57,8 +57,9 @@ export function CredibilityGrid() {
             Every claim links to a file on a hard drive.
           </h2>
           <p className="mt-6 max-w-[55ch] text-body-lg text-sbe-graphite">
-            Ai consulting is a noisy market. Here is how we are different,
-            one verifiable fact at a time.
+            The Ai implementation market rewards vague claims. SBE is measured
+            by shipped systems, operational evidence, and verifiable source
+            material.
           </p>
         </div>
 

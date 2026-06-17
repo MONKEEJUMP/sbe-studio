@@ -37,12 +37,12 @@ export function HeroAct2() {
       <Container className="relative z-10">
         <div className="mb-16 flex justify-center">
           <Eyebrow className="rounded-full border-2 border-sbe-ink bg-sbe-surface px-4 py-2 text-sbe-copper">
-            VERIFIABLE PROOF-OF-WORK · LAST UPDATED{" "}
+            VERIFIABLE PRODUCTION RECORD · LAST UPDATED{" "}
             {lastUpdated.toUpperCase()}
           </Eyebrow>
         </div>
         <p className="mx-auto mb-12 max-w-4xl text-center font-serif text-h2 text-sbe-ink">
-          Real numbers. Real systems. Real production.
+          Measured systems. Production domains. Inspectable proof.
         </p>
         <h2 id="proof-heading" className="sr-only">
           Verifiable proof of work

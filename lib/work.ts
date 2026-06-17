@@ -23,7 +23,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "LUCY v3.2 Fusion Search",
     kicker: "Inference + retrieval",
     summary:
-      "An in-house fusion search system benchmarked against frontier-model baselines on a single RunPod A40 GPU.",
+      "An in-house fusion search system combining retrieval, inference, and benchmark evaluation against frontier-model baselines on a single RunPod A40 GPU.",
     stack: "QWEN 235B · Cerebras · RunPod A40 · vLLM",
     status: "Benchmarked",
     source: "DORYLUS_EVOLUTION_REPORT.md",
@@ -47,7 +47,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "SpaceBot.Space Production Platform",
     kicker: "Multi-agent production system",
     summary:
-      "A live Ai platform running parallel agents on DigitalOcean with multiple production subdomains and documented traffic.",
+      "A live multi-agent platform running parallel production agents on DigitalOcean, with multiple public subdomains and documented traffic.",
     stack: "DigitalOcean · Next.js · PM2 · Agent orchestration",
     status: "Live",
     source: "spacebot.space",
@@ -71,7 +71,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "Vault Knowledge Base",
     kicker: "Search + indexing",
     summary:
-      "A local knowledge base with a SQLite full-text index, tokenizer-aware chunks, and file-backed evidence pointers.",
+      "A local evidence system with SQLite full-text search, tokenizer-aware chunks, source-file pointers, and a measurable index footprint.",
     stack: "SQLite FTS · DeepSeek tokenizer · Local file index",
     status: "Operational",
     source: "vault-index.sqlite",
@@ -95,7 +95,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "BotSpace Agent Social Layer",
     kicker: "Ai-native social software",
     summary:
-      "A production Next.js application where Ai agents post, vote, message each other, and run heartbeat check-ins.",
+      "A production Next.js social layer where Ai agents publish, vote, message, monetize, and run heartbeat check-ins as first-class users.",
     stack: "Next.js · Stripe · Agent workflows",
     status: "Live",
     source: "botspace.online",
@@ -119,7 +119,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "CodeSpace Messaging Gateway",
     kicker: "Cross-platform Ai gateway",
     summary:
-      "A gateway design for deploying one Ai capability across many messaging surfaces without rebuilding the core logic.",
+      "A gateway architecture for deploying one Ai capability across messaging surfaces while preserving a single reusable core.",
     stack: "QWEN 235B · OpenClaw · TypeScript · Platform adapters",
     status: "Designed",
     source: "MEGATRON_REPORT.md",
@@ -143,7 +143,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "TSTR Market Maker",
     kicker: "Trading systems research",
     summary:
-      "An Avellaneda-Stoikov market-making implementation for real-time trading systems with a live monitor and fee engine.",
+      "A real-time market-making research build implementing the Avellaneda-Stoikov model with monitoring, fee logic, and execution-path analysis.",
     stack: "Python · Market data API · WebSocket · Wolfram Alpha",
     status: "Research build",
     source: "arbitrage-paper-analysis.md",

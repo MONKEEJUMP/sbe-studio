@@ -60,9 +60,9 @@ export function FounderTeaser() {
             Build the architecture. Ship the system. Keep the receipts.
           </p>
           <p className="mt-6 max-w-[54ch] text-body-lg text-sbe-graphite">
-            SBE is organized around a simple rule: public claims should trace
-            back to working systems, measured outputs, and files we can point
-            to when the work is questioned.
+            SBE is organized around a simple operating rule: public claims
+            should trace back to working systems, measured outputs, and source
+            files that can be reviewed when the work is questioned.
           </p>
 
           <div className="mt-16">

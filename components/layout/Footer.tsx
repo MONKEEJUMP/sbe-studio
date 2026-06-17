@@ -54,7 +54,7 @@ export function Footer() {
             <BrandSignature variant="footer" />
           </div>
           <p className="max-w-sm text-caption text-white md:text-right">
-            Oklahoma City | Building Ai that works.
+            Oklahoma City | Production Ai, websites, and operating systems.
           </p>
         </div>
 
@@ -65,7 +65,8 @@ export function Footer() {
               <Wordmark href="/" forceFull showMotto={false} />
             </div>
             <p className="mt-3 text-caption text-white">
-              Practical Ai systems, useful automation, and careful code for real teams.
+              Practical Ai systems, useful automation, and careful code for teams
+              that need production outcomes.
             </p>
           </div>
 

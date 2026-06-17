@@ -53,7 +53,7 @@ export function DeploymentStrip({
             </p>
           </div>
           <Button href="/work" variant="secondary" withArrow>
-            View the work wall
+            View the work index
           </Button>
         </div>
 

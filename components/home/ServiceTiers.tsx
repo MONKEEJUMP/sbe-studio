@@ -54,12 +54,12 @@ export function ServiceTiers() {
             id="services-heading"
             className="mt-6 font-serif text-h1 text-sbe-ink sm:text-display"
           >
-            Three ways in. Every engagement ends in production.
+            Three engagement paths. Every one ends in production.
           </h2>
           <p className="mt-6 max-w-[55ch] text-body-lg text-sbe-graphite">
-            A short audit. A full build. A long-term operator.
-            Pick the one that fits. We&rsquo;ll tell you on the call if it
-            doesn&rsquo;t.
+            Choose the level of intervention: a technical audit, a production
+            build, or an operating partnership. If the fit is not right, we say
+            so early.
           </p>
         </div>
 

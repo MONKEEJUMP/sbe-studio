@@ -37,9 +37,9 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
     headline: "A live multi-agent Ai platform in production.",
     body: `SpaceBot.Space runs 18 parallel Ai agents on DigitalOcean, receiving ${fmt(
       MANIFEST_DATA.spacebotVisits
-    )} documented browser visits to the production domain. Four subdomains are live, including a Munia variant (${
+    )} documented browser visits to the production domain. Four public subdomains are live, including a Munia variant (${
       MANIFEST_DATA.muniaVisits
-    } visits) and a Misskey social layer (${MANIFEST_DATA.misskeyVisits} visits). Built and deployed in under three months.`,
+    } visits) and a Misskey social layer (${MANIFEST_DATA.misskeyVisits} visits). Built and deployed as an operating platform in under three months.`,
     stat: {
       value: fmt(MANIFEST_DATA.spacebotVisits),
       label: "PRODUCTION VISITS",
@@ -63,7 +63,7 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
       MANIFEST_DATA.vaultTokens / 1_000_000
     ).toFixed(
       0
-    )}M tokens. Rebuilt daily. Replicated across six physical drives.`,
+    )}M tokens. Rebuilt daily and replicated across six physical drives.`,
     stat: {
       value: `${(MANIFEST_DATA.vaultTokens / 1_000_000).toFixed(0)}M`,
       label: "INDEXED TOKENS",
@@ -75,9 +75,9 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
     headline: `A ${MANIFEST_DATA.swarmNodes}-node distributed Ai swarm with ${fmt(
       MANIFEST_DATA.gossipInboxFiles
     )}+ gossip messages.`,
-    body: `IMMORTAL SWARM: a PM2-managed swarm where each physical hard drive is an autonomous worker node, communicating via a file-based gossip protocol. ${MANIFEST_DATA.swarmLogSizeGB}+ GB of active log data. ${fmt(
+    body: `IMMORTAL SWARM: a PM2-managed distributed worker system where physical drives operate as autonomous nodes communicating through a file-based gossip protocol. ${MANIFEST_DATA.swarmLogSizeGB}+ GB of active log data. ${fmt(
       MANIFEST_DATA.gossipInboxFiles
-    )} messages queued in the inbox. Queen on drive J; workers on C, D, E, G, K. Last active today.`,
+    )} messages queued in the inbox. Queen on drive J; workers on C, D, E, G, K.`,
     stat: {
       value: `${MANIFEST_DATA.swarmNodes}`,
       label: "SWARM NODES",
@@ -87,7 +87,7 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   {
     id: 5,
     headline: "An Avellaneda-Stoikov market maker.",
-    body: `TSTR implements the Avellaneda-Stoikov optimal market-making algorithm for real-time trading systems. ${MANIFEST_DATA.tstrLanguage}. WebSocket monitor. Fee engine, Wolfram Alpha verified. Execution layer. Market scanner. Built after a complete reading of ArXiv paper ${MANIFEST_DATA.arxivPaperTSTR}.`,
+    body: `TSTR implements the Avellaneda-Stoikov optimal market-making algorithm for real-time trading systems. ${MANIFEST_DATA.tstrLanguage}. WebSocket monitor, fee engine, execution layer, market scanner, and Wolfram Alpha verification. Built after a complete reading of ArXiv paper ${MANIFEST_DATA.arxivPaperTSTR}.`,
     stat: {
       value: MANIFEST_DATA.arxivPaperTSTR,
       label: "ARXIV PAPER",
@@ -97,9 +97,9 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   {
     id: 6,
     headline: `An Ai gateway connecting to ${MANIFEST_DATA.messagingPlatforms}+ messaging platforms.`,
-    body: `CodeSpace deploys QWEN 235B simultaneously across WhatsApp, Telegram, Signal, Discord, iMessage, Matrix, LINE, Slack, Feishu, Mattermost, and twelve other platforms. ${fmt(
+    body: `CodeSpace is an adapter architecture for deploying QWEN 235B across WhatsApp, Telegram, Signal, Discord, iMessage, Matrix, LINE, Slack, Feishu, Mattermost, and twelve other platforms. ${fmt(
       MANIFEST_DATA.codespaceAgents
-    )} agent implementations. Built after a 9-phase reverse-engineering of OpenClaw v${MANIFEST_DATA.openclawVersion}.`,
+    )} agent implementations. Built after a 9-phase reverse-engineering pass on OpenClaw v${MANIFEST_DATA.openclawVersion}.`,
     stat: {
       value: `${MANIFEST_DATA.messagingPlatforms}`,
       label: "MESSAGING PLATFORMS",
@@ -109,7 +109,7 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   {
     id: 7,
     headline: `An Ai social platform with ${MANIFEST_DATA.botPersonalities} bot personalities.`,
-    body: `BotSpace is a production Next.js application built for Ai agents, not humans. Agents post, vote, and message each other. ${MANIFEST_DATA.botPersonalities} bot personalities. A heartbeat check-in system iterated ${MANIFEST_DATA.heartbeatIterations} times. Stripe monetization. Live at botspace.online with ${MANIFEST_DATA.botspaceVisits} browser visits. Documented by ${MANIFEST_DATA.botspaceArchitectureDocs}+ architecture files.`,
+    body: `BotSpace is a production Next.js application built for Ai agents as first-class users. Agents post, vote, message each other, and operate across ${MANIFEST_DATA.botPersonalities} bot personalities. The heartbeat system iterated ${MANIFEST_DATA.heartbeatIterations} times. Stripe monetization is installed. Live at botspace.online with ${MANIFEST_DATA.botspaceVisits} browser visits and ${MANIFEST_DATA.botspaceArchitectureDocs}+ architecture files.`,
     stat: {
       value: `${MANIFEST_DATA.botPersonalities}`,
       label: "BOT PERSONALITIES",
@@ -119,7 +119,7 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   {
     id: 8,
     headline: `A ${MANIFEST_DATA.vllmVersions}-iteration vLLM cluster, built and debugged in the open.`,
-    body: `${MANIFEST_DATA.vllmVersions} iterations of a custom vLLM inference cluster deployed on RunPod A40 GPUs. AWQ and GPTQ quantization. Multi-GPU VRAM allocation (${MANIFEST_DATA.lucyV32VramGiB} GiB in v3.2). A "Never Again" engineering rulebook documenting every failure. ${MANIFEST_DATA.runpodConsoleVisits} RunPod console sessions logged.`,
+    body: `${MANIFEST_DATA.vllmVersions} iterations of a custom vLLM inference cluster deployed on RunPod A40 GPUs. AWQ and GPTQ quantization. Multi-GPU VRAM allocation (${MANIFEST_DATA.lucyV32VramGiB} GiB in v3.2). A "Never Again" engineering rulebook documents failure modes, recovery steps, and operating constraints. ${MANIFEST_DATA.runpodConsoleVisits} RunPod console sessions logged.`,
     stat: {
       value: `${MANIFEST_DATA.vllmVersions}`,
       label: "VLLM ITERATIONS",
@@ -129,7 +129,7 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   {
     id: 9,
     headline: `${MANIFEST_DATA.architectureDocs} architecture documents in ${MANIFEST_DATA.monthsToEmpire} months.`,
-    body: `Every non-trivial system gets a written blueprint before a single line of production code. Social platforms. Market-making algorithms. Distributed swarms. Multi-model fusion engines. Reviewed, iterated, built against \u2014 never guess-and-check. Verified in the vault index.`,
+    body: `Every non-trivial system gets a written blueprint before production code. Social platforms, market-making algorithms, distributed swarms, and multi-model fusion engines are reviewed, iterated, and implemented against documented architecture. Verified in the vault index.`,
     stat: {
       value: `${MANIFEST_DATA.architectureDocs}`,
       label: "ARCHITECTURE DOCS",
@@ -139,7 +139,7 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   {
     id: 10,
     headline: "A public live-site portfolio, shipped and linked.",
-    body: `The studio work wall now tracks ${MANIFEST_DATA.publicVercelDeployments} public production sites with live URLs, screenshots, and sector notes. The point is simple: finished work should be inspectable in a browser, not trapped in a slide deck.`,
+    body: `The studio work index tracks ${MANIFEST_DATA.publicVercelDeployments} public production sites with live URLs, screenshots, and sector notes. Finished work should be inspectable in a browser, not trapped in a slide deck.`,
     stat: {
       value: String(MANIFEST_DATA.publicVercelDeployments),
       label: "LIVE SITES",

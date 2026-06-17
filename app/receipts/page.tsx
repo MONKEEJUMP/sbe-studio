@@ -153,7 +153,7 @@ const RECEIPTS = [
 export const metadata: Metadata = {
   title: "Receipts",
   description:
-    "Every number on the Space Bot Engineering Studio website is verifiable. Here are the receipts.",
+    "The public verification ledger for Space Bot Engineering Studio: statistics, source references, and production evidence.",
 };
 
 export default function ReceiptsPage() {
@@ -190,7 +190,7 @@ export default function ReceiptsPage() {
               Every number on this site is verifiable.
             </h1>
             <p className="mt-10 max-w-[62ch] text-body-lg text-sbe-graphite">
-              This page exposes the public receipt layer for the current site.
+              This page is the public verification layer for the current site.
               The source of truth is the local manifest generated on{" "}
               {formatDate(MANIFEST_DATA.manifestGenerated)}.
             </p>

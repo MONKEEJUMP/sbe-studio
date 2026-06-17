@@ -11,7 +11,7 @@ import { SERVICE_TIERS } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Three engagement tiers from Space Bot Engineering Studio \u2014 Audit, Build, Operate. Every engagement ends in production.",
+    "Three production engagement tiers from Space Bot Engineering Studio: Audit, Build, and Operate.",
 };
 
 const TIER_STAMP_TONES = ["electric", "cobalt", "plasma"] as const;
@@ -56,13 +56,13 @@ export default function ServicesPage() {
             <div className="max-w-4xl">
               <Eyebrow>HOW WE WORK</Eyebrow>
               <h1 className="mt-10 font-serif text-h1 text-sbe-ink max-w-[20ch]">
-                Three ways in. Every engagement ends in production.
+                Three engagement paths. Every one ends in production.
               </h1>
               <p className="mt-10 max-w-[60ch] text-body-lg text-sbe-graphite">
-                We are a small firm with a large knowledge base. Most of
-                what we do lives in one of three engagement shapes below.
-                If your situation doesn&rsquo;t fit, say so on the call and
-                we&rsquo;ll tell you whether we can help.
+                SBE works where strategy has to become shipped infrastructure.
+                Most client work fits one of three engagement models: diagnose
+                the system, build the system, or operate the system after it is
+                live.
               </p>
             </div>
 
@@ -238,7 +238,7 @@ export default function ServicesPage() {
         <DeploymentStrip
           eyebrow="PROOF OF DELIVERY"
           title="Strategy is useful when it ships."
-          body="The engagement model is built for finished work: live domains, client-ready pages, and systems that can be inspected in a browser."
+          body="The engagement model is built for finished work: production domains, client-ready interfaces, documented systems, and outcomes that can be inspected in a browser."
           slugs={["scissortail-laboratory", "chute-boss", "strategic-website"]}
         />
 
@@ -277,19 +277,18 @@ export default function ServicesPage() {
                 id="next-heading"
                 className="mt-8 font-serif text-h2 text-sbe-ink max-w-[22ch]"
               >
-                A short call. A written proposal. Then the work.
+                A focused call. A written scope. Then accountable delivery.
               </h2>
               <p className="mt-8 max-w-[60ch] text-body-lg text-sbe-graphite">
-                Every engagement starts with a 30-minute conversation, free
-                of charge and free of obligation. If it makes sense, we
-                follow up with a written proposal that names scope, duration,
-                deliverables, and terms. If it doesn&rsquo;t, we say so and
-                point you toward a firm that fits better.
+                Every engagement starts with a direct discovery conversation.
+                If the opportunity is real, SBE follows with a written scope
+                that names the system, the deliverables, the implementation
+                path, and the operating risks.
               </p>
               <p className="mt-6 max-w-[60ch] text-body-lg text-sbe-graphite">
-                Pricing is discussed on the call. It depends on scope,
-                timeline, and risk &mdash; variables we don&rsquo;t pretend
-                to know before we talk.
+                Pricing is discussed after the technical shape is understood.
+                Scope, timeline, integration risk, and production responsibility
+                determine the engagement.
               </p>
               <div className="mt-12">
                 <Button href="/contact" variant="primary" size="lg" withArrow>

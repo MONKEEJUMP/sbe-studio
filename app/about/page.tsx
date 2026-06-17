@@ -12,7 +12,7 @@ import { formatDate, formatNumber } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The origin story of Space Bot Engineering Studio — 130 days, 20 flagship projects, one knowledge base.",
+    "The operating model behind Space Bot Engineering Studio: a lean production studio backed by a large technical memory.",
 };
 
 export default function AboutPage() {
@@ -46,14 +46,14 @@ export default function AboutPage() {
           <Container className="relative z-10">
             <Eyebrow>ABOUT</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
-              A one-person firm, with a knowledge base the size of planet earth.
+              A lean studio with an enterprise-scale operating memory.
             </h1>
             <p className="mt-10 max-w-[62ch] text-body-lg text-sbe-graphite">
               Space Bot Engineering Studio is the public consulting face of a
               private Ai engineering practice in Oklahoma City. The work is
-              practical: architecture, retrieval, agents, deployment,
-              operations, and the unglamorous pieces that make Ai systems keep
-              running after the demo.
+              practical and production-oriented: architecture, retrieval,
+              agents, deployment, operations, and the engineering discipline
+              required to keep Ai systems useful after the demo.
             </p>
           </Container>
         </section>
@@ -96,14 +96,14 @@ export default function AboutPage() {
                   The current manifest tracks {formatNumber(MANIFEST_DATA.aiSignalFiles)} Ai-signal
                   files, {formatNumber(MANIFEST_DATA.projectRoots)} project
                   roots, and {MANIFEST_DATA.flagshipProjects} flagship
-                  projects. The point is not volume for its own sake. The point
-                  is a working memory of what was built, what failed, and what
-                  can be reused.
+                  projects. The value is not volume for its own sake. The value
+                  is an operating memory of decisions, failures, patterns, and
+                  reusable infrastructure.
                 </p>
                 <p className="max-w-[68ch] text-body-lg text-sbe-graphite">
                   Every engagement starts with architecture and ends with
                   ownership: a running system, a written runbook, or a clear
-                  technical report the client can hand to another engineer.
+                  technical report another engineer can inspect.
                 </p>
                 <div className="grid grid-cols-1 gap-8 border-t border-sbe-hairline pt-10 sm:grid-cols-3">
                   <div>
@@ -144,7 +144,7 @@ export default function AboutPage() {
         <DeploymentStrip
           eyebrow="THE PUBLIC ARCHIVE"
           title="The studio has receipts you can click."
-          body="The Vercel portfolio is a living archive of the work: consumer brands, Oklahoma service businesses, Ai products, nonprofits, and event builds."
+          body="The Vercel portfolio is a public archive of delivered work: consumer brands, Oklahoma service businesses, Ai products, nonprofits, and event builds."
           slugs={["botspace", "ftautogarage", "music-giving-hope"]}
         />
       </main>

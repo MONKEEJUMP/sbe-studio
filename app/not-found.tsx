@@ -26,11 +26,11 @@ export default function NotFound() {
           <Container className="relative z-10">
             <Eyebrow>ERROR · 404</Eyebrow>
             <h1 className="mt-8 font-serif text-display text-sbe-ink max-w-[18ch]">
-              Page not on any hard drive we can find.
+              This page is outside the current operating record.
             </h1>
             <p className="mt-8 max-w-[55ch] text-body-lg text-sbe-graphite">
-              Every claim on this site links to a file on a hard drive. This
-              URL, apparently, does not.
+              Every claim on this site links to a file, deployment, or source
+              record. This URL is not part of the current public index.
             </p>
             <div className="mt-12 flex flex-wrap items-center gap-6">
               <Button href="/" variant="primary" withArrow>

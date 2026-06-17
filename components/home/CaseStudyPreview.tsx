@@ -49,7 +49,7 @@ export function CaseStudyPreview() {
             id="work-heading"
             className="mt-6 font-serif text-h1 text-sbe-ink"
           >
-            Built it. Shipped it. Still running it.
+            Built, shipped, and still operating.
           </h2>
         </div>
 

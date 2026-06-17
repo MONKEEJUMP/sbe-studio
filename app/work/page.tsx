@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Live websites, Vercel deployments, and selected engineering case studies from Space Bot Engineering Studio.",
+    "Live websites, Vercel deployments, and selected production engineering case studies from Space Bot Engineering Studio.",
 };
 
 const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
@@ -65,12 +65,12 @@ export default function WorkPage() {
               <div className="lg:col-span-7">
                 <Eyebrow>LIVE WORK INDEX</Eyebrow>
                 <h1 className="mt-8 max-w-[18ch] font-serif text-h1 text-sbe-cobalt">
-                  Built it. Shipped it. Put it on Vercel.
+                  Designed, shipped, and deployed to production.
                 </h1>
                 <p className="mt-8 max-w-[62ch] text-body-lg text-sbe-graphite">
-                  A public wall of SBE deployments: brand sites, product
+                  A public index of SBE deployments: brand sites, product
                   experiments, Ai platforms, local service engines, nonprofits,
-                  event pages, and the studio systems behind them.
+                  event pages, and the technical systems behind them.
                 </p>
               </div>
 
@@ -130,11 +130,12 @@ export default function WorkPage() {
             <div className="mb-16 max-w-3xl">
               <Eyebrow tone="cobalt">FEATURED DEPLOYMENTS</Eyebrow>
               <h2 className="mt-6 font-serif text-h2 text-sbe-ink">
-                The front row.
+                Featured production launches.
               </h2>
               <p className="mt-6 max-w-[58ch] text-body-lg text-sbe-graphite">
-                A few of the strongest public builds get the big treatment
-                here. Every screen links directly to the live website.
+                A selected group of public builds appears here with live URLs,
+                real screenshots, and business context. Every screen links
+                directly to the production site.
               </p>
             </div>
 
@@ -232,11 +233,11 @@ export default function WorkPage() {
               <div className="max-w-3xl">
                 <Eyebrow>ALL LIVE WEBSITES</Eyebrow>
                 <h2 className="mt-6 font-serif text-h2 text-sbe-ink">
-                  The Vercel wall.
+                  Live production inventory.
                 </h2>
                 <p className="mt-6 max-w-[62ch] text-body-lg text-sbe-graphite">
-                  Each item is pulled from the current Vercel account inventory
-                  and linked to its live production URL.
+                  Each item represents a public deployment in the current work
+                  inventory and links to the live production URL.
                 </p>
               </div>
               <p className="font-mono text-caption text-sbe-mist">
@@ -322,12 +323,12 @@ export default function WorkPage() {
             <div className="mb-12 max-w-3xl">
               <Eyebrow tone="cobalt">ENGINEERING RECEIPTS</Eyebrow>
               <h2 className="mt-6 font-serif text-h2 text-sbe-ink">
-                The deeper systems behind the sites.
+                The technical systems behind the public work.
               </h2>
               <p className="mt-6 max-w-[62ch] text-body-lg text-sbe-graphite">
-                The public websites are the visible layer. The studio also
-                keeps receipts for the research systems, benchmarked engines,
-                and production architecture that power the work.
+                The websites are the visible layer. SBE also keeps receipts for
+                retrieval engines, agent platforms, benchmarked inference
+                systems, and production architecture that support the work.
               </p>
             </div>
 

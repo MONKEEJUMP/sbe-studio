@@ -67,12 +67,12 @@ export function VercelShowcase() {
               id="vercel-showcase-heading"
               className="mt-6 max-w-[12ch] font-serif text-h1 text-sbe-ink sm:text-display"
             >
-              A studio wall of shipped websites.
+              A public portfolio of shipped digital products.
             </h2>
             <p className="mt-6 max-w-[58ch] text-body-lg text-sbe-graphite">
               These are live deployments from the SBE Vercel account: brand
-              sites, local service engines, Ai experiments, event pages, and
-              product concepts that moved from prompt to production.
+              sites, local service engines, Ai products, event pages, and
+              operating concepts moved from prompt to production.
             </p>
           </div>
 
@@ -151,7 +151,7 @@ export function VercelShowcase() {
             Open the full work index
           </Button>
           <p className="font-mono text-caption text-sbe-mist">
-            {PORTFOLIO_STATS.totalProjects} live sites indexed
+            {PORTFOLIO_STATS.totalProjects} live production sites indexed
           </p>
         </div>
       </Container>

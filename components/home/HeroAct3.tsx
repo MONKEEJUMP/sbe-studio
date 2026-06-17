@@ -55,11 +55,11 @@ export function HeroAct3() {
       />
       <div className="relative z-10 mb-6 flex justify-center px-6">
         <Eyebrow className="rounded-full border-2 border-sbe-ink bg-sbe-surface px-4 py-2 text-sbe-cobalt">
-          TECHNICAL STACK · ACTIVELY IN PRODUCTION
+          TECHNICAL STACK · ACTIVE IN PRODUCTION
         </Eyebrow>
       </div>
       <h2 id="stack-heading" className="sr-only">
-        Technical stack actively in production
+        Technical stack active in production
       </h2>
       <div className="relative z-10">
         <Marquee items={TECH_STACK} speedSeconds={40} />

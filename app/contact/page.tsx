@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a conversation with Space Bot Engineering Studio. Oklahoma City · Central Time.",
+    "Start a production engineering conversation with Space Bot Engineering Studio. Oklahoma City · Central Time.",
 };
 
 export default function ContactPage() {
@@ -51,12 +51,13 @@ export default function ContactPage() {
           <Container className="relative z-10">
             <Eyebrow>START A CONVERSATION</Eyebrow>
             <h1 className="mt-8 font-serif text-h1 text-sbe-ink max-w-[22ch]">
-              Tell us what you&rsquo;re trying to build.
+              Tell us what needs to ship.
             </h1>
             <p className="mt-10 max-w-[58ch] text-body-lg text-sbe-graphite">
-              Send a short note with the problem, the current stack, and what
-              would count as a working outcome. If there is a fit, the next
-              step is a focused discovery call and a written scope.
+              Send a short note with the business problem, the current stack,
+              the systems involved, and what would count as a production
+              outcome. If there is a fit, the next step is a focused discovery
+              call and a written scope.
             </p>
             <p className="mt-8">
               <a
@@ -79,8 +80,8 @@ export default function ContactPage() {
               </Button>
             </div>
             <p className="mt-10 font-mono text-caption text-sbe-mist">
-              Oklahoma City · Central Time · Responses are handled directly by
-              the studio.
+              Oklahoma City · Central Time · Every inquiry is reviewed directly
+              by the studio.
             </p>
           </Container>
         </section>

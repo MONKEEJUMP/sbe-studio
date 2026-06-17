@@ -64,9 +64,9 @@ export function HeroAct1() {
             </p>
 
             <p className="mx-auto mt-6 max-w-[54ch] text-body-lg text-sbe-graphite">
-              SBE turns useful Ai ideas into real production software, public
-              websites, automations, and operating systems that a team can
-              actually use.
+              SBE turns useful Ai ideas into production software, public
+              websites, automations, and operating systems that teams can
+              adopt, maintain, and verify.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
@@ -74,7 +74,7 @@ export function HeroAct1() {
                 Start a conversation
               </Button>
               <Button href="/work" variant="secondary" size="lg" withArrow>
-                See the work wall
+                See the work index
               </Button>
             </div>
           </div>
@@ -83,8 +83,8 @@ export function HeroAct1() {
         <div className="grid gap-5 pt-4 md:grid-cols-3">
           {[
             {
-              title: "Built-in Ai systems",
-              body: "Assistants, agents, knowledge bases, internal tools, and workflows designed around the way your team already works.",
+              title: "Production Ai systems",
+              body: "Assistants, agent workflows, retrieval knowledge bases, internal tools, and operating processes engineered around how the team already works.",
               tone: "bg-sbe-electric",
               accent: "sbe-offset-blue",
               label: "text-sbe-ink",
@@ -92,8 +92,8 @@ export function HeroAct1() {
               copy: "text-sbe-ink",
             },
             {
-              title: "Live website launches",
-              body: "Beautiful public sites, Vercel deployments, real URLs, screenshots, analytics, and maintenance after the launch.",
+              title: "Live digital launches",
+              body: "Public websites, Vercel deployments, real URLs, screenshots, analytics, DNS coordination, and launch support that remains accountable after day one.",
               tone: "bg-sbe-cobalt",
               accent: "sbe-offset-red",
               label: "text-sbe-neon",
@@ -102,7 +102,7 @@ export function HeroAct1() {
             },
             {
               title: "Proof you can inspect",
-              body: "Every claim points back to working systems, indexed files, production domains, and receipts we can open together.",
+              body: "Every claim points back to working systems, indexed files, production domains, and receipt records that can be opened and reviewed.",
               tone: "bg-sbe-surface",
               accent: "sbe-offset-plasma",
               label: "text-sbe-plasma",
