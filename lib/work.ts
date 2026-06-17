@@ -23,7 +23,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "LUCY v3.2 Fusion Search",
     kicker: "Inference + retrieval",
     summary:
-      "An in-house fusion search system benchmarked against Grok and DeepSeek on a single RunPod A40 GPU.",
+      "An in-house fusion search system benchmarked against frontier-model baselines on a single RunPod A40 GPU.",
     stack: "QWEN 235B · Cerebras · RunPod A40 · vLLM",
     status: "Benchmarked",
     source: "DORYLUS_EVOLUTION_REPORT.md",
@@ -33,7 +33,7 @@ export const WORK_PROJECTS: WorkProject[] = [
         value: MANIFEST_DATA.benchmarkAccuracy,
       },
       {
-        label: "Lead over Grok",
+        label: "Frontier lead",
         value: `${MANIFEST_DATA.grokBeatBySeconds}s`,
       },
       {
@@ -57,7 +57,7 @@ export const WORK_PROJECTS: WorkProject[] = [
         value: formatNumber(MANIFEST_DATA.spacebotVisits),
       },
       {
-        label: "Production domains",
+        label: "Live production domains",
         value: String(MANIFEST_DATA.productionDomains),
       },
       {
@@ -143,8 +143,8 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "TSTR Market Maker",
     kicker: "Trading systems research",
     summary:
-      "An Avellaneda-Stoikov market-making implementation for Kalshi prediction markets with a real-time monitor and fee engine.",
-    stack: "Python · Kalshi API · WebSocket · Wolfram Alpha",
+      "An Avellaneda-Stoikov market-making implementation for real-time trading systems with a live monitor and fee engine.",
+    stack: "Python · Market data API · WebSocket · Wolfram Alpha",
     status: "Research build",
     source: "arbitrage-paper-analysis.md",
     metrics: [

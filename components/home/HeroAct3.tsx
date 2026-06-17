@@ -22,7 +22,7 @@ const TECH_STACK = [
   "Oracle Cloud",
   "Vercel",
   "Python 3.14",
-  "Kalshi API",
+  "Market data API",
   "Avellaneda-Stoikov",
   "OpenClaw",
   "Tesseract.js",

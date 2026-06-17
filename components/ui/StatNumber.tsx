@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 type StatNumberProps = {
-  value: number;
+  value: number | string;
   suffix?: string;
   prefix?: string;
   className?: string;
@@ -16,7 +16,9 @@ export function StatNumber({
   format = "number",
 }: StatNumberProps) {
   const formatted =
-    format === "number"
+    typeof value === "string"
+      ? value
+      : format === "number"
       ? new Intl.NumberFormat("en-US").format(value)
       : String(value);
 

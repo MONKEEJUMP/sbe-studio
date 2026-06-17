@@ -1,3 +1,5 @@
+import { MANIFEST_DATA } from "./manifest-data";
+
 export type VercelProject = {
   slug: string;
   projectName: string;
@@ -325,9 +327,11 @@ export const FEATURED_VERCEL_PROJECTS = VERCEL_PROJECTS.filter(
 );
 
 export const PORTFOLIO_STATS = {
-  totalProjects: VERCEL_PROJECTS.length,
+  totalProjects: MANIFEST_DATA.publicVercelDeployments,
   featuredProjects: FEATURED_VERCEL_PROJECTS.length,
   categories: new Set(VERCEL_PROJECTS.map((project) => project.category)).size,
+  pagesShipped: MANIFEST_DATA.pagesShipped,
+  platform: "www",
 };
 
 export function getProjectHost(url: string) {

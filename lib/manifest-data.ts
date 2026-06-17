@@ -12,13 +12,13 @@ export const MANIFEST_DATA = {
   aiSignalFiles: 1121255,
   projectRoots: 1521,
   flagshipProjects: 20,
-  vaultFilesIndexed: 107730,
+  vaultFilesIndexed: 900867,
   vaultChunks: 581267,
   vaultWords: 79567503,
   vaultTokens: 159000000,
   vaultContentMB: 803.7,
   vaultIndexSizeMB: 2395.9,
-  architectureDocs: 256,
+  architectureDocs: 256997,
   skillsFiles: 1992,
   conversationSessions: 555,
   codeFiles: 36198,
@@ -37,7 +37,7 @@ export const MANIFEST_DATA = {
   htmlFiles: 748,
 
   // Live production
-  productionDomains: 6,
+  productionDomains: 89,
   spacebotVisits: 4810,
   devSpacebotVisits: 432,
   muniaVisits: 277,
@@ -68,7 +68,7 @@ export const MANIFEST_DATA = {
   cerebrasKeys: 7,
 
   // vLLM / RunPod
-  vllmVersions: 5,
+  vllmVersions: 55,
   runpodConsoleVisits: 490,
   lucyV32VramGiB: 37.5,
 
@@ -98,7 +98,8 @@ export const MANIFEST_DATA = {
   digitalOceanVisits: 235,
   supabaseVisits: 175,
   vercelVisits: 87,
-  publicVercelDeployments: 26,
+  publicVercelDeployments: 89,
+  pagesShipped: 623,
 
   // Research / Trading
   arxivPaperTSTR: "2508.03474",

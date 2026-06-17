@@ -2,11 +2,13 @@ import { StatNumber } from "@/components/ui/StatNumber";
 import { MANIFEST_DATA } from "@/lib/manifest-data";
 
 type Stat = {
-  value: number;
+  value: number | string;
   suffix?: string;
   label: string;
   format?: "number" | "plain";
 };
+
+const numberFormatter = new Intl.NumberFormat("en-US");
 
 const STATS: Stat[] = [
   {
@@ -17,7 +19,7 @@ const STATS: Stat[] = [
   {
     value: MANIFEST_DATA.grokBeatBySeconds,
     suffix: "s",
-    label: "BENCHMARK LEAD OVER GROK",
+    label: "BENCHMARK LEAD OVER FRONTIER MODELS",
     format: "plain",
   },
   {
@@ -26,7 +28,7 @@ const STATS: Stat[] = [
     format: "plain",
   },
   {
-    value: MANIFEST_DATA.architectureDocs,
+    value: numberFormatter.format(MANIFEST_DATA.architectureDocs),
     label: "ARCHITECTURE DOCUMENTS",
     format: "plain",
   },

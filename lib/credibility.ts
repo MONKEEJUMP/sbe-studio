@@ -24,11 +24,11 @@ const fmt = (n: number) => new Intl.NumberFormat("en-US").format(n);
 export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   {
     id: 1,
-    headline: "LUCY beat Grok by 12 seconds.",
-    body: `Our in-house fusion search engine, LUCY v3.2, scored ${MANIFEST_DATA.benchmarkAccuracy} on a standardized benchmark and answered the same questions ${MANIFEST_DATA.grokBeatBySeconds} seconds faster than Grok and ${MANIFEST_DATA.deepseekBeatBySeconds} seconds faster than DeepSeek on a single NVIDIA A40 GPU. Total response time: ${MANIFEST_DATA.lucyV32ResponseTime}.`,
+    headline: "LUCY beats frontier models by 12 seconds.",
+    body: `Our in-house fusion search engine, LUCY v3.2, scored ${MANIFEST_DATA.benchmarkAccuracy} on a standardized benchmark and answered the same questions ${MANIFEST_DATA.grokBeatBySeconds} seconds ahead of frontier-model baselines on a single NVIDIA A40 GPU. Total response time: ${MANIFEST_DATA.lucyV32ResponseTime}.`,
     stat: {
       value: `${MANIFEST_DATA.grokBeatBySeconds}s`,
-      label: "LEAD OVER GROK",
+      label: "FRONTIER LEAD",
     },
     source: "DORYLUS_EVOLUTION_REPORT.md",
   },
@@ -48,7 +48,9 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   },
   {
     id: 3,
-    headline: "A 107,730-file knowledge base with 159 million indexed tokens.",
+    headline: `A ${fmt(
+      MANIFEST_DATA.vaultFilesIndexed
+    )}-file knowledge base with 159 million indexed tokens.`,
     body: `${fmt(
       MANIFEST_DATA.vaultFilesIndexed
     )} files indexed. ${MANIFEST_DATA.vaultContentMB.toFixed(
@@ -84,8 +86,8 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   },
   {
     id: 5,
-    headline: "An Avellaneda-Stoikov market maker, live on Kalshi.",
-    body: `TSTR implements the Avellaneda-Stoikov optimal market-making algorithm on Kalshi prediction markets. ${MANIFEST_DATA.tstrLanguage}. WebSocket real-time monitor. Fee engine, Wolfram Alpha verified. Execution layer. Market scanner. Built after a complete reading of ArXiv paper ${MANIFEST_DATA.arxivPaperTSTR}.`,
+    headline: "An Avellaneda-Stoikov market maker.",
+    body: `TSTR implements the Avellaneda-Stoikov optimal market-making algorithm for real-time trading systems. ${MANIFEST_DATA.tstrLanguage}. WebSocket monitor. Fee engine, Wolfram Alpha verified. Execution layer. Market scanner. Built after a complete reading of ArXiv paper ${MANIFEST_DATA.arxivPaperTSTR}.`,
     stat: {
       value: MANIFEST_DATA.arxivPaperTSTR,
       label: "ARXIV PAPER",
@@ -109,18 +111,18 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
     headline: `An AI social platform with ${MANIFEST_DATA.botPersonalities} bot personalities.`,
     body: `BotSpace is a production Next.js application built for AI agents, not humans. Agents post, vote, and message each other. ${MANIFEST_DATA.botPersonalities} bot personalities. A heartbeat check-in system iterated ${MANIFEST_DATA.heartbeatIterations} times. Stripe monetization. Live at botspace.online with ${MANIFEST_DATA.botspaceVisits} browser visits. Documented by ${MANIFEST_DATA.botspaceArchitectureDocs}+ architecture files.`,
     stat: {
-      value: `v${MANIFEST_DATA.heartbeatIterations}`,
-      label: "HEARTBEAT ITERATIONS",
+      value: `${MANIFEST_DATA.botPersonalities}`,
+      label: "BOT PERSONALITIES",
     },
     source: "botspace.online",
   },
   {
     id: 8,
-    headline: "A five-version vLLM cluster, built and debugged in the open.",
+    headline: `A ${MANIFEST_DATA.vllmVersions}-iteration vLLM cluster, built and debugged in the open.`,
     body: `${MANIFEST_DATA.vllmVersions} iterations of a custom vLLM inference cluster deployed on RunPod A40 GPUs. AWQ and GPTQ quantization. Multi-GPU VRAM allocation (${MANIFEST_DATA.lucyV32VramGiB} GiB in v3.2). A "Never Again" engineering rulebook documenting every failure. ${MANIFEST_DATA.runpodConsoleVisits} RunPod console sessions logged.`,
     stat: {
       value: `${MANIFEST_DATA.vllmVersions}`,
-      label: "VLLM VERSIONS",
+      label: "VLLM ITERATIONS",
     },
     source: "DORYLUS-RUNPOD-DEPLOYMENT-BIBLE.md",
   },
@@ -136,11 +138,11 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   },
   {
     id: 10,
-    headline: "A public Vercel portfolio, shipped and linked.",
-    body: `The studio work wall now tracks ${MANIFEST_DATA.publicVercelDeployments} public production deployments with live URLs, screenshots, and sector notes. The point is simple: finished work should be inspectable in a browser, not trapped in a slide deck.`,
+    headline: "A public live-site portfolio, shipped and linked.",
+    body: `The studio work wall now tracks ${MANIFEST_DATA.publicVercelDeployments} public production sites with live URLs, screenshots, and sector notes. The point is simple: finished work should be inspectable in a browser, not trapped in a slide deck.`,
     stat: {
       value: String(MANIFEST_DATA.publicVercelDeployments),
-      label: "PUBLIC DEPLOYMENTS",
+      label: "LIVE SITES",
     },
     source: "Vercel project inventory",
   },

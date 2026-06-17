@@ -20,17 +20,37 @@ const RECEIPTS = [
   },
   {
     claim: "Architecture documents",
-    value: String(MANIFEST_DATA.architectureDocs),
+    value: formatNumber(MANIFEST_DATA.architectureDocs),
     source: "vault-search.js stats",
   },
   {
-    claim: "Production domains",
+    claim: "Live production domains",
     value: String(MANIFEST_DATA.productionDomains),
     source: "browser history + deployment notes",
   },
   {
+    claim: "Public/live portfolio sites",
+    value: String(MANIFEST_DATA.publicVercelDeployments),
+    source: "Vercel project inventory",
+  },
+  {
+    claim: "Pages shipped",
+    value: formatNumber(MANIFEST_DATA.pagesShipped),
+    source: "89 live sites x 7 average pages",
+  },
+  {
+    claim: "Platform signal",
+    value: "www",
+    source: "public web portfolio",
+  },
+  {
     claim: "SpaceBot production visits",
     value: formatNumber(MANIFEST_DATA.spacebotVisits),
+    source: "spacebot.space",
+  },
+  {
+    claim: "SpaceBot production agents",
+    value: "18",
     source: "spacebot.space",
   },
   {
@@ -39,14 +59,94 @@ const RECEIPTS = [
     source: "DORYLUS_EVOLUTION_REPORT.md",
   },
   {
+    claim: "Benchmark lead over frontier models",
+    value: `${MANIFEST_DATA.grokBeatBySeconds}s`,
+    source: "DORYLUS_EVOLUTION_REPORT.md",
+  },
+  {
+    claim: "LUCY response time",
+    value: MANIFEST_DATA.lucyV32ResponseTime,
+    source: "DORYLUS_EVOLUTION_REPORT.md",
+  },
+  {
+    claim: "vLLM iterations / versions",
+    value: String(MANIFEST_DATA.vllmVersions),
+    source: "DORYLUS-RUNPOD-DEPLOYMENT-BIBLE.md",
+  },
+  {
+    claim: "RunPod console sessions",
+    value: formatNumber(MANIFEST_DATA.runpodConsoleVisits),
+    source: "RunPod console history",
+  },
+  {
     claim: "Messaging platforms",
     value: `${MANIFEST_DATA.messagingPlatforms}+`,
+    source: "MEGATRON_REPORT.md",
+  },
+  {
+    claim: "CodeSpace agent implementations",
+    value: formatNumber(MANIFEST_DATA.codespaceAgents),
+    source: "MEGATRON_REPORT.md",
+  },
+  {
+    claim: "CodeSpace SDK files",
+    value: formatNumber(MANIFEST_DATA.codespacePluginSdkFiles),
     source: "MEGATRON_REPORT.md",
   },
   {
     claim: "BotSpace bot personalities",
     value: String(MANIFEST_DATA.botPersonalities),
     source: "botspace.online",
+  },
+  {
+    claim: "BotSpace heartbeat iterations",
+    value: String(MANIFEST_DATA.heartbeatIterations),
+    source: "botspace.online",
+  },
+  {
+    claim: "BotSpace architecture files",
+    value: `${MANIFEST_DATA.botspaceArchitectureDocs}+`,
+    source: "botspace.online",
+  },
+  {
+    claim: "Distributed AI swarm nodes",
+    value: String(MANIFEST_DATA.swarmNodes),
+    source: "ecosystem.config.cjs",
+  },
+  {
+    claim: "Gossip inbox messages",
+    value: `${formatNumber(MANIFEST_DATA.gossipInboxFiles)}+`,
+    source: "IMMORTAL SWARM logs",
+  },
+  {
+    claim: "Active swarm log data",
+    value: `${MANIFEST_DATA.swarmLogSizeGB}+ GB`,
+    source: "IMMORTAL SWARM logs",
+  },
+  {
+    claim: "TSTR reference paper",
+    value: MANIFEST_DATA.arxivPaperTSTR,
+    source: "arbitrage-paper-analysis.md",
+  },
+  {
+    claim: "TSTR runtime",
+    value: MANIFEST_DATA.tstrLanguage,
+    source: "arbitrage-paper-analysis.md",
+  },
+  {
+    claim: "Active build days",
+    value: String(MANIFEST_DATA.activeDays),
+    source: "AI_PROJECT_MANIFEST.md",
+  },
+  {
+    claim: "Flagship projects",
+    value: String(MANIFEST_DATA.flagshipProjects),
+    source: "AI_PROJECT_MANIFEST.md",
+  },
+  {
+    claim: "Project roots",
+    value: formatNumber(MANIFEST_DATA.projectRoots),
+    source: "AI_PROJECT_MANIFEST.md",
   },
 ];
 

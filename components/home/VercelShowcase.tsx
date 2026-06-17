@@ -6,7 +6,6 @@ import { ProjectBrowser } from "@/components/work/ProjectBrowser";
 import {
   FEATURED_VERCEL_PROJECTS,
   PORTFOLIO_STATS,
-  VERCEL_PROJECTS,
 } from "@/lib/vercel-portfolio";
 
 const HOME_PROJECTS = FEATURED_VERCEL_PROJECTS.slice(0, 4);
@@ -80,8 +79,8 @@ export function VercelShowcase() {
           <div className="grid grid-cols-3 gap-4 lg:col-span-5">
             {[
               ["Live sites", PORTFOLIO_STATS.totalProjects],
-              ["Sectors", PORTFOLIO_STATS.categories],
-              ["Platform", "Vercel"],
+              ["Pages shipped", PORTFOLIO_STATS.pagesShipped],
+              ["Platform", PORTFOLIO_STATS.platform],
             ].map(([label, value], index) => (
               <div
                 key={label}
@@ -152,7 +151,7 @@ export function VercelShowcase() {
             Open the full work index
           </Button>
           <p className="font-mono text-caption text-sbe-mist">
-            {VERCEL_PROJECTS.length} live deployments indexed
+            {PORTFOLIO_STATS.totalProjects} live sites indexed
           </p>
         </div>
       </Container>

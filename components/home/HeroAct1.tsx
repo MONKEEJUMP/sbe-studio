@@ -60,7 +60,7 @@ export function HeroAct1() {
             </h1>
 
             <p className="mx-auto mt-8 max-w-[36ch] text-h3 font-bold leading-tight text-sbe-ink">
-              Build the system. Launch the website. Keep the receipts.
+              Build the system. Launch the site. Keep the receipts.
             </p>
 
             <p className="mx-auto mt-6 max-w-[54ch] text-body-lg text-sbe-graphite">
