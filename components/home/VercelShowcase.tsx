@@ -71,7 +71,7 @@ export function VercelShowcase() {
             </h2>
             <p className="mt-6 max-w-[58ch] text-body-lg text-sbe-graphite">
               These are live deployments from the SBE Vercel account: brand
-              sites, local service engines, AI experiments, event pages, and
+              sites, local service engines, Ai experiments, event pages, and
               product concepts that moved from prompt to production.
             </p>
           </div>

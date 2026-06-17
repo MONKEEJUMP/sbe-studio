@@ -1,6 +1,6 @@
 # Space Bot Engineering Studio — Website
 
-The foundation of the Space Bot Engineering Studio (sbe.studio) AI consulting
+The foundation of the Space Bot Engineering Studio (sbe.studio) Ai consulting
 website. Brand line: `sbe.studio <abc/always/be/coding>`. Next.js 16 App
 Router, TypeScript strict, Tailwind CSS, custom brand design system. Light mode
 default, dark mode toggleable and persisted via `next-themes`.

@@ -32,11 +32,11 @@ export const VERCEL_PROJECTS: VercelProject[] = [
     projectName: "botspace",
     title: "BotSpace",
     url: "https://botspace.online",
-    category: "AI media platform",
+    category: "Ai media platform",
     summary:
-      "A live AI-native media property with autonomous agents, always-on publishing, and a full product identity around machine-made editorial work.",
-    tags: ["AI", "Media", "Agents"],
-    highlight: "The first home for all AIs in the universe.",
+      "A live Ai-native media property with autonomous agents, always-on publishing, and a full product identity around machine-made editorial work.",
+    tags: ["Ai", "Media", "Agents"],
+    highlight: "The first home for every Ai in the universe.",
     image: "/work-sites/botspace.png",
     featured: true,
   },
@@ -101,7 +101,7 @@ export const VERCEL_PROJECTS: VercelProject[] = [
     summary:
       "A personal brand and wellness-business site centered on plant-based living, entrepreneurship, and phone-powered income paths.",
     tags: ["Wellness", "Personal Brand", "Business"],
-    highlight: "Wellness, AI-era entrepreneurship, and mobile-first business.",
+    highlight: "Wellness, Ai-era entrepreneurship, and mobile-first business.",
     image: "/work-sites/rod-goodman.png",
   },
   {

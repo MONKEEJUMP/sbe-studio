@@ -16,7 +16,7 @@ const fmt = (n: number) => new Intl.NumberFormat("en-US").format(n);
 /**
  * 10 credibility hooks transcribed from the authoritative
  * "CREDIBILITY HOOKS FOR THE CONSULTING WEBSITE" section of
- * the private AI project manifest.
+ * the private Ai project manifest.
  *
  * Every stat on every hook is sourced from MANIFEST_DATA. Every
  * hook points to a real file on a real hard drive.
@@ -34,8 +34,8 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   },
   {
     id: 2,
-    headline: "A live multi-agent AI platform in production.",
-    body: `SpaceBot.Space runs 18 parallel AI agents on DigitalOcean, receiving ${fmt(
+    headline: "A live multi-agent Ai platform in production.",
+    body: `SpaceBot.Space runs 18 parallel Ai agents on DigitalOcean, receiving ${fmt(
       MANIFEST_DATA.spacebotVisits
     )} documented browser visits to the production domain. Four subdomains are live, including a Munia variant (${
       MANIFEST_DATA.muniaVisits
@@ -72,7 +72,7 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   },
   {
     id: 4,
-    headline: `A ${MANIFEST_DATA.swarmNodes}-node distributed AI swarm with ${fmt(
+    headline: `A ${MANIFEST_DATA.swarmNodes}-node distributed Ai swarm with ${fmt(
       MANIFEST_DATA.gossipInboxFiles
     )}+ gossip messages.`,
     body: `IMMORTAL SWARM: a PM2-managed swarm where each physical hard drive is an autonomous worker node, communicating via a file-based gossip protocol. ${MANIFEST_DATA.swarmLogSizeGB}+ GB of active log data. ${fmt(
@@ -96,7 +96,7 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   },
   {
     id: 6,
-    headline: `An AI gateway connecting to ${MANIFEST_DATA.messagingPlatforms}+ messaging platforms.`,
+    headline: `An Ai gateway connecting to ${MANIFEST_DATA.messagingPlatforms}+ messaging platforms.`,
     body: `CodeSpace deploys QWEN 235B simultaneously across WhatsApp, Telegram, Signal, Discord, iMessage, Matrix, LINE, Slack, Feishu, Mattermost, and twelve other platforms. ${fmt(
       MANIFEST_DATA.codespaceAgents
     )} agent implementations. Built after a 9-phase reverse-engineering of OpenClaw v${MANIFEST_DATA.openclawVersion}.`,
@@ -108,8 +108,8 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   },
   {
     id: 7,
-    headline: `An AI social platform with ${MANIFEST_DATA.botPersonalities} bot personalities.`,
-    body: `BotSpace is a production Next.js application built for AI agents, not humans. Agents post, vote, and message each other. ${MANIFEST_DATA.botPersonalities} bot personalities. A heartbeat check-in system iterated ${MANIFEST_DATA.heartbeatIterations} times. Stripe monetization. Live at botspace.online with ${MANIFEST_DATA.botspaceVisits} browser visits. Documented by ${MANIFEST_DATA.botspaceArchitectureDocs}+ architecture files.`,
+    headline: `An Ai social platform with ${MANIFEST_DATA.botPersonalities} bot personalities.`,
+    body: `BotSpace is a production Next.js application built for Ai agents, not humans. Agents post, vote, and message each other. ${MANIFEST_DATA.botPersonalities} bot personalities. A heartbeat check-in system iterated ${MANIFEST_DATA.heartbeatIterations} times. Stripe monetization. Live at botspace.online with ${MANIFEST_DATA.botspaceVisits} browser visits. Documented by ${MANIFEST_DATA.botspaceArchitectureDocs}+ architecture files.`,
     stat: {
       value: `${MANIFEST_DATA.botPersonalities}`,
       label: "BOT PERSONALITIES",

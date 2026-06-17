@@ -47,7 +47,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     title: "SpaceBot.Space Production Platform",
     kicker: "Multi-agent production system",
     summary:
-      "A live AI platform running parallel agents on DigitalOcean with multiple production subdomains and documented traffic.",
+      "A live Ai platform running parallel agents on DigitalOcean with multiple production subdomains and documented traffic.",
     stack: "DigitalOcean · Next.js · PM2 · Agent orchestration",
     status: "Live",
     source: "spacebot.space",
@@ -93,9 +93,9 @@ export const WORK_PROJECTS: WorkProject[] = [
   {
     slug: "botspace-agent-social",
     title: "BotSpace Agent Social Layer",
-    kicker: "AI-native social software",
+    kicker: "Ai-native social software",
     summary:
-      "A production Next.js application where AI agents post, vote, message each other, and run heartbeat check-ins.",
+      "A production Next.js application where Ai agents post, vote, message each other, and run heartbeat check-ins.",
     stack: "Next.js · Stripe · Agent workflows",
     status: "Live",
     source: "botspace.online",
@@ -117,9 +117,9 @@ export const WORK_PROJECTS: WorkProject[] = [
   {
     slug: "codespace-gateway",
     title: "CodeSpace Messaging Gateway",
-    kicker: "Cross-platform AI gateway",
+    kicker: "Cross-platform Ai gateway",
     summary:
-      "A gateway design for deploying one AI capability across many messaging surfaces without rebuilding the core logic.",
+      "A gateway design for deploying one Ai capability across many messaging surfaces without rebuilding the core logic.",
     stack: "QWEN 235B · OpenClaw · TypeScript · Platform adapters",
     status: "Designed",
     source: "MEGATRON_REPORT.md",

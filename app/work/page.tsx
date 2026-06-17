@@ -69,7 +69,7 @@ export default function WorkPage() {
                 </h1>
                 <p className="mt-8 max-w-[62ch] text-body-lg text-sbe-graphite">
                   A public wall of SBE deployments: brand sites, product
-                  experiments, AI platforms, local service engines, nonprofits,
+                  experiments, Ai platforms, local service engines, nonprofits,
                   event pages, and the studio systems behind them.
                 </p>
               </div>

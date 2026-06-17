@@ -16,7 +16,7 @@ const RECEIPTS = [
   {
     claim: "Indexed tokens",
     value: `${MANIFEST_DATA.vaultTokens / 1_000_000}M`,
-    source: "AI_PROJECT_MANIFEST.md",
+    source: "Ai project manifest",
   },
   {
     claim: "Architecture documents",
@@ -109,7 +109,7 @@ const RECEIPTS = [
     source: "botspace.online",
   },
   {
-    claim: "Distributed AI swarm nodes",
+    claim: "Distributed Ai swarm nodes",
     value: String(MANIFEST_DATA.swarmNodes),
     source: "ecosystem.config.cjs",
   },
@@ -136,17 +136,17 @@ const RECEIPTS = [
   {
     claim: "Active build days",
     value: String(MANIFEST_DATA.activeDays),
-    source: "AI_PROJECT_MANIFEST.md",
+    source: "Ai project manifest",
   },
   {
     claim: "Flagship projects",
     value: String(MANIFEST_DATA.flagshipProjects),
-    source: "AI_PROJECT_MANIFEST.md",
+    source: "Ai project manifest",
   },
   {
     claim: "Project roots",
     value: formatNumber(MANIFEST_DATA.projectRoots),
-    source: "AI_PROJECT_MANIFEST.md",
+    source: "Ai project manifest",
   },
 ];
 

@@ -56,7 +56,7 @@ export function HeroAct1() {
               id="hero-heading"
               className="mx-auto mt-8 max-w-[13ch] font-serif text-h2 text-sbe-ink sm:text-display"
             >
-              The studio that keeps AI shipping.
+              The studio that keeps Ai shipping.
             </h1>
 
             <p className="mx-auto mt-8 max-w-[36ch] text-h3 font-bold leading-tight text-sbe-ink">
@@ -64,7 +64,7 @@ export function HeroAct1() {
             </p>
 
             <p className="mx-auto mt-6 max-w-[54ch] text-body-lg text-sbe-graphite">
-              SBE turns useful AI ideas into real production software, public
+              SBE turns useful Ai ideas into real production software, public
               websites, automations, and operating systems that a team can
               actually use.
             </p>
@@ -83,7 +83,7 @@ export function HeroAct1() {
         <div className="grid gap-5 pt-4 md:grid-cols-3">
           {[
             {
-              title: "Built-in AI systems",
+              title: "Built-in Ai systems",
               body: "Assistants, agents, knowledge bases, internal tools, and workflows designed around the way your team already works.",
               tone: "bg-sbe-electric",
               accent: "sbe-offset-blue",

@@ -1,7 +1,7 @@
 /**
  * Source of truth for every statistic on the SBE website.
  *
- * Upstream source: private AI project manifest.
+ * Upstream source: private Ai project manifest.
  *
  * Every value below is verifiable against that manifest or against
  * a file enumerated in the manifest's EVIDENCE INDEX section. When a

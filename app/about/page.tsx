@@ -50,9 +50,9 @@ export default function AboutPage() {
             </h1>
             <p className="mt-10 max-w-[62ch] text-body-lg text-sbe-graphite">
               Space Bot Engineering Studio is the public consulting face of a
-              private AI engineering practice in Oklahoma City. The work is
+              private Ai engineering practice in Oklahoma City. The work is
               practical: architecture, retrieval, agents, deployment,
-              operations, and the unglamorous pieces that make AI systems keep
+              operations, and the unglamorous pieces that make Ai systems keep
               running after the demo.
             </p>
           </Container>
@@ -93,7 +93,7 @@ export default function AboutPage() {
               </div>
               <div className="space-y-8 lg:col-span-8">
                 <p className="max-w-[68ch] text-body-lg text-sbe-ink">
-                  The current manifest tracks {formatNumber(MANIFEST_DATA.aiSignalFiles)} AI-signal
+                  The current manifest tracks {formatNumber(MANIFEST_DATA.aiSignalFiles)} Ai-signal
                   files, {formatNumber(MANIFEST_DATA.projectRoots)} project
                   roots, and {MANIFEST_DATA.flagshipProjects} flagship
                   projects. The point is not volume for its own sake. The point
@@ -144,7 +144,7 @@ export default function AboutPage() {
         <DeploymentStrip
           eyebrow="THE PUBLIC ARCHIVE"
           title="The studio has receipts you can click."
-          body="The Vercel portfolio is a living archive of the work: consumer brands, Oklahoma service businesses, AI products, nonprofits, and event builds."
+          body="The Vercel portfolio is a living archive of the work: consumer brands, Oklahoma service businesses, Ai products, nonprofits, and event builds."
           slugs={["botspace", "ftautogarage", "music-giving-hope"]}
         />
       </main>

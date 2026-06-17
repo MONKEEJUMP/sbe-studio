@@ -57,7 +57,7 @@ export function CredibilityGrid() {
             Every claim links to a file on a hard drive.
           </h2>
           <p className="mt-6 max-w-[55ch] text-body-lg text-sbe-graphite">
-            AI consulting is a noisy market. Here is how we are different,
+            Ai consulting is a noisy market. Here is how we are different,
             one verifiable fact at a time.
           </p>
         </div>
