@@ -114,9 +114,9 @@ export const MANIFEST_DATA = {
   chatExportFiles: 400,
 
   // Time
-  activeDays: 130, // Dec 15, 2025 \u2192 Apr 23, 2026 inclusive
+  activeDays: 856, // fallback only; live UI derives from originDate
   monthsToEmpire: 5, // per manifest: "Total active span: 5 months"
-  originDate: "2024-11-25", // BCPilot Chrome extension compile date
+  originDate: "2024-02-12", // SBE full-time Ai web journey start
   firstAISession: "2025-12-15", // picganize-prototype-v2-code.txt
   manifestGenerated: "2026-04-23",
 

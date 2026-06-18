@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/layout/Container";
 import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { ActiveSpanCounter } from "@/components/ui/ActiveSpanCounter";
 import { MANIFEST_DATA } from "@/lib/manifest-data";
 import { formatDate, formatNumber } from "@/lib/utils";
 
@@ -134,9 +135,9 @@ const RECEIPTS = [
     source: "arbitrage-paper-analysis.md",
   },
   {
-    claim: "Active build days",
-    value: String(MANIFEST_DATA.activeDays),
-    source: "Ai project manifest",
+    claim: "Active span",
+    value: <ActiveSpanCounter originDate={MANIFEST_DATA.originDate} />,
+    source: "SBE origin date",
   },
   {
     claim: "Flagship projects",

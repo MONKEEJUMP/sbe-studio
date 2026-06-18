@@ -5,6 +5,7 @@ import { Container } from "@/components/layout/Container";
 import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { ActiveSpanCounter } from "@/components/ui/ActiveSpanCounter";
 import { DeploymentStrip } from "@/components/work/DeploymentStrip";
 import { MANIFEST_DATA } from "@/lib/manifest-data";
 import { formatDate, formatNumber } from "@/lib/utils";
@@ -111,7 +112,7 @@ export default function AboutPage() {
                       Active span
                     </p>
                     <p className="mt-2 font-mono text-body text-sbe-ink">
-                      {MANIFEST_DATA.activeDays} days
+                      <ActiveSpanCounter originDate={MANIFEST_DATA.originDate} />
                     </p>
                   </div>
                   <div>
