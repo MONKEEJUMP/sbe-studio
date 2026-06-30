@@ -8,7 +8,7 @@ export function ServiceTiers() {
   return (
     <section
       aria-labelledby="services-heading"
-      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-copper py-28"
+      className="relative overflow-hidden border-t-2 border-sbe-ink bg-sbe-copper py-28 text-white"
     >
       <BrandStamp
         tone="electric"
@@ -49,14 +49,14 @@ export function ServiceTiers() {
       />
       <Container className="relative z-10">
         <div className="mb-20 max-w-4xl">
-          <Eyebrow>HOW WE WORK</Eyebrow>
+          <Eyebrow className="text-white">HOW WE WORK</Eyebrow>
           <h2
             id="services-heading"
-            className="mt-6 font-serif text-h1 text-sbe-ink sm:text-display"
+            className="mt-6 font-serif text-h1 text-white sm:text-display"
           >
             Three engagement paths. Every one ends in production.
           </h2>
-          <p className="mt-6 max-w-[55ch] text-body-lg text-sbe-graphite">
+          <p className="mt-6 max-w-[55ch] text-body-lg text-white">
             Choose the level of intervention: a technical audit, a production
             build, or an operating partnership. If the fit is not right, we say
             so early.

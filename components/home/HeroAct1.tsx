@@ -38,13 +38,13 @@ export function HeroAct1() {
 
       <Container className="relative">
         <div className="pointer-events-none absolute inset-x-4 -top-[4.5rem] z-20 hidden justify-center lg:flex">
-          <p className="max-w-[34rem] bg-sbe-surface/95 px-4 py-1.5 text-center font-serif text-[clamp(1.24rem,1.89vw,2.02rem)] leading-none text-sbe-cobalt">
+          <p className="max-w-[34rem] rounded-sm bg-sbe-chip/95 px-4 py-1.5 text-center font-serif text-[clamp(1.24rem,1.89vw,2.02rem)] leading-none text-sbe-copper">
             &lt; the same{" "}
-            <span className="text-sbe-copper">ai</span>{" "}
+            <span className="text-sbe-cobalt">ai</span>{" "}
             we build for you
             <br />
             / is the same{" "}
-            <span className="text-sbe-copper">ai</span>{" "}
+            <span className="text-sbe-cobalt">ai</span>{" "}
             we build for us &gt;
           </p>
         </div>
@@ -96,16 +96,16 @@ export function HeroAct1() {
               body: "Public websites, Vercel deployments, real URLs, screenshots, analytics, DNS coordination, and launch support that remains accountable after day one.",
               tone: "bg-sbe-cobalt",
               accent: "sbe-offset-red",
-              label: "text-sbe-neon",
-              heading: "text-white",
-              copy: "text-white",
+              label: "text-sbe-ink",
+              heading: "text-sbe-ink",
+              copy: "text-sbe-ink",
             },
             {
               title: "Proof you can inspect",
               body: "Every claim points back to working systems, indexed files, production domains, and receipt records that can be opened and reviewed.",
               tone: "bg-sbe-surface",
               accent: "sbe-offset-plasma",
-              label: "text-sbe-plasma",
+              label: "text-sbe-cobalt",
               heading: "text-sbe-ink",
               copy: "text-sbe-graphite",
             },
@@ -132,14 +132,14 @@ export function HeroAct1() {
         <div className="mt-20 border-y-2 border-sbe-ink py-5">
           <h1
             aria-hidden="true"
-            className="font-serif text-h2 text-sbe-cobalt sm:text-display"
+            className="font-serif text-h2 text-sbe-copper sm:text-display"
           >
             &lt; the same{" "}
-            <span className="text-sbe-copper">ai</span>{" "}
+            <span className="text-sbe-cobalt">ai</span>{" "}
             we build for you
             <br />
             / is the same{" "}
-            <span className="text-sbe-copper">ai</span>{" "}
+            <span className="text-sbe-cobalt">ai</span>{" "}
             we build for us &gt;
           </h1>
         </div>

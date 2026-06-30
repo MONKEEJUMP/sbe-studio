@@ -5,25 +5,27 @@
 @tailwind utilities;
 
 :root {
-  /* SBE Electropop System — Light */
+  /* SBE Pine Signal System - Light */
   --sbe-canvas: #FFFFFF;
-  --sbe-ink: #000000;
-  --sbe-graphite: #000000;
-  --sbe-mist: #000000;
-  --sbe-hairline: #000000;
+  --sbe-ink: #0B3D0B;
+  --sbe-graphite: #145214;
+  --sbe-mist: #2F7D32;
+  --sbe-hairline: #228B22;
   --sbe-surface: #FFFFFF;
+  --sbe-chip: #EDFFE8;
 
-  /* Electropop palette: orange and blue lead; pink and neon yellow accent. */
-  --sbe-copper: #FF6B00;
-  --sbe-cobalt: #5200FF;
-  --sbe-electric: #FF6B00;
-  --sbe-plasma: #F900FF;
+  /* Pine structure with live green/yellow accents. */
+  --sbe-copper: #228B22;
+  --sbe-cobalt: #00BF33;
+  --sbe-electric: #89F336;
+  --sbe-plasma: #2CFF05;
   --sbe-neon: #CCFF00;
+  --sbe-yellow: #FFFC30;
 
   /* Status signals */
-  --sbe-live: #CCFF00;
-  --sbe-verified: #5200FF;
-  --sbe-alert: #F900FF;
+  --sbe-live: #2CFF05;
+  --sbe-verified: #00BF33;
+  --sbe-alert: #CCFF00;
 
   --font-sans: Inter, Arial, Helvetica, sans-serif;
   --font-serif: Fraunces, Georgia, "Times New Roman", serif;
@@ -34,18 +36,23 @@
 }
 
 .dark {
-  --sbe-canvas: #000000;
-  --sbe-ink: #FFFFFF;
-  --sbe-graphite: #FFFFFF;
-  --sbe-mist: #FFFFFF;
-  --sbe-hairline: #FFFFFF;
-  --sbe-surface: #000000;
+  --sbe-canvas: #020F03;
+  --sbe-ink: #F4FFF0;
+  --sbe-graphite: #D9FFD1;
+  --sbe-mist: #89F336;
+  --sbe-hairline: #2CFF05;
+  --sbe-surface: #061A08;
+  --sbe-chip: #102B12;
 
-  --sbe-copper: #FF6B00;
-  --sbe-cobalt: #5200FF;
-  --sbe-electric: #FF6B00;
-  --sbe-plasma: #F900FF;
+  --sbe-copper: #89F336;
+  --sbe-cobalt: #00BF33;
+  --sbe-electric: #228B22;
+  --sbe-plasma: #2CFF05;
   --sbe-neon: #CCFF00;
+  --sbe-yellow: #FFFC30;
+  --sbe-live: #2CFF05;
+  --sbe-verified: #00BF33;
+  --sbe-alert: #CCFF00;
 
   color-scheme: dark;
 }
@@ -165,26 +172,34 @@
       linear-gradient(
         90deg,
         var(--sbe-copper) 0%,
-        var(--sbe-copper) 38%,
-        var(--sbe-cobalt) 38%,
-        var(--sbe-cobalt) 74%,
-        var(--sbe-plasma) 74%,
-        var(--sbe-plasma) 88%,
-        var(--sbe-neon) 88%,
-        var(--sbe-neon) 100%
+        var(--sbe-copper) 24%,
+        var(--sbe-cobalt) 24%,
+        var(--sbe-cobalt) 45%,
+        var(--sbe-plasma) 45%,
+        var(--sbe-plasma) 63%,
+        var(--sbe-electric) 63%,
+        var(--sbe-electric) 79%,
+        var(--sbe-neon) 79%,
+        var(--sbe-neon) 91%,
+        var(--sbe-yellow) 91%,
+        var(--sbe-yellow) 100%
       );
   }
 
   .sbe-offset-red {
-    box-shadow: 10px 10px 0 var(--sbe-copper);
-  }
-
-  .sbe-offset-blue {
     box-shadow: 10px 10px 0 var(--sbe-cobalt);
   }
 
-  .sbe-offset-plasma {
+  .sbe-offset-blue {
     box-shadow: 10px 10px 0 var(--sbe-plasma);
+  }
+
+  .sbe-offset-plasma {
+    box-shadow: 10px 10px 0 var(--sbe-electric);
+  }
+
+  .sbe-offset-yellow {
+    box-shadow: 10px 10px 0 var(--sbe-yellow);
   }
 
   .sbe-soft-panel {

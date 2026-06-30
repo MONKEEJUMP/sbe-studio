@@ -9,7 +9,12 @@ import {
 } from "@/lib/vercel-portfolio";
 
 const HOME_PROJECTS = FEATURED_VERCEL_PROJECTS.slice(0, 4);
-const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
+const CARD_SHADOWS = [
+  "sbe-offset-blue",
+  "sbe-offset-red",
+  "sbe-offset-plasma",
+  "sbe-offset-yellow",
+];
 
 export function VercelShowcase() {
   const [lead, ...supporting] = HOME_PROJECTS;
@@ -91,7 +96,7 @@ export function VercelShowcase() {
                 <p className="font-mono text-micro uppercase text-sbe-mist">
                   {label}
                 </p>
-                <p className="mt-3 font-mono text-h4 text-sbe-cobalt">
+                <p className="mt-3 font-mono text-h4 text-sbe-copper">
                   {value}
                 </p>
               </div>

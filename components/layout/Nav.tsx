@@ -47,6 +47,7 @@ export function Nav() {
           "bg-sbe-canvas"
         )}
       >
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1 sbe-vivid-band" />
         <Container className="grid h-full grid-cols-[auto_1fr_auto] items-center gap-4">
           <Wordmark showMotto={false} />
 

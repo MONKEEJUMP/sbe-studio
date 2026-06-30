@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     "Live websites, Vercel deployments, and selected production engineering case studies from Space Bot Engineering Studio.",
 };
 
-const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
+const CARD_SHADOWS = [
+  "sbe-offset-blue",
+  "sbe-offset-red",
+  "sbe-offset-plasma",
+  "sbe-offset-yellow",
+];
 
 export default function WorkPage() {
   const leadProject = FEATURED_VERCEL_PROJECTS[0];
@@ -64,7 +69,7 @@ export default function WorkPage() {
             <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
                 <Eyebrow>LIVE WORK INDEX</Eyebrow>
-                <h1 className="mt-8 max-w-[18ch] font-serif text-h1 text-sbe-cobalt">
+                <h1 className="mt-8 max-w-[18ch] font-serif text-h1 text-sbe-ink">
                   Designed, shipped, and deployed to production.
                 </h1>
                 <p className="mt-8 max-w-[62ch] text-body-lg text-sbe-graphite">
@@ -152,7 +157,7 @@ export default function WorkPage() {
                   <p className="font-mono text-micro uppercase text-sbe-copper">
                     01 · {leadProject.category}
                   </p>
-                  <h3 className="mt-5 font-serif text-h2 text-sbe-cobalt">
+                  <h3 className="mt-5 font-serif text-h2 text-sbe-ink">
                     {leadProject.title}
                   </h3>
                   <p className="mt-6 text-body-lg text-sbe-graphite">

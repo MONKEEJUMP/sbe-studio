@@ -3,7 +3,12 @@ import { BrandStamp, BrandStampField } from "@/components/brand/BrandStamp";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CREDIBILITY_HOOKS } from "@/lib/credibility";
 
-const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
+const CARD_SHADOWS = [
+  "sbe-offset-blue",
+  "sbe-offset-red",
+  "sbe-offset-plasma",
+  "sbe-offset-yellow",
+];
 
 export function CredibilityGrid() {
   return (
@@ -87,7 +92,7 @@ export function CredibilityGrid() {
                 </div>
 
                 {hook.stat && (
-                  <span className="mt-3 font-mono text-h2 text-sbe-cobalt tabular-nums">
+                  <span className="mt-3 font-mono text-h2 text-sbe-copper tabular-nums">
                     {hook.stat.value}
                   </span>
                 )}

@@ -13,7 +13,12 @@ type DeploymentStripProps = {
   slugs: string[];
 };
 
-const CARD_SHADOWS = ["sbe-offset-blue", "sbe-offset-red", "sbe-offset-plasma"];
+const CARD_SHADOWS = [
+  "sbe-offset-blue",
+  "sbe-offset-red",
+  "sbe-offset-plasma",
+  "sbe-offset-yellow",
+];
 
 export function DeploymentStrip({
   eyebrow = "LIVE DEPLOYMENTS",

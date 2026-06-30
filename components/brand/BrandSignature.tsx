@@ -24,18 +24,22 @@ export function BrandSignature({
       <span
         aria-hidden="true"
         className={cn(
-          "h-px shrink-0 bg-sbe-copper",
+          "h-px shrink-0 bg-sbe-plasma",
           footer ? "w-10 sm:w-16" : "w-5"
         )}
       />
       <span
         aria-hidden="true"
-        className={cn("min-w-0", footer ? "break-all" : "whitespace-nowrap")}
+        className={cn(
+          "min-w-0 rounded-sm px-2 py-1",
+          footer ? "bg-white/10" : "bg-sbe-chip",
+          footer ? "break-all" : "whitespace-nowrap"
+        )}
       >
         <span className="text-sbe-ink">{BRAND_DOMAIN}</span>{" "}
-        <span className="text-sbe-copper">&lt;</span>
+        <span className="text-sbe-cobalt">&lt;</span>
         <span>{BRAND_CODE}</span>
-        <span className="text-sbe-copper">&gt;</span>
+        <span className="text-sbe-cobalt">&gt;</span>
       </span>
     </span>
   );
