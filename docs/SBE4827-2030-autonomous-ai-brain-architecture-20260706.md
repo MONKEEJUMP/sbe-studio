@@ -1,9 +1,9 @@
 # SBE4827-2030 Autonomous Ai Brain Architecture
 
-Date: 2026-07-06  
-Project: SBE Studio / Space Bot Engineering  
-Repo: `C:\Users\DJ PAULIEWOOD\Dropbox\PC\Desktop\sbe-ai-consulting`  
-Live site: `https://sbe.studio`  
+Date: 2026-07-06
+Project: SBE Studio / Space Bot Engineering
+Repo: `C:\Users\DJ PAULIEWOOD\Dropbox\PC\Desktop\sbe-ai-consulting`
+Live site: `https://sbe.studio`
 Purpose: architecture plan for adding a real large language model to SBE Studio without breaking the public site, leaking private material, or pretending unsafe autonomy is ready before the proof gates exist.
 
 ## Executive Decision
@@ -500,4 +500,3 @@ Use the secure OpenAI API key flow in Codex/OpenAI Platform when the implementat
 - Vercel Chatbot template: https://github.com/vercel/chatbot
 - Next.js Server Functions and mutations: https://nextjs.org/docs/app/getting-started/mutating-data
 - Next.js Route Handlers: https://nextjs.org/docs/app/getting-started/route-handlers
-
