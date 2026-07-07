@@ -61,7 +61,7 @@ const RECEIPTS = [
   },
   {
     claim: "Benchmark lead over frontier models",
-    value: `${MANIFEST_DATA.grokBeatBySeconds}s`,
+    value: `${MANIFEST_DATA.frontierBenchmarkLeadSeconds}s`,
     source: "DORYLUS_EVOLUTION_REPORT.md",
   },
   {

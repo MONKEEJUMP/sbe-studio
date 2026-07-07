@@ -7,7 +7,9 @@
     "build": "pnpm typecheck && next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:public": "node scripts/check-public-safety.mjs",
+    "verify": "pnpm check:public && pnpm lint && pnpm build"
   },
   "dependencies": {
     "clsx": "^2.1.1",

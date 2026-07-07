@@ -23,7 +23,7 @@ const STATS: Stat[] = [
     format: "number",
   },
   {
-    value: MANIFEST_DATA.grokBeatBySeconds,
+    value: MANIFEST_DATA.frontierBenchmarkLeadSeconds,
     suffix: "s",
     label: "BENCHMARK LEAD OVER FRONTIER MODELS",
     format: "plain",

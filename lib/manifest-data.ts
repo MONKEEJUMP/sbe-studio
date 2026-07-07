@@ -49,12 +49,12 @@ export const MANIFEST_DATA = {
   claudeAiBookmarks: 14,
 
   // Benchmarks (LUCY v3.2)
-  grokBeatBySeconds: 12,
-  deepseekBeatBySeconds: 14,
+  frontierBenchmarkLeadSeconds: 12,
+  secondaryBenchmarkLeadSeconds: 14,
   benchmarkAccuracy: "11/11",
   lucyV32ResponseTime: "5-8 seconds",
-  grokResponseTime: "17-20 seconds",
-  deepseekResponseTime: "19-22 seconds",
+  frontierBaselineResponseTime: "17-20 seconds",
+  secondaryBaselineResponseTime: "19-22 seconds",
 
   // LUCY / DORYLUS
   lucyVersions: 5,

@@ -68,8 +68,9 @@ lib/
 └── utils.ts
 public/favicon.svg
 public/work-sites/    # screenshot captures for the portfolio wall
+.codex/actions/       # coded setup, verification, and release runbooks
 ops/
-├── deploy-scripts/   # DreamHost/VPS helper scripts
+├── deploy-scripts/   # historical DreamHost/VPS helper scripts
 └── archive/          # old deploy logs and generated tarballs
 ```
 
@@ -90,19 +91,25 @@ Never hardcode a statistic in a component. Never round. Never estimate.
 
 ### Color palette
 
-Neutrals (70%) and signature accents (30%), plus status signals:
+The current SBE system is the green signal palette. Pine/forest carries
+structure and text, pure white carries the page surface, and the live accents
+rotate through grass, neon, lime, chartreuse, and yellow.
 
 | Token              | Light     | Dark      | Role                                |
 |--------------------|-----------|-----------|-------------------------------------|
-| `--sbe-canvas`     | `#FAFAF7` | `#0A0A0A` | Page background                     |
-| `--sbe-ink`        | `#0A0A0A` | `#F5F5F4` | Headlines, body text                |
-| `--sbe-graphite`   | `#525252` | `#A3A3A3` | Secondary text                      |
-| `--sbe-mist`       | `#A3A3A3` | `#737373` | Tertiary text, metadata             |
-| `--sbe-hairline`   | `#E5E5E5` | `#262626` | 1px dividers                        |
-| `--sbe-copper`     | `#B22234` | `#F06474` | United States flag red accent       |
-| `--sbe-cobalt`     | `#3C3B6E` | `#A8B0FF` | United States flag blue accent      |
-| `--sbe-live`       | `#F59E0B` | `#F59E0B` | Live status dots                    |
-| `--sbe-verified`   | `#059669` | `#059669` | Verified checkmarks                 |
+| `--sbe-canvas`     | `#FFFFFF` | `#0B1F0B` | Page background                     |
+| `--sbe-surface`    | `#FFFFFF` | `#123812` | Cards and framed surfaces           |
+| `--sbe-ink`        | `#0B3D0B` | `#F2FFF0` | Headlines, body text                |
+| `--sbe-graphite`   | `#145214` | `#B7E8B7` | Secondary text                      |
+| `--sbe-mist`       | `#2F7D32` | `#8FD98F` | Tertiary text, metadata             |
+| `--sbe-hairline`   | `#228B22` | `#2CFF05` | Borders and dividers                |
+| `--sbe-copper`     | `#228B22` | `#89F336` | Deep forest structural accent       |
+| `--sbe-cobalt`     | `#00BF33` | `#00BF33` | Grass live accent                   |
+| `--sbe-electric`   | `#89F336` | `#89F336` | Lime accent and offset shadows      |
+| `--sbe-plasma`     | `#2CFF05` | `#2CFF05` | Neon accent and live signal states  |
+| `--sbe-neon`       | `#CCFF00` | `#CCFF00` | Chartreuse accent                   |
+| `--sbe-yellow`     | `#FFFC30` | `#FFFC30` | Bright band and high-signal accents |
+| `--sbe-chip`       | `#EDFFE8` | `#0F2A0F` | Soft code-chip background           |
 
 ### Typography
 
@@ -114,11 +121,14 @@ Neutrals (70%) and signature accents (30%), plus status signals:
 
 ### Rules
 
-- 70% neutrals · 20% flag red · 10% flag blue · status colors sparingly
-- Zero color gradients (only one alpha-mask on the Marquee edges)
+- Pure white surfaces, pine structure, and green/yellow live accents.
+- Use vivid color as signal, shadow, proof, and status; do not let the page
+  collapse into a single flat green tone.
+- Offset shadows should contrast the card color and the page background.
+- Checkmarks are green; code chips use the soft green tint.
 - Brand motto: `sbe.studio <abc/always/be/coding>`
 - Headlines Fraunces serif; body Inter; all numbers mono
-- All interactive elements: visible `focus-visible` ring in Copper
+- All interactive elements: visible `focus-visible` ring
 - All animation honors `prefers-reduced-motion`
 
 ---
@@ -133,9 +143,11 @@ Neutrals (70%) and signature accents (30%), plus status signals:
   usable first-pass content sourced from the manifest.
 - **Portfolio baseline:** `/work` now includes a featured deployment row, all
   current Vercel websites, and screenshot assets captured from the live URLs.
-- **Next improvements:** individual case-study pages, richer founder/about
-  copy, a real contact form or calendar link, OG image generation, and a
-  deployment runbook.
+- **Command-center baseline:** repo `AGENTS.md` and coded `.codex/actions`
+  document setup, verification, and release rules.
+- **Next improvements:** proof guard checks, individual case-study pages,
+  typed evidence/receipt objects, a structured intake path, public-safe Ai
+  concierge foundations, OG image generation, and a current deployment runbook.
 
 Every number on every page flows from `lib/manifest-data.ts`. When a stat
 updates in the manifest, it updates on the site. Do not bypass this rule.

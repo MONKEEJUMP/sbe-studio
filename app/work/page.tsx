@@ -98,9 +98,11 @@ export default function WorkPage() {
                 </div>
                 <div>
                   <p className="font-mono text-micro uppercase text-sbe-mist">
-                    Host
+                    Platform
                   </p>
-                  <p className="mt-2 font-mono text-h3 text-sbe-ink">Vercel</p>
+                  <p className="mt-2 font-mono text-h3 text-sbe-ink">
+                    {PORTFOLIO_STATS.platform}
+                  </p>
                 </div>
               </div>
             </div>

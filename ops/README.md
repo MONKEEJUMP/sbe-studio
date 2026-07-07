@@ -6,7 +6,8 @@ Studio site.
 ## Layout
 
 - `deploy-scripts/` contains DreamHost/VPS helper scripts used during the
-  original deployment and later proxy/systemd pivot.
+  original deployment and later proxy/systemd pivot. These are historical
+  references, not the current production deployment lane.
 - `archive/deploy-logs/` contains local copies of historical command output.
 - `archive/deploy-bundles/` contains old generated deployment bundles.
 
@@ -16,45 +17,54 @@ treated as source.
 
 ## Current Hosting Shape
 
-As of 2026-05-11, the live DNS for `sbe.studio` still resolves to the
-DreamHost VPS:
+As of 2026-07-06, the active production lane is GitHub `main` to Vercel:
 
-- `sbe.studio` -> `69.163.199.91`
-- reverse DNS: `vps63781.dreamhostps.com`
-- remote app dir from the old scripts: `/home/dh_isibk9/sbe.studio`
-
-The checked-in `app.js` starts Next.js in production mode on `127.0.0.1:3000`
-for DreamHost/Apache proxying. The latest scripts in `deploy-scripts/` indicate
-the production host was pivoted from Passenger-only startup toward a user
-systemd service behind Apache proxy rules.
-
-## Vercel Migration
-
-The project has been created and linked in Vercel:
-
-- Vercel account: `paulie-pauliewoods-projects`
+- GitHub repo: `https://github.com/MONKEEJUMP/sbe-studio.git`
+- Vercel account/team: `paulie-pauliewoods-projects`
 - Vercel project: `sbe-studio`
-- Project ID: `prj_0dd82j71SRvY4flgVLACjCiHRSmV`
-- Production alias: `https://sbe-studio.vercel.app`
+- Production site: `https://sbe.studio`
+- Vercel project URL: `https://vercel.com/paulie-pauliewoods-projects/sbe-studio`
 
-The domains `sbe.studio` and `www.sbe.studio` have been added to the Vercel
-project, but they are not live on Vercel until DreamHost DNS is changed.
+DreamHost was part of the earlier hosting/DNS journey. Treat the DreamHost
+scripts and VPS notes as archive material unless PAULIEWOOD explicitly asks to
+recover or inspect the old host.
 
-Cutover records Vercel requested:
+## Vercel Production Flow
 
-```text
-A    sbe.studio      76.76.21.21
-A    www.sbe.studio  76.76.21.21
+For normal releases:
+
+```powershell
+pnpm lint
+pnpm typecheck
+pnpm build
+git status --short
+git add <exact files>
+git commit -m "<message>"
+git push origin main
 ```
 
-After changing DNS, verify with:
+After pushing, wait for the connected Vercel deployment and verify the live
+domain directly:
 
-```bash
-vercel domains inspect sbe.studio
-vercel domains inspect www.sbe.studio
-curl -I https://sbe.studio/
+```powershell
+curl.exe -I https://sbe.studio/
+curl.exe -I https://sbe.studio/receipts
 ```
+
+When content, stats, or layout changes ship, also browser-check the homepage
+and Receipts page. Do not claim the live site is updated until `https://sbe.studio/`
+is verified after the Vercel deployment is ready.
+
+## Historical DNS Notes
+
+During the migration, Vercel requested these records:
+
+- apex/root `sbe.studio` -> `76.76.21.21`
+- `www.sbe.studio` -> `76.76.21.21`
+
+DreamHost may still hold DNS records or registrar settings, but it is not the
+current app host for the production website.
 
 Before running any deployment script, review it first and make sure the target
-host, username, Node path, and `.htaccess` strategy still match the live
-DreamHost account.
+host, username, Node path, and `.htaccess` strategy still match the intended
+target. Do not run old DreamHost deployment scripts for normal Vercel releases.

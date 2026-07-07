@@ -34,7 +34,7 @@ export const WORK_PROJECTS: WorkProject[] = [
       },
       {
         label: "Frontier lead",
-        value: `${MANIFEST_DATA.grokBeatBySeconds}s`,
+        value: `${MANIFEST_DATA.frontierBenchmarkLeadSeconds}s`,
       },
       {
         label: "Response time",

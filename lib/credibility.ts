@@ -25,9 +25,9 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   {
     id: 1,
     headline: "LUCY beats frontier models by 12 seconds.",
-    body: `Our in-house fusion search engine, LUCY v3.2, scored ${MANIFEST_DATA.benchmarkAccuracy} on a standardized benchmark and answered the same questions ${MANIFEST_DATA.grokBeatBySeconds} seconds ahead of frontier-model baselines on a single NVIDIA A40 GPU. Total response time: ${MANIFEST_DATA.lucyV32ResponseTime}.`,
+    body: `Our in-house fusion search engine, LUCY v3.2, scored ${MANIFEST_DATA.benchmarkAccuracy} on a standardized benchmark and answered the same questions ${MANIFEST_DATA.frontierBenchmarkLeadSeconds} seconds ahead of frontier-model baselines on a single NVIDIA A40 GPU. Total response time: ${MANIFEST_DATA.lucyV32ResponseTime}.`,
     stat: {
-      value: `${MANIFEST_DATA.grokBeatBySeconds}s`,
+      value: `${MANIFEST_DATA.frontierBenchmarkLeadSeconds}s`,
       label: "FRONTIER LEAD",
     },
     source: "DORYLUS_EVOLUTION_REPORT.md",
