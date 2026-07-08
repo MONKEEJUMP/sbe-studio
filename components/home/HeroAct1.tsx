@@ -41,11 +41,11 @@ export function HeroAct1() {
           <p className="max-w-[34rem] rounded-sm bg-sbe-chip/95 px-4 py-1.5 text-center font-serif text-[clamp(1.24rem,1.89vw,2.02rem)] leading-none text-sbe-copper">
             &lt; the same{" "}
             <span className="text-sbe-cobalt">ai</span>{" "}
-            we build for you
+            we build for us
             <br />
             / is the same{" "}
             <span className="text-sbe-cobalt">ai</span>{" "}
-            we build for us &gt;
+            we build for you &gt;
           </p>
         </div>
         <div className="flex min-h-[560px] items-center justify-center py-12 text-center lg:min-h-[620px]">
@@ -136,11 +136,11 @@ export function HeroAct1() {
           >
             &lt; the same{" "}
             <span className="text-sbe-cobalt">ai</span>{" "}
-            we build for you
+            we build for us
             <br />
             / is the same{" "}
             <span className="text-sbe-cobalt">ai</span>{" "}
-            we build for us &gt;
+            we build for you &gt;
           </h1>
         </div>
       </Container>
