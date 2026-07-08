@@ -35,7 +35,7 @@ export function CaseStudyPreview() {
       <BrandStampField
         seed={707}
         count={28}
-        tones={["plasma", "copper", "cobalt"]}
+        tones={["plasma", "neon", "copper", "cobalt"]}
         className="hidden md:block"
         minOpacity={0.05}
         maxOpacity={0.2}
@@ -56,10 +56,12 @@ export function CaseStudyPreview() {
         <ul
           className="flex flex-col"
         >
-          {PREVIEW_PROJECTS.map((project) => (
+          {PREVIEW_PROJECTS.map((project, index) => (
             <li
               key={project.slug}
-              className="group mb-5 rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-6 transition-transform duration-200 hover:-translate-y-1 sbe-offset-blue"
+              className={`group mb-5 rounded-[8px] border-2 bg-sbe-surface p-6 transition-transform duration-200 hover:-translate-y-1 ${
+                index === 1 ? "border-sbe-neon sbe-offset-neon" : "border-sbe-ink sbe-offset-blue"
+              }`}
             >
               <Link
                 href={`/work#${project.slug}`}

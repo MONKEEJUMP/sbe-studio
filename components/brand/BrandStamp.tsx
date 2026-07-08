@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
-type StampTone = "electric" | "cobalt" | "copper" | "plasma";
+type StampTone = "electric" | "cobalt" | "copper" | "plasma" | "neon";
 
 type BrandStampProps = {
   tone?: StampTone;
@@ -19,6 +19,7 @@ const toneClass: Record<StampTone, string> = {
   cobalt: "text-sbe-cobalt",
   copper: "text-sbe-copper",
   plasma: "text-sbe-plasma",
+  neon: "text-sbe-neon",
 };
 
 export function BrandStamp({
@@ -69,6 +70,7 @@ type BrandStampFieldProps = {
 const DEFAULT_FIELD_TONES: StampTone[] = [
   "electric",
   "cobalt",
+  "neon",
   "copper",
   "plasma",
 ];

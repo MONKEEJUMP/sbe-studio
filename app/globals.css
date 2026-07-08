@@ -198,6 +198,10 @@
     box-shadow: 10px 10px 0 var(--sbe-electric);
   }
 
+  .sbe-offset-neon {
+    box-shadow: 10px 10px 0 var(--sbe-neon);
+  }
+
   .sbe-offset-yellow {
     box-shadow: 10px 10px 0 var(--sbe-yellow);
   }

@@ -37,10 +37,17 @@ export function ServiceTiers() {
         rotate={19}
         size="clamp(2.7rem, 4vw, 3.9rem)"
       />
+      <BrandStamp
+        tone="neon"
+        className="right-[8%] top-[40rem] hidden xl:block"
+        opacity={0.18}
+        rotate={-24}
+        size="clamp(3rem, 5vw, 4.6rem)"
+      />
       <BrandStampField
         seed={606}
         count={34}
-        tones={["electric", "cobalt", "plasma"]}
+        tones={["electric", "neon", "cobalt", "plasma"]}
         className="hidden md:block"
         minOpacity={0.045}
         maxOpacity={0.18}
@@ -66,10 +73,12 @@ export function ServiceTiers() {
         <div
           className="grid grid-cols-1 gap-6 md:grid-cols-3"
         >
-          {SERVICE_TIERS.map((tier) => (
+          {SERVICE_TIERS.map((tier, index) => (
             <div
               key={tier.slug}
-              className="rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-8 sbe-offset-blue"
+              className={`rounded-[8px] border-2 bg-sbe-surface p-8 ${
+                index === 1 ? "border-sbe-neon sbe-offset-neon" : "border-sbe-ink sbe-offset-blue"
+              }`}
             >
               <div className="flex items-baseline gap-4">
                 <span

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const CARD_SHADOWS = [
   "sbe-offset-blue",
-  "sbe-offset-red",
+  "sbe-offset-neon",
   "sbe-offset-plasma",
   "sbe-offset-yellow",
 ];
@@ -56,9 +56,17 @@ export default function WorkPage() {
             rotate={-19}
             size="clamp(2.7rem, 4vw, 4rem)"
           />
+          <BrandStamp
+            tone="neon"
+            className="right-[17%] bottom-12 hidden xl:block"
+            opacity={0.16}
+            rotate={24}
+            size="clamp(3rem, 5vw, 4.5rem)"
+          />
           <BrandStampField
             seed={1111}
             count={30}
+            tones={["plasma", "electric", "neon", "cobalt"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.14}
@@ -126,7 +134,7 @@ export default function WorkPage() {
           <BrandStampField
             seed={1212}
             count={28}
-            tones={["electric", "plasma", "copper"]}
+            tones={["electric", "neon", "plasma", "copper"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.13}
@@ -225,10 +233,17 @@ export default function WorkPage() {
             rotate={17}
             size="clamp(2.4rem, 3.5vw, 3.4rem)"
           />
+          <BrandStamp
+            tone="neon"
+            className="left-[12%] bottom-[18rem] hidden xl:block"
+            opacity={0.14}
+            rotate={-25}
+            size="clamp(3rem, 5vw, 4.8rem)"
+          />
           <BrandStampField
             seed={1313}
             count={42}
-            tones={["cobalt", "electric", "plasma", "copper"]}
+            tones={["cobalt", "electric", "neon", "plasma", "copper"]}
             className="hidden md:block"
             minOpacity={0.03}
             maxOpacity={0.12}
@@ -319,7 +334,7 @@ export default function WorkPage() {
           <BrandStampField
             seed={1414}
             count={30}
-            tones={["copper", "electric", "cobalt"]}
+            tones={["copper", "neon", "electric", "cobalt"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.13}

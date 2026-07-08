@@ -5,7 +5,7 @@ import { CREDIBILITY_HOOKS } from "@/lib/credibility";
 
 const CARD_SHADOWS = [
   "sbe-offset-blue",
-  "sbe-offset-red",
+  "sbe-offset-neon",
   "sbe-offset-plasma",
   "sbe-offset-yellow",
 ];
@@ -42,10 +42,17 @@ export function CredibilityGrid() {
         rotate={24}
         size="clamp(2.6rem, 4vw, 3.8rem)"
       />
+      <BrandStamp
+        tone="neon"
+        className="left-[16%] top-[29rem] hidden xl:block"
+        opacity={0.15}
+        rotate={-27}
+        size="clamp(3.2rem, 5vw, 4.7rem)"
+      />
       <BrandStampField
         seed={505}
         count={32}
-        tones={["electric", "cobalt", "plasma"]}
+        tones={["electric", "cobalt", "neon", "plasma"]}
         className="hidden md:block"
         minOpacity={0.035}
         maxOpacity={0.13}
@@ -76,7 +83,9 @@ export function CredibilityGrid() {
             return (
               <li
                 key={hook.id}
-                className={`group flex min-h-[25rem] flex-col rounded-[8px] border-2 border-sbe-ink bg-sbe-surface p-7 transition-transform duration-200 hover:-translate-y-1 ${
+                className={`group flex min-h-[25rem] flex-col rounded-[8px] border-2 bg-sbe-surface p-7 transition-transform duration-200 hover:-translate-y-1 ${
+                  index % 5 === 2 ? "border-sbe-neon" : "border-sbe-ink"
+                } ${
                   CARD_SHADOWS[index % CARD_SHADOWS.length]
                 }`}
               >

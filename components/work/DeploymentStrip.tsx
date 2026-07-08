@@ -15,7 +15,7 @@ type DeploymentStripProps = {
 
 const CARD_SHADOWS = [
   "sbe-offset-blue",
-  "sbe-offset-red",
+  "sbe-offset-neon",
   "sbe-offset-plasma",
   "sbe-offset-yellow",
 ];
@@ -41,7 +41,7 @@ export function DeploymentStrip({
       <BrandStampField
         seed={6111}
         count={24}
-        tones={["electric", "cobalt", "plasma"]}
+        tones={["electric", "neon", "cobalt", "plasma"]}
         className="hidden md:block"
         minOpacity={0.035}
         maxOpacity={0.13}

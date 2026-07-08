@@ -11,7 +11,7 @@ import {
 const HOME_PROJECTS = FEATURED_VERCEL_PROJECTS.slice(0, 4);
 const CARD_SHADOWS = [
   "sbe-offset-blue",
-  "sbe-offset-red",
+  "sbe-offset-neon",
   "sbe-offset-plasma",
   "sbe-offset-yellow",
 ];
@@ -55,9 +55,17 @@ export function VercelShowcase() {
         rotate={21}
         size="clamp(2.6rem, 4vw, 3.8rem)"
       />
+      <BrandStamp
+        tone="neon"
+        className="right-[9%] bottom-[7rem] hidden xl:block"
+        opacity={0.18}
+        rotate={-26}
+        size="clamp(3rem, 5vw, 4.8rem)"
+      />
       <BrandStampField
         seed={404}
         count={34}
+        tones={["electric", "cobalt", "neon", "plasma"]}
         className="hidden md:block"
         minOpacity={0.035}
         maxOpacity={0.14}

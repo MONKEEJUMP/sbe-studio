@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Three production engagement tiers from Space Bot Engineering Studio: Audit, Build, and Operate.",
 };
 
-const TIER_STAMP_TONES = ["electric", "cobalt", "plasma"] as const;
+const TIER_STAMP_TONES = ["electric", "neon", "cobalt", "plasma"] as const;
 
 export default function ServicesPage() {
   return (
@@ -43,9 +43,17 @@ export default function ServicesPage() {
             rotate={-21}
             size="clamp(2.6rem, 4vw, 3.8rem)"
           />
+          <BrandStamp
+            tone="neon"
+            className="right-[12%] bottom-12 hidden xl:block"
+            opacity={0.16}
+            rotate={24}
+            size="clamp(3rem, 5vw, 4.4rem)"
+          />
           <BrandStampField
             seed={2111}
             count={28}
+            tones={["cobalt", "plasma", "neon", "electric"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.14}
@@ -127,8 +135,8 @@ export default function ServicesPage() {
               count={22}
               tones={
                 index % 2 === 0
-                  ? ["electric", "cobalt", "plasma"]
-                  : ["plasma", "copper", "electric"]
+                  ? ["electric", "neon", "cobalt", "plasma"]
+                  : ["plasma", "copper", "neon", "electric"]
               }
               className="hidden md:block"
               minOpacity={0.03}
@@ -263,7 +271,7 @@ export default function ServicesPage() {
           <BrandStampField
             seed={2444}
             count={26}
-            tones={["copper", "electric", "cobalt", "plasma"]}
+            tones={["copper", "neon", "electric", "cobalt", "plasma"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.13}

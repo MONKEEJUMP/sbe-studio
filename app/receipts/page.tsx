@@ -176,9 +176,17 @@ export default function ReceiptsPage() {
             rotate={-9}
             size="clamp(6rem, 10vw, 9rem)"
           />
+          <BrandStamp
+            tone="neon"
+            className="right-[18%] bottom-14 hidden xl:block"
+            opacity={0.16}
+            rotate={24}
+            size="clamp(3rem, 5vw, 4.4rem)"
+          />
           <BrandStampField
             seed={4111}
             count={24}
+            tones={["electric", "copper", "neon", "plasma"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.14}
@@ -216,7 +224,7 @@ export default function ReceiptsPage() {
           <BrandStampField
             seed={4222}
             count={24}
-            tones={["plasma", "cobalt", "electric"]}
+            tones={["plasma", "neon", "cobalt", "electric"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.13}

@@ -29,9 +29,17 @@ export function FounderTeaser() {
         rotate={-10}
         size="clamp(5rem, 8vw, 7rem)"
       />
+      <BrandStamp
+        tone="neon"
+        className="right-[14%] top-12 hidden xl:block"
+        opacity={0.16}
+        rotate={22}
+        size="clamp(3.2rem, 5vw, 4.8rem)"
+      />
       <BrandStampField
         seed={808}
         count={24}
+        tones={["electric", "cobalt", "neon", "plasma"]}
         className="hidden md:block"
         minOpacity={0.035}
         maxOpacity={0.14}
@@ -40,7 +48,7 @@ export function FounderTeaser() {
       />
       <Container className="relative z-10">
         <div
-          className="mx-auto flex max-w-4xl flex-col items-center rounded-[8px] border-2 border-sbe-ink bg-sbe-electric p-10 text-center sbe-offset-blue"
+          className="mx-auto flex max-w-4xl flex-col items-center rounded-[8px] border-2 border-sbe-neon bg-sbe-electric p-10 text-center sbe-offset-neon"
         >
           <span
             aria-hidden="true"

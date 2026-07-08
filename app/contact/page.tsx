@@ -38,10 +38,17 @@ export default function ContactPage() {
             rotate={10}
             size="clamp(5rem, 8vw, 7rem)"
           />
+          <BrandStamp
+            tone="neon"
+            className="right-[18%] bottom-12 hidden xl:block"
+            opacity={0.16}
+            rotate={-23}
+            size="clamp(3rem, 5vw, 4.4rem)"
+          />
           <BrandStampField
             seed={5111}
             count={30}
-            tones={["copper", "electric", "plasma", "cobalt"]}
+            tones={["copper", "electric", "neon", "plasma", "cobalt"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.14}

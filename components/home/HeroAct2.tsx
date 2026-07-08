@@ -27,7 +27,7 @@ export function HeroAct2() {
       <BrandStampField
         seed={202}
         count={26}
-        tones={["plasma", "copper", "electric"]}
+        tones={["plasma", "neon", "copper", "electric"]}
         className="hidden md:block"
         minOpacity={0.045}
         maxOpacity={0.18}

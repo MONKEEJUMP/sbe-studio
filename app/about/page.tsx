@@ -35,9 +35,17 @@ export default function AboutPage() {
             rotate={-9}
             size="clamp(6rem, 10vw, 9rem)"
           />
+          <BrandStamp
+            tone="neon"
+            className="right-[19%] bottom-16 hidden xl:block"
+            opacity={0.15}
+            rotate={24}
+            size="clamp(3rem, 5vw, 4.4rem)"
+          />
           <BrandStampField
             seed={3111}
             count={26}
+            tones={["electric", "neon", "cobalt", "plasma"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.14}
@@ -77,7 +85,7 @@ export default function AboutPage() {
           <BrandStampField
             seed={3222}
             count={28}
-            tones={["plasma", "copper", "electric", "cobalt"]}
+            tones={["plasma", "neon", "copper", "electric", "cobalt"]}
             className="hidden md:block"
             minOpacity={0.035}
             maxOpacity={0.13}

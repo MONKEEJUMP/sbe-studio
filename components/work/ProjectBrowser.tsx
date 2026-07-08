@@ -32,7 +32,7 @@ export function ProjectBrowser({
         <span className="flex shrink-0 gap-1.5" aria-hidden="true">
           <span className="h-3 w-3 rounded-full bg-sbe-copper" />
           <span className="h-3 w-3 rounded-full bg-sbe-cobalt" />
-          <span className="h-3 w-3 rounded-full bg-sbe-mist" />
+          <span className="h-3 w-3 rounded-full bg-sbe-neon" />
         </span>
         <span className="min-w-0 flex-1 truncate font-mono text-caption text-sbe-ink">
           {host}

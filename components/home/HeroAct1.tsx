@@ -14,9 +14,9 @@ export function HeroAct1() {
         className="absolute inset-x-0 top-16 h-[45rem] bg-sbe-canvas"
       />
       <BrandStamp
-        tone="electric"
+        tone="neon"
         className="-left-16 top-32 hidden lg:block"
-        opacity={0.95}
+        opacity={0.82}
         size="13rem"
       />
       <BrandStamp
@@ -86,7 +86,7 @@ export function HeroAct1() {
               title: "Production Ai systems",
               body: "Assistants, agent workflows, retrieval knowledge bases, internal tools, and operating processes engineered around how the team already works.",
               tone: "bg-sbe-electric",
-              accent: "sbe-offset-blue",
+              accent: "sbe-offset-neon",
               label: "text-sbe-ink",
               heading: "text-sbe-ink",
               copy: "text-sbe-ink",

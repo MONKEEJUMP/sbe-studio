@@ -33,9 +33,9 @@ type Props = LinkButtonProps | ButtonProps;
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "border-2 border-sbe-ink bg-sbe-ink text-sbe-canvas shadow-[0_6px_0_var(--sbe-cobalt)] hover:-translate-y-0.5 hover:shadow-[0_8px_0_var(--sbe-plasma)] active:translate-y-0 active:shadow-[0_3px_0_var(--sbe-cobalt)] transition-all duration-200",
+    "border-2 border-sbe-ink bg-sbe-ink text-sbe-canvas shadow-[0_6px_0_var(--sbe-neon)] hover:-translate-y-0.5 hover:shadow-[0_8px_0_var(--sbe-plasma)] active:translate-y-0 active:shadow-[0_3px_0_var(--sbe-cobalt)] transition-all duration-200",
   secondary:
-    "border-2 border-sbe-ink bg-sbe-surface text-sbe-ink shadow-[0_6px_0_var(--sbe-electric)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-sbe-copper hover:text-white hover:shadow-[0_8px_0_var(--sbe-yellow)] active:translate-y-0 active:shadow-[0_3px_0_var(--sbe-electric)]",
+    "border-2 border-sbe-ink bg-sbe-surface text-sbe-ink shadow-[0_6px_0_var(--sbe-electric)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-sbe-copper hover:text-white hover:shadow-[0_8px_0_var(--sbe-neon)] active:translate-y-0 active:shadow-[0_3px_0_var(--sbe-electric)]",
   ghost:
     "bg-transparent text-sbe-ink hover:bg-sbe-chip transition-colors duration-150",
   link: "bg-transparent text-sbe-ink underline decoration-sbe-cobalt decoration-2 underline-offset-4 hover:text-sbe-copper transition-colors duration-150",
