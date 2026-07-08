@@ -10,9 +10,9 @@ type Stat = {
 
 const numberFormatter = new Intl.NumberFormat("en-US");
 const STAT_SHADOWS = [
-  "sbe-offset-red",
-  "sbe-offset-blue",
   "sbe-offset-neon",
+  "sbe-offset-blue",
+  "sbe-offset-plasma",
   "sbe-offset-yellow",
 ];
 
