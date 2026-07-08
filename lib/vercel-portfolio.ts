@@ -317,7 +317,7 @@ export const VERCEL_PROJECTS: VercelProject[] = [
     summary:
       "The studio hub for proof of work, services, receipts, production stats, and the public archive of websites shipping from the Vercel account.",
     tags: ["Studio", "Portfolio", "Vercel"],
-    highlight: "sbe.studio <abc/always/be/coding>",
+    highlight: "sbe.studio (abc)</always/be/coding>",
     image: "/work-sites/sbe-studio.png",
   },
 ];

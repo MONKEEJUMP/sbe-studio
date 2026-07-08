@@ -128,10 +128,10 @@ export const CREDIBILITY_HOOKS: CredibilityHook[] = [
   },
   {
     id: 9,
-    headline: `${MANIFEST_DATA.architectureDocs} architecture documents in ${MANIFEST_DATA.monthsToEmpire} months.`,
+    headline: `${fmt(MANIFEST_DATA.architectureDocs)} architecture documents in ${MANIFEST_DATA.monthsToEmpire} months.`,
     body: `Every non-trivial system gets a written blueprint before production code. Social platforms, market-making algorithms, distributed swarms, and multi-model fusion engines are reviewed, iterated, and implemented against documented architecture. Verified in the vault index.`,
     stat: {
-      value: `${MANIFEST_DATA.architectureDocs}`,
+      value: fmt(MANIFEST_DATA.architectureDocs),
       label: "ARCHITECTURE DOCS",
     },
     source: "vault-search.js stats",

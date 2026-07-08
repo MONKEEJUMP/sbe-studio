@@ -1,4 +1,9 @@
-import { BRAND_CODE, BRAND_DOMAIN, BRAND_MOTTO } from "@/lib/brand";
+import {
+  BRAND_CODE_PATH,
+  BRAND_CODE_PREFIX,
+  BRAND_DOMAIN,
+  BRAND_MOTTO,
+} from "@/lib/brand";
 import { cn } from "@/lib/utils";
 
 type BrandSignatureProps = {
@@ -37,8 +42,9 @@ export function BrandSignature({
         )}
       >
         <span className="text-sbe-ink">{BRAND_DOMAIN}</span>{" "}
-        <span className="text-sbe-cobalt">&lt;</span>
-        <span>{BRAND_CODE}</span>
+        <span>{BRAND_CODE_PREFIX}</span>
+        <span className="text-sbe-cobalt">&lt;/</span>
+        <span>{BRAND_CODE_PATH}</span>
         <span className="text-sbe-cobalt">&gt;</span>
       </span>
     </span>

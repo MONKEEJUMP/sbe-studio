@@ -1,7 +1,7 @@
 # Space Bot Engineering Studio — Website
 
 The foundation of the Space Bot Engineering Studio (sbe.studio) Ai consulting
-website. Brand line: `sbe.studio <abc/always/be/coding>`. Next.js 16 App
+website. Brand line: `sbe.studio (abc)</always/be/coding>`. Next.js 16 App
 Router, TypeScript strict, Tailwind CSS, custom brand design system. Light mode
 default, dark mode toggleable and persisted via `next-themes`.
 
@@ -126,7 +126,7 @@ rotate through grass, neon, lime, chartreuse, and yellow.
   collapse into a single flat green tone.
 - Offset shadows should contrast the card color and the page background.
 - Checkmarks are green; code chips use the soft green tint.
-- Brand motto: `sbe.studio <abc/always/be/coding>`
+- Brand motto: `sbe.studio (abc)</always/be/coding>`
 - Headlines Fraunces serif; body Inter; all numbers mono
 - All interactive elements: visible `focus-visible` ring
 - All animation honors `prefers-reduced-motion`
